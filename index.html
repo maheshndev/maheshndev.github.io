@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mahesh Narsale — Full Stack Software Engineer</title>
-  <meta name="description" content="Mahesh Narsale — Full Stack Software Engineer. Python, Angular, Frappe, Cloud DevOps. Portfolio & resume 2025." />
+  <meta name="description"
+    content="Mahesh Narsale — Full Stack Software Engineer. Python, Angular, Frappe, Cloud DevOps. Portfolio & resume 2025." />
   <!-- Tailwind CDN (Play) - convenient for GitHub Pages single-file prototype -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -39,14 +41,39 @@
   <link href="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.css" rel="stylesheet" />
   <style>
     /* small custom styles */
-    :root { --accent: #8b5cf6; --brandblue:#2563eb; --brandgreen:#10b981; }
-    html { scroll-behavior: smooth; }
-    .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(6px); }
-    .dark .glass { background: rgba(17,24,39,0.55); }
-    .card-hover:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
-    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+    :root {
+      --accent: #8b5cf6;
+      --brandblue: #2563eb;
+      --brandgreen: #10b981;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+    }
+
+    .dark .glass {
+      background: rgba(17, 24, 39, 0.55);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
   </style>
 </head>
+
 <body class="antialiased bg-gray-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100">
 
   <!-- PAGE CONTAINER -->
@@ -57,35 +84,56 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6">
         <div class="flex items-center justify-between h-10">
           <a href="#hero" class="flex items-center gap-3 group">
-            <img src="assets/cv.png" alt="Mahesh logo" class="w-10 h-10 rounded-md object-cover shadow-sm" onerror="this.style.display='none'">
+            <img src="assets/cv.png" alt="Mahesh logo" class="w-10 h-10 rounded-md object-cover shadow-sm"
+              onerror="this.style.display='none'">
             <div>
-              <div class="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">Mahesh Narsale</div>
+              <div
+                class="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">
+                Mahesh Narsale</div>
               <div class="text-xs text-slate-500 dark:text-slate-400 -mt-0.5">Full Stack Software Engineer</div>
             </div>
           </a>
 
           <nav class="hidden md:flex items-center gap-6">
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="#about">About</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="#experience">Experience</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="#education">Education</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="#skills">Skills</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="#projects">Projects</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="#certifications">Certifications</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="#github-projects-section">GitHub</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="#contact">Contact</a>
+            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+              href="#about">About</a>
+            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+              href="#experience">Experience</a>
+            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+              href="#education">Education</a>
+            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+              href="#skills">Skills</a>
+            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+              href="#projects">Projects</a>
+            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+              href="#certifications">Certifications</a>
+            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+              href="#github-projects-section">GitHub</a>
+            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+              href="#contact">Contact</a>
           </nav>
 
           <div class="flex items-center gap-3">
-            <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
+              class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
 
-            <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
+            <button id="theme-toggle" aria-label="Toggle theme"
+              class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
               <!-- icons set by JS -->
-              <svg id="icon-sun" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z"></path></svg>
-              <svg id="icon-moon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              <svg id="icon-sun" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z">
+                </path>
+              </svg>
+              <svg id="icon-moon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+              </svg>
             </button>
 
             <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             </button>
           </div>
         </div>
@@ -112,36 +160,52 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="space-y-5">
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
-              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">Mahesh Narsale</span>
-              <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1">Full Stack Developer — Python ·  Angular  ·  Frappe  · Flask . FastAPI . Node.js . Express.js </span>
-              <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1">JavaScript . Typescript . MySQL . PostgreSQL . MongoDB </span>
+              <span
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">Mahesh
+                Narsale</span>
+              <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1">Full Stack Developer —
+                Python · Angular · Frappe · Flask . FastAPI . Node.js . Express.js </span>
+              <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1">JavaScript . Typescript .
+                MySQL . PostgreSQL . MongoDB </span>
             </h1>
 
             <p class="text-base text-slate-700 dark:text-slate-300 max-w-2xl">
-              I build scalable web applications, customize ERPNext/Frappe solutions, and design robust cloud deployments. Passionate about automation, mentoring, and open-source collaboration.
+              I build scalable web applications, customize ERPNext/Frappe solutions, and design robust cloud
+              deployments. Passionate about automation, mentoring, and open-source collaboration.
             </p>
 
             <div class="flex flex-wrap gap-3 mt-4">
-              <a href="#projects" target="_blank" class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">View Projects (GitHub)</a>
-              <a href="#contact" target="_blank" class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Hire Me</a>
-              <a href="assets/Mahesh-Narsale-Resume.pdf" download  class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Download Resume</a>
+              <a href="#projects" target="_blank"
+                class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">View
+                Projects (GitHub)</a>
+              <a href="#contact" target="_blank"
+                class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Hire
+                Me</a>
+              <a href="assets/Mahesh-Narsale-Resume.pdf" download
+                class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Download
+                Resume</a>
             </div>
 
             <div class="mt-4 text-sm text-slate-600 dark:text-slate-400">
               Location: Pune, Maharashtra · Languages: English, Marathi, Hindi
             </div>
 
-            <div class="mt-4 text-sm text-slate-700 dark:text-slate-300">Experience: <span id="experience-years" class="font-semibold">—</span></div>
+            <div class="mt-4 text-sm text-slate-700 dark:text-slate-300">Experience: <span id="experience-years"
+                class="font-semibold">—</span></div>
 
             <div class="flex gap-2 mt-5">
-              <a href="https://github.com/maheshndev" target="_blank" class="px-3 py-2 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
-              <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank" class="px-3 py-2 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
+              <a href="https://github.com/maheshndev" target="_blank"
+                class="px-3 py-2 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+              <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
+                class="px-3 py-2 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
             </div>
           </div>
 
           <div class="flex justify-center md:justify-end">
-            <div class="w-64 h-64 rounded-2xl overflow-hidden shadow-soft-lg transform transition-transform duration-500 hover:scale-105 card-hover">
-              <img src="assets/portrait.png" alt="Mahesh portrait" class="w-full h-full object-cover" onerror="this.style.display='none'">
+            <div
+              class="w-64 h-64 rounded-2xl overflow-hidden shadow-soft-lg transform transition-transform duration-500 hover:scale-105 card-hover">
+              <img src="assets/portrait.png" alt="Mahesh portrait" class="w-full h-full object-cover"
+                onerror="this.style.display='none'">
             </div>
           </div>
         </div>
@@ -155,12 +219,15 @@
               <h2 class="text-2xl font-semibold">About</h2>
               <p class="mt-4 text-slate-700 dark:text-slate-300">
                 <strong>CAREER OBJECTIVE:</strong>
-                To leverage my expertise as a software professional, contribute to the success of the company, share knowledge, and actively contribute to the growth and development of my peers.
+                To leverage my expertise as a software professional, contribute to the success of the company, share
+                knowledge, and actively contribute to the growth and development of my peers.
               </p>
 
               <div class="mt-6 prose prose-slate dark:prose-invert max-w-none">
                 <p>
-                  I have experience developing and customizing ERPNext and Frappe applications and building responsive web apps using Python, JavaScript, Node.js, and modern frontend frameworks. I also manage deployments on Ubuntu, Docker, and AWS.
+                  I have experience developing and customizing ERPNext and Frappe applications and building responsive
+                  web apps using Python, JavaScript, Node.js, and modern frontend frameworks. I also manage deployments
+                  on Ubuntu, Docker, and AWS.
                 </p>
                 <ul>
                   <li>Active contributor to open-source and technical communities.</li>
@@ -173,9 +240,12 @@
               <div class="text-sm text-slate-600 dark:text-slate-300">Contact</div>
               <div class="mt-2 font-semibold">Mahesh Narsale</div>
               <div class="mt-3 flex flex-col gap-2">
-                <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank" class="text-sm px-3 py-2 rounded-md border text-center">LinkedIn</a>
-                <a href="https://github.com/maheshndev" target="_blank" class="text-sm px-3 py-2 rounded-md border text-center">GitHub</a>
-                <a href="assets/Mahesh-Narsale-Resume.pdf" download class="text-sm px-3 py-2 rounded-md border text-center">Download Resume</a>
+                <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
+                  class="text-sm px-3 py-2 rounded-md border text-center">LinkedIn</a>
+                <a href="https://github.com/maheshndev" target="_blank"
+                  class="text-sm px-3 py-2 rounded-md border text-center">GitHub</a>
+                <a href="assets/Mahesh-Narsale-Resume.pdf" download
+                  class="text-sm px-3 py-2 rounded-md border text-center">Download Resume</a>
               </div>
             </aside>
           </div>
@@ -197,12 +267,16 @@
                 <div class="text-sm text-slate-600 dark:text-slate-400">On-site</div>
               </div>
               <ul class="mt-4 list-disc ml-5 text-slate-700 dark:text-slate-300">
-                 <li>Developed, customized, and maintained ERPNext and Frappe Framework applications.</li>
-                <li>Designed and implemented responsive web applications using Python, JavaScript, Node.js, HTML5, CSS3, Bootstrap, Vue.js, React.js, and MariaDB.</li>
+                <li>Developed, customized, and maintained ERPNext and Frappe Framework applications.</li>
+                <li>Designed and implemented responsive web applications using Python, JavaScript, Node.js, HTML5, CSS3,
+                  Bootstrap, Vue.js, React.js, and MariaDB.</li>
                 <li>Built and managed backend APIs for seamless system integration and data processing.</li>
-                <li>Developed and managed Frappe/ERPNext apps including HRMS, CRM, Hospital, Real Estate, Inventory, and School Management modules.</li>
-                <li>Customized existing ERPNext apps like HR, ERP, Frappe, and Frappe School, enhancing features to meet client-specific requirements.</li>
-                <li>Designed and deployed custom Frappe modules such as Mold Management, Gate Entry, and Biometric Integration.</li>
+                <li>Developed and managed Frappe/ERPNext apps including HRMS, CRM, Hospital, Real Estate, Inventory, and
+                  School Management modules.</li>
+                <li>Customized existing ERPNext apps like HR, ERP, Frappe, and Frappe School, enhancing features to meet
+                  client-specific requirements.</li>
+                <li>Designed and deployed custom Frappe modules such as Mold Management, Gate Entry, and Biometric
+                  Integration.</li>
                 <li>Handled server management and deployment on Ubuntu, Docker, and AWS Cloud Infrastructure.</li>
               </ul>
             </li>
@@ -217,10 +291,13 @@
               </div>
               <ul class="mt-4 list-disc ml-5 text-slate-700 dark:text-slate-300">
                 <li>Developed, customized, and maintained ERPNext and Frappe Framework applications.</li>
-                <li>Designed and implemented responsive web applications using Python, JavaScript, Node.js, HTML5, CSS3, Bootstrap, Vue.js, React.js, and MariaDB.</li>
+                <li>Designed and implemented responsive web applications using Python, JavaScript, Node.js, HTML5, CSS3,
+                  Bootstrap, Vue.js, React.js, and MariaDB.</li>
                 <li>Built and managed backend APIs for seamless system integration and data processing.</li>
-                <li>Developed and managed Frappe/ERPNext apps including HRMS, CRM, Hospital, Real Estate, Inventory, and School Management modules.</li>
-                <li>Customized existing ERPNext apps like HR, ERP, Frappe, and Frappe School, enhancing features to meet client-specific requirements.</li>
+                <li>Developed and managed Frappe/ERPNext apps including HRMS, CRM, Hospital, Real Estate, Inventory, and
+                  School Management modules.</li>
+                <li>Customized existing ERPNext apps like HR, ERP, Frappe, and Frappe School, enhancing features to meet
+                  client-specific requirements.</li>
                 <li>Worked with Express.js, Node.js, MySQL, and Bootstrap.</li>
               </ul>
             </li>
@@ -236,12 +313,14 @@
           <div class="mt-6 grid md:grid-cols-3 gap-6">
             <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-4 border">
               <div class="font-semibold">MCA — ASMA Institute of Management, Pune</div>
-              <div class="text-sm text-slate-500 dark:text-slate-400">Savitribai Phule Pune University · 2020 – 2022 </div>
+              <div class="text-sm text-slate-500 dark:text-slate-400">Savitribai Phule Pune University · 2020 – 2022
+              </div>
             </div>
 
             <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-4 border">
               <div class="font-semibold">BCA — New Arts, Commerce & Science College, Ahmednagar</div>
-              <div class="text-sm text-slate-500 dark:text-slate-400">Savitribai Phule Pune University · 2017 – 2020 </div>
+              <div class="text-sm text-slate-500 dark:text-slate-400">Savitribai Phule Pune University · 2017 – 2020
+              </div>
             </div>
 
             <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-4 border">
@@ -292,18 +371,18 @@
                 <span class="px-3 py-1 rounded-full bg-green-50 text-green-700">MongoDB</span>
               </div>
             </div>
-           <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
+            <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
               <h4 class="font-semibold">Cloud & Hosting</h4>
               <div class="mt-3 flex flex-wrap gap-2 text-xs">
                 <span class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700">Docker</span>
                 <span class="px-3 py-1 rounded-full bg-slate-50 text-slate-700">AWS</span>
               </div>
             </div>
-             <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
+            <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
               <h4 class="font-semibold">Other Tools and OS</h4>
               <div class="mt-3 flex flex-wrap gap-2 text-xs">
                 <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Ubuntu</span>
-                 <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Windows</span>
+                <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Windows</span>
                 <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Android Studio</span>
                 <span class="px-3 py-1 rounded-full bg-green-50 text-green-700">VS Code</span>
               </div>
@@ -321,250 +400,273 @@
           </div>
 
           <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-   <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Renu Dashboards </h3>
-                  <div class="text-sm text-slate-500 dark:text-slate-400">April 2026 — April 2026 · Assimilate Technologies</div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">April 2026 — April 2026 · Assimilate
+                    Technologies</div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version 16</span>
+                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version
+                  16</span>
               </div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack development of sales, purchase, accounts, stock, hr, india compliance,  modules for ERPNext, deployed on AWS. Customization and new modules like</p>
-   <!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack development of sales, purchase,
+                accounts, stock, hr, india compliance, modules for ERPNext, deployed on AWS. Customization and new
+                modules like</p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>         
-   </article>
-            
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
+            </article>
+
             <!-- Use your project entries from resume -->
-              <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Yash Plastic & Engineering Works Manufacturing ERP</h3>
-                  <div class="text-sm text-slate-500 dark:text-slate-400">January 2026 — April 2026 · Assimilate Technologies</div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">January 2026 — April 2026 · Assimilate
+                    Technologies</div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version 16</span>
+                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version
+                  16</span>
               </div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack development of sales, purchase, accounts, stock, hr, manufacturing, mold managenent, india compliance,  modules for ERPNext, deployed on AWS. Customization and new modules like</p>
-            <!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack development of sales, purchase,
+                accounts, stock, hr, manufacturing, mold managenent, india compliance, modules for ERPNext, deployed on
+                AWS. Customization and new modules like</p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
-              </article>
-             <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
+            </article>
+            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
               <div class="flex justify-between items-start">
                 <div>
-                  <h3 class="font-semibold"> MSS- Monthly Production Scheduler and Rescheduler for Manufacturing ERP</h3>
-                  <div class="text-sm text-slate-500 dark:text-slate-400">Oct 2025 — Nov 2026 · Assimilate Technologies</div>
+                  <h3 class="font-semibold"> MSS- Monthly Production Scheduler and Rescheduler for Manufacturing ERP
+                  </h3>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">Oct 2025 — Nov 2026 · Assimilate Technologies
+                  </div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version 15</span>
+                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version
+                  15</span>
               </div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Plan and optimize monthly production with intelligent scheduling based on molds, machine capacity, and resource availability. Manage machine allocation, balance workloads, and efficiently reschedule work orders. Includes detailed reporting dashboards for machine capacity utilization and production planning insights.</p>
-            <!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Plan and optimize monthly production with
+                intelligent scheduling based on molds, machine capacity, and resource availability. Manage machine
+                allocation, balance workloads, and efficiently reschedule work orders. Includes detailed reporting
+                dashboards for machine capacity utilization and production planning insights.</p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
-             </article> 
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
+            </article>
             <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Renu Sales & Purchase Modules ERP </h3>
-                  <div class="text-sm text-slate-500 dark:text-slate-400">Aug 2025 — Sep 2025 · Assimilate Technologies</div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">Aug 2025 — Sep 2025 · Assimilate Technologies
+                  </div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version 15</span>
+                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version
+                  15</span>
               </div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack development of sales & purchase, hr, short close, mrp, india compliance, box customization, bulk credit note, frappe insights  modules for ERPNext, deployed on AWS and managed via Docker.</p>
-           <!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack development of sales & purchase, hr,
+                short close, mrp, india compliance, box customization, bulk credit note, frappe insights modules for
+                ERPNext, deployed on AWS and managed via Docker.</p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
             </article>
 
             <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Resume Lens App</h3>
-                  <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Developer · Assimilate Technologies</div>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Developer · Assimilate Technologies
+                  </div>
                 </div>
                 <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">React · Frappe</span>
               </div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Tool to parse and visualize resume data inside ERPNext workflows.</p>
-           <!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Tool to parse and visualize resume data inside
+                ERPNext workflows.</p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
             </article>
 
-           <!-- Mold Management -->
-<article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="font-semibold">Mold Management</h3>
-      <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
-    </div>
-    <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
-  </div>
-  <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
-    Manage molds lifecycle, maintenance schedules, and production tracking efficiently.
-  </p>
-<!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+            <!-- Mold Management -->
+            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-semibold">Mold Management</h3>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
+                </div>
+                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
+              </div>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
+                Manage molds lifecycle, maintenance schedules, and production tracking efficiently.
+              </p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
-</article>
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
+            </article>
 
-<!-- Gate Management -->
-<article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="font-semibold">Gate Management</h3>
-      <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
-    </div>
-    <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
-  </div>
-  <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
-    Control entry/exit logs, visitor tracking, and vehicle movement with security integration.
-  </p>
-<!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+            <!-- Gate Management -->
+            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-semibold">Gate Management</h3>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
+                </div>
+                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
+              </div>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
+                Control entry/exit logs, visitor tracking, and vehicle movement with security integration.
+              </p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
-</article>
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
+            </article>
 
-<!-- HRMS -->
-<article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
-  <div class="flex justify-between items-start">
-    <div>
-      <h3 class="font-semibold">Biometric Integration App For HRMS</h3>
-      <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
-    </div>
-    <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
-  </div>
-  <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
-    Employee management, attendance tracking, payroll processing, and biometric integration.
-  </p>
-<!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+            <!-- HRMS -->
+            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-semibold">Biometric Integration App For HRMS</h3>
+                  <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
+                </div>
+                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
+              </div>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
+                Employee management, attendance tracking, payroll processing, and biometric integration.
+              </p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
-</article>
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
+            </article>
 
             <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
               <h3 class="font-semibold">SoftwareTechIT Website</h3>
               <div class="text-sm text-slate-500 dark:text-slate-400">Nov 2022 — Jan 2023</div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack website using Angular, Node.js, Express, MongoDB and Bootstrap.</p>
-            <!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack website using Angular, Node.js,
+                Express, MongoDB and Bootstrap.</p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
             </article>
 
             <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
               <h3 class="font-semibold">Android App — SoftwareTechIT</h3>
               <div class="text-sm text-slate-500 dark:text-slate-400">Aug 2021 — Nov 2022</div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Android app using YouTube API and Figma for design.</p>
-            <!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Android app using YouTube API and Figma for
+                design.</p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
             </article>
 
             <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
               <h3 class="font-semibold">Covid-19 Hospital Management System</h3>
               <div class="text-sm text-slate-500 dark:text-slate-400">Java · PostgreSQL (MCA Project)</div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Hospital management system implemented using Java and PostgreSQL.</p>
-           <!-- Action Buttons -->
-  <div class="mt-4 flex gap-3">
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-       View Project
-    </a>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Hospital management system implemented using
+                Java and PostgreSQL.</p>
+              <!-- Action Buttons -->
+              <div class="mt-4 flex gap-3">
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                  View Project
+                </a>
 
-    <a href="#" target="_blank"
-       class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-       Live Demo
-    </a>
-  </div>
+                <a href="#" target="_blank"
+                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                  Live Demo
+                </a>
+              </div>
             </article>
           </div>
         </div>
@@ -614,7 +716,8 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between">
             <h2 class="text-2xl font-semibold">GitHub Projects</h2>
-            <a href="https://github.com/maheshndev?tab=repositories" target="_blank" class="text-sm underline">View repos on GitHub →</a>
+            <a href="https://github.com/maheshndev?tab=repositories" target="_blank" class="text-sm underline">View
+              repos on GitHub →</a>
           </div>
 
           <div id="github-projects" class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
@@ -625,15 +728,20 @@
       <section id="contact" class="py-5 bg-gray-50 dark:bg-slate-800">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-semibold text-center">Contact</h2>
-          <p class="text-center text-sm text-slate-600 dark:text-slate-300 mt-2">Interested in collaborating or hiring? Send a message — I'll get back within 48 hours.</p>
+          <p class="text-center text-sm text-slate-600 dark:text-slate-300 mt-2">Interested in collaborating or hiring?
+            Send a message — I'll get back within 48 hours.</p>
 
           <form id="contact-form" class="mt-6 grid grid-cols-1 gap-4">
             <div class="grid md:grid-cols-2 gap-4">
-              <input name="name" type="text" required placeholder="Your name" class="p-3 border rounded-md bg-white dark:bg-slate-900" />
-              <input name="email" type="email" required placeholder="Email address" class="p-3 border rounded-md bg-white dark:bg-slate-900" />
+              <input name="name" type="text" required placeholder="Your name"
+                class="p-3 border rounded-md bg-white dark:bg-slate-900" />
+              <input name="email" type="email" required placeholder="Email address"
+                class="p-3 border rounded-md bg-white dark:bg-slate-900" />
             </div>
-            <input name="subject" type="text" placeholder="Subject (optional)" class="p-3 border rounded-md bg-white dark:bg-slate-900" />
-            <textarea name="message" rows="5" required placeholder="Message" class="p-3 border rounded-md bg-white dark:bg-slate-900"></textarea>
+            <input name="subject" type="text" placeholder="Subject (optional)"
+              class="p-3 border rounded-md bg-white dark:bg-slate-900" />
+            <textarea name="message" rows="5" required placeholder="Message"
+              class="p-3 border rounded-md bg-white dark:bg-slate-900"></textarea>
 
             <div class="flex items-center justify-between gap-4">
               <button type="submit" class="btn-primary px-4 py-2">Send Message</button>
@@ -690,34 +798,34 @@
     });
 
     // ----- Experience years auto-calc -----
-(function() {
-  // Set your actual career start date here:
-  const careerStart = new Date('2023-12-01'); // change if needed
-  const now = new Date();
+    (function () {
+      // Set your actual career start date here:
+      const careerStart = new Date('2023-12-01'); // change if needed
+      const now = new Date();
 
-  const diffMs = now - careerStart;
-  const diffYears = diffMs / (1000 * 60 * 60 * 24 * 365.25);
+      const diffMs = now - careerStart;
+      const diffYears = diffMs / (1000 * 60 * 60 * 24 * 365.25);
 
-  // Round to one decimal, e.g., 1.9 or 2.1
-  const roundedYears = Math.round(diffYears * 10) / 10;
+      // Round to one decimal, e.g., 1.9 or 2.1
+      const roundedYears = Math.round(diffYears * 10) / 10;
 
-  // Add a '+' if not a clean integer
-  const label = roundedYears % 1 === 0 ? `${roundedYears}+ Years` : `${roundedYears}+ Years`;
+      // Add a '+' if not a clean integer
+      const label = roundedYears % 1 === 0 ? `${roundedYears}+ Years` : `${roundedYears}+ Years`;
 
-  // Example: 1.9+ Years or 2+ Years
-  document.getElementById('experience-years').textContent = label;
-})();
+      // Example: 1.9+ Years or 2+ Years
+      document.getElementById('experience-years').textContent = label;
+    })();
 
 
     // ----- Fetch GitHub repos and render
-    (async function loadGitHubRepos(){
+    (async function loadGitHubRepos() {
       const container = document.getElementById('github-projects');
       const user = 'maheshndev';
       try {
         const res = await fetch(`https://api.github.com/users/${user}/repos?per_page=12&sort=updated`);
-        if(!res.ok) throw new Error('GitHub API rate or network issue');
+        if (!res.ok) throw new Error('GitHub API rate or network issue');
         const repos = await res.json();
-        if(!Array.isArray(repos)) throw new Error('Unexpected repo data');
+        if (!Array.isArray(repos)) throw new Error('Unexpected repo data');
         repos.forEach(repo => {
           const el = document.createElement('article');
           el.className = 'p-4 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover';
@@ -738,7 +846,7 @@
     })();
 
     // ----- Simple contact form (client-side demo)
-    (function(){
+    (function () {
       const form = document.getElementById('contact-form');
       const status = document.getElementById('form-status');
       form.addEventListener('submit', (e) => {
@@ -750,10 +858,10 @@
     })();
 
     // ----- Smooth highlight active nav link on scroll (basic)
-    (function() {
+    (function () {
       const links = document.querySelectorAll('a.nav-link');
       const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href')));
-      function onScroll(){
+      function onScroll() {
         const scrollPos = window.scrollY + 120;
         for (let i = sections.length - 1; i >= 0; i--) {
           const s = sections[i];
@@ -761,7 +869,7 @@
           if (scrollPos >= s.offsetTop) {
             links.forEach(l => l.classList.remove('text-accent-600', 'font-semibold'));
             const active = [...links].find(l => l.getAttribute('href') === '#' + s.id);
-            active?.classList.add('text-accent-600','font-semibold');
+            active?.classList.add('text-accent-600', 'font-semibold');
             break;
           }
         }
@@ -775,23 +883,5 @@
   <!-- Flowbite script (optional) -->
   <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
