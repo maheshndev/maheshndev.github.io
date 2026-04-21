@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — Mahesh Narsale</title>
+  <meta name="description" content="Visual Showcase and Screenshots of Projects by Mahesh Narsale." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 300: '#c4b5fd',
+              400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body class="antialiased bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 glass border-b">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="text-xl font-bold text-gradient">MN</div>
+          <div class="hidden sm:block">
+            <div class="text-sm font-bold text-slate-800 dark:text-slate-100">Mahesh Narsale</div>
+            <div class="text-[10px] text-slate-500 dark:text-slate-400 -mt-1 font-medium">Software Engineer</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-semibold hover:text-accent-600 transition-colors" href="index.html">Home</a>
+          <a class="text-sm font-semibold hover:text-accent-600 transition-colors" href="projects.html">Projects</a>
+          <a class="text-sm font-semibold text-accent-600 underline underline-offset-8 decoration-2" href="gallery.html">Gallery</a>
+          <a class="text-sm font-semibold hover:text-accent-600 transition-colors" href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button id="theme-toggle" class="p-2.5 rounded-xl glass-card hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+            <svg id="icon-sun" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z"></path></svg>
+            <svg id="icon-moon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+          </button>
+          
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl glass-card">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile nav -->
+    <div id="mobile-menu" class="hidden border-t md:hidden">
+      <div class="px-4 py-6 space-y-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl">
+        <a class="block text-lg font-semibold" href="index.html">Home</a>
+        <a class="block text-lg font-semibold" href="projects.html">Projects</a>
+        <a class="block text-lg font-semibold text-accent-600" href="gallery.html">Gallery</a>
+        <a class="block text-lg font-semibold" href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-16 pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Project <span class="text-gradient">Gallery</span></h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          Visual glimpses into the interfaces, dashboards, and systems I've built. 
+          A picture is worth a thousand lines of code.
+        </p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Item 1 -->
+        <div class="gallery-item group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer" data-modal-target="modal-1" data-modal-toggle="modal-1">
+          <img src="assets/img/erp-dashboard.png" alt="ERPNext Dashboard" class="w-full h-full object-cover">
+          <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+            <span class="text-white font-bold text-lg mb-2">ERPNext Dashboard</span>
+            <span class="text-slate-300 text-sm">Industrial Analytics Interface</span>
+            <div class="mt-4 p-2 rounded-full bg-white/20 backdrop-blur-md">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer" data-modal-target="modal-2" data-modal-toggle="modal-2">
+          <img src="assets/img/webapp.png" alt="Travel App UI" class="w-full h-full object-cover">
+          <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+            <span class="text-white font-bold text-lg mb-2">Full Stack Webapp</span>
+            <span class="text-slate-300 text-sm">Modern Portal Design</span>
+            <div class="mt-4 p-2 rounded-full bg-white/20 backdrop-blur-md">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer" data-modal-target="modal-3" data-modal-toggle="modal-3">
+          <img src="assets/img/mobile-app.png" alt="Task Manager" class="w-full h-full object-cover">
+          <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+            <span class="text-white font-bold text-lg mb-2">Mobile Application</span>
+            <span class="text-slate-300 text-sm">Fintech UI Concept</span>
+            <div class="mt-4 p-2 rounded-full bg-white/20 backdrop-blur-md">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modals (Simple implementation for demo) -->
+  <div id="modal-1" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-4xl max-h-full">
+      <div class="relative bg-white rounded-2xl shadow dark:bg-slate-800 overflow-hidden">
+        <button type="button" class="absolute top-4 right-4 text-slate-400 bg-transparent hover:bg-slate-200 hover:text-slate-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-slate-600 dark:hover:text-white" data-modal-hide="modal-1">
+          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <img src="assets/img/erp-dashboard.png" alt="Full view" class="w-full h-auto">
+        <div class="p-6">
+          <h3 class="text-xl font-bold dark:text-white">ERPNext Dashboard</h3>
+          <p class="text-slate-500 dark:text-slate-400 mt-2">A high-performance dashboard designed for industrial monitoring, featuring real-time data visualization and glassmorphism UI elements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-2" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-4xl max-h-full">
+      <div class="relative bg-white rounded-2xl shadow dark:bg-slate-800 overflow-hidden">
+        <button type="button" class="absolute top-4 right-4 text-slate-400 bg-transparent hover:bg-slate-200 hover:text-slate-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-slate-600 dark:hover:text-white" data-modal-hide="modal-2">
+          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <img src="assets/img/webapp.png" alt="Full view" class="w-full h-auto">
+        <div class="p-6">
+          <h3 class="text-xl font-bold dark:text-white">Full Stack Webapp</h3>
+          <p class="text-slate-500 dark:text-slate-400 mt-2">Customized web portal with a focus on clean typography and intuitive navigation. Built with Angular and Node.js.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-3" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-4xl max-h-full">
+      <div class="relative bg-white rounded-2xl shadow dark:bg-slate-800 overflow-hidden">
+        <button type="button" class="absolute top-4 right-4 text-slate-400 bg-transparent hover:bg-slate-200 hover:text-slate-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-slate-600 dark:hover:text-white" data-modal-hide="modal-3">
+          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <img src="assets/img/mobile-app.png" alt="Full view" class="w-full h-auto">
+        <div class="p-6">
+          <h3 class="text-xl font-bold dark:text-white">Mobile Application</h3>
+          <p class="text-slate-500 dark:text-slate-400 mt-2">Financial management mobile app concept with a sleek dark theme and fluid interactive components.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-12 bg-white dark:bg-slate-900 border-t">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="text-gradient font-bold text-2xl mb-4">Mahesh Narsale</div>
+      <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">Visualizing complexity into simplicity.</p>
+      <div class="flex justify-center gap-6 mb-8">
+        <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank" class="text-slate-400 hover:text-accent-500 transition-all" aria-label="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://github.com/maheshndev" target="_blank" class="text-slate-400 hover:text-accent-500 transition-all" aria-label="GitHub">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.011-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.188.69.805.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:maheshnarasale1@gmail.com" class="text-slate-400 hover:text-accent-500 transition-all" aria-label="Email">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </a>
+      </div>
+      <div class="text-xs text-slate-400">© <span id="year"></span> Mahesh Narsale. All rights reserved.</div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+    
+    function setIcons(isDark) {
+      if (isDark) { iconMoon.classList.remove('hidden'); iconSun.classList.add('hidden'); }
+      else { iconSun.classList.remove('hidden'); iconMoon.classList.add('hidden'); }
+    }
+    
+    (function initTheme() {
+      const saved = localStorage.getItem('theme');
+      const dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.classList.toggle('dark', dark);
+      setIcons(dark);
+    })();
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      setIcons(isDark);
+    });
+  </script>
+</body>
+</html>

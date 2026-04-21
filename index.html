@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mahesh Narsale — Full Stack Software Engineer</title>
+  <title>Mahesh Narsale — Full Stack Developer</title>
   <meta name="description"
-    content="Mahesh Narsale — Full Stack Software Engineer. Python, Angular, Frappe, Cloud DevOps. Portfolio & resume 2025." />
+    content="Mahesh Narsale — Full Stack Developer. Python, Angular, Frappe, Cloud DevOps. Portfolio & resume 2025." />
   <!-- Tailwind CDN (Play) - convenient for GitHub Pages single-file prototype -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -37,41 +37,11 @@
     }
   </script>
 
-  <!-- Flowbite (optional UI extras) -->
+  <!-- Flowbite -->
   <link href="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.css" rel="stylesheet" />
-  <style>
-    /* small custom styles */
-    :root {
-      --accent: #8b5cf6;
-      --brandblue: #2563eb;
-      --brandgreen: #10b981;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .glass {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(6px);
-    }
-
-    .dark .glass {
-      background: rgba(17, 24, 39, 0.55);
-    }
-
-    .card-hover:hover {
-      transform: translateY(-6px) scale(1.01);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        transition: none !important;
-        animation: none !important;
-      }
-    }
-  </style>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body class="antialiased bg-gray-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100">
@@ -90,7 +60,7 @@
               <div
                 class="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">
                 Mahesh Narsale</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 -mt-0.5">Full Stack Software Engineer</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 -mt-0.5">Full Stack Developer</div>
             </div>
           </a>
 
@@ -98,24 +68,18 @@
             <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
               href="#about">About</a>
             <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="#experience">Experience</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="#education">Education</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
               href="#skills">Skills</a>
             <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="#projects">Projects</a>
+              href="projects.html">Projects</a>
             <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="#certifications">Certifications</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="#github-projects-section">GitHub</a>
+              href="gallery.html">Gallery</a>
             <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
               href="#contact">Contact</a>
           </nav>
 
           <div class="flex items-center gap-3">
             <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
-              class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
+              class="hidden sm:inline-flex btn-secondary-premium !px-3 !py-1.5 !rounded-lg animate-pulse-subtle">LinkedIn</a>
 
             <button id="theme-toggle" aria-label="Toggle theme"
               class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
@@ -142,14 +106,10 @@
       <!-- Mobile nav -->
       <div id="mobile-menu" class="md:hidden hidden border-t">
         <div class="px-4 py-3 space-y-1">
-          <a class="block py-2 rounded-md" href="#about">About</a>
-          <a class="block py-2 rounded-md" href="#experience">Experience</a>
-          <a class="block py-2 rounded-md" href="#education">Education</a>
-          <a class="block py-2 rounded-md" href="#skills">Skills</a>
-          <a class="block py-2 rounded-md" href="#projects">Projects</a>
-          <a class="block py-2 rounded-md" href="#certifications">Certifications</a>
-          <a class="block py-2 rounded-md" href="#github-projects-section">GitHub</a>
-          <a class="block py-2 rounded-md" href="#contact">Contact</a>
+          <a class="block py-2 rounded-md" href="index.html#about">About</a>
+          <a class="block py-2 rounded-md" href="projects.html">Projects</a>
+          <a class="block py-2 rounded-md" href="gallery.html">Gallery</a>
+          <a class="block py-2 rounded-md" href="index.html#contact">Contact</a>
         </div>
       </div>
     </header>
@@ -169,21 +129,38 @@
                 MySQL . PostgreSQL . MongoDB </span>
             </h1>
 
-            <p class="text-base text-slate-700 dark:text-slate-300 max-w-2xl">
+            <p class="text-base text-slate-700 dark:text-slate-300 max-w-2xl fade-in" style="animation-delay: 0.2s">
               I build scalable web applications, customize ERPNext/Frappe solutions, and design robust cloud
               deployments. Passionate about automation, mentoring, and open-source collaboration.
             </p>
 
-            <div class="flex flex-wrap gap-3 mt-4">
-              <a href="#projects" target="_blank"
-                class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">View
-                Projects (GitHub)</a>
-              <a href="#contact" target="_blank"
-                class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Hire
-                Me</a>
-              <a href="assets/Mahesh-Narsale-Resume.pdf" download
-                class="px-2 py-1 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Download
-                Resume</a>
+            <div class="flex flex-wrap gap-4 mt-6">
+              <a href="projects.html" class="btn-premium group">
+                <svg class="w-5 h-5 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                  </path>
+                </svg>
+                View Projects
+              </a>
+              <a href="#contact" class="btn-outline-premium group">
+                <svg class="w-5 h-5 transition-transform group-hover:scale-110" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                  </path>
+                </svg>
+                Hire Me
+              </a>
+              <a href="assets/Mahesh-Narsale-Resume.pdf" download class="btn-secondary-premium group">
+                <svg class="w-5 h-5 transition-transform group-hover:-translate-y-1" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                Resume
+              </a>
             </div>
 
             <div class="mt-4 text-sm text-slate-600 dark:text-slate-400">
@@ -193,18 +170,23 @@
             <div class="mt-4 text-sm text-slate-700 dark:text-slate-300">Experience: <span id="experience-years"
                 class="font-semibold">—</span></div>
 
-            <div class="flex gap-2 mt-5">
+            <div class="flex gap-3 mt-6">
               <a href="https://github.com/maheshndev" target="_blank"
-                class="px-3 py-2 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+                class="btn-secondary-premium !px-4 !py-2">GitHub</a>
               <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
-                class="px-3 py-2 rounded-md border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">LinkedIn</a>
+                class="btn-secondary-premium !px-4 !py-2">LinkedIn</a>
             </div>
           </div>
 
-          <div class="flex justify-center md:justify-end">
+          <div class="flex justify-center md:justify-end relative">
+            <div class="absolute -top-12 -right-12 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse">
+            </div>
+            <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"
+              style="animation-delay: 1s"></div>
+
             <div
-              class="w-64 h-64 rounded-2xl overflow-hidden shadow-soft-lg transform transition-transform duration-500 hover:scale-105 card-hover">
-              <img src="assets/portrait.png" alt="Mahesh portrait" class="w-full h-full object-cover"
+              class="w-full max-w-lg transform transition-all duration-1000 animate-float-slow z-10 blend-to-bg">
+              <img src="assets/portrait.png" alt="Mahesh Workspace Illustration" class="w-full h-auto object-contain mix-blend-lighten opacity-90 dark:opacity-100 [filter:drop-shadow(0_10px_30px_rgba(139,92,246,0.3))]"
                 onerror="this.style.display='none'">
             </div>
           </div>
@@ -216,7 +198,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid md:grid-cols-3 gap-8 items-start">
             <div class="md:col-span-2">
-              <h2 class="text-2xl font-semibold">About</h2>
+              <h2 class="text-3xl font-extrabold text-gradient inline-block">About</h2>
               <p class="mt-4 text-slate-700 dark:text-slate-300">
                 <strong>CAREER OBJECTIVE:</strong>
                 To leverage my expertise as a software professional, contribute to the success of the company, share
@@ -241,11 +223,11 @@
               <div class="mt-2 font-semibold">Mahesh Narsale</div>
               <div class="mt-3 flex flex-col gap-2">
                 <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
-                  class="text-sm px-3 py-2 rounded-md border text-center">LinkedIn</a>
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-[#0077b5] hover:text-white">LinkedIn</a>
                 <a href="https://github.com/maheshndev" target="_blank"
-                  class="text-sm px-3 py-2 rounded-md border text-center">GitHub</a>
-                <a href="assets/Mahesh-Narsale-Resume.pdf" download
-                  class="text-sm px-3 py-2 rounded-md border text-center">Download Resume</a>
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-[#333] hover:text-white">GitHub</a>
+                <a href="mailto:maheshnarasale1@gmail.com"
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-accent-600 hover:text-white">Email</a>
               </div>
             </aside>
           </div>
@@ -253,138 +235,233 @@
       </section>
 
       <!-- EXPERIENCE -->
-      <section id="experience" class="py-5 bg-gray-50 dark:bg-slate-800">
+      <section id="experience" class="py-20 bg-white dark:bg-slate-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-semibold">Experience</h2>
+          <div class="mb-12">
+            <h2 class="text-3xl font-extrabold text-gradient inline-block">Work Experience</h2>
+          </div>
 
-          <ol class="mt-6 space-y-6">
-            <li class="bg-white dark:bg-slate-900 rounded-xl p-6 border shadow-sm">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h3 class="font-semibold">Assimilate Technology — Full Stack Software Engineer</h3>
-                  <div class="text-sm text-slate-500 dark:text-slate-400">March 2024 — Present · Pune, India</div>
-                </div>
-                <div class="text-sm text-slate-600 dark:text-slate-400">On-site</div>
-              </div>
-              <ul class="mt-4 list-disc ml-5 text-slate-700 dark:text-slate-300">
-                <li>Developed, customized, and maintained ERPNext and Frappe Framework applications.</li>
-                <li>Designed and implemented responsive web applications using Python, JavaScript, Node.js, HTML5, CSS3,
-                  Bootstrap, Vue.js, React.js, and MariaDB.</li>
-                <li>Built and managed backend APIs for seamless system integration and data processing.</li>
-                <li>Developed and managed Frappe/ERPNext apps including HRMS, CRM, Hospital, Real Estate, Inventory, and
-                  School Management modules.</li>
-                <li>Customized existing ERPNext apps like HR, ERP, Frappe, and Frappe School, enhancing features to meet
-                  client-specific requirements.</li>
-                <li>Designed and deployed custom Frappe modules such as Mold Management, Gate Entry, and Biometric
-                  Integration.</li>
-                <li>Handled server management and deployment on Ubuntu, Docker, and AWS Cloud Infrastructure.</li>
-              </ul>
-            </li>
+          <div
+            class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent dark:before:via-slate-700">
 
-            <li class="bg-white dark:bg-slate-900 rounded-xl p-6 border shadow-sm">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h3 class="font-semibold">Intern — Assimilate Technology</h3>
-                  <div class="text-sm text-slate-500 dark:text-slate-400">Dec 2023 — Mar 2024 · Pune, India</div>
-                </div>
-                <div class="text-sm text-slate-600 dark:text-slate-400">Internship</div>
+            <!-- Item 1 -->
+            <div
+              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+              <!-- Icon -->
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-800 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+                  <path
+                    d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z">
+                  </path>
+                </svg>
               </div>
-              <ul class="mt-4 list-disc ml-5 text-slate-700 dark:text-slate-300">
-                <li>Developed, customized, and maintained ERPNext and Frappe Framework applications.</li>
-                <li>Designed and implemented responsive web applications using Python, JavaScript, Node.js, HTML5, CSS3,
-                  Bootstrap, Vue.js, React.js, and MariaDB.</li>
-                <li>Built and managed backend APIs for seamless system integration and data processing.</li>
-                <li>Developed and managed Frappe/ERPNext apps including HRMS, CRM, Hospital, Real Estate, Inventory, and
-                  School Management modules.</li>
-                <li>Customized existing ERPNext apps like HR, ERP, Frappe, and Frappe School, enhancing features to meet
-                  client-specific requirements.</li>
-                <li>Worked with Express.js, Node.js, MySQL, and Bootstrap.</li>
-              </ul>
-            </li>
-          </ol>
+              <!-- Content -->
+              <div
+                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+                <div class="flex items-center justify-between space-x-2 mb-1">
+                  <div class="font-bold text-slate-900 dark:text-white">Assimilate Technology</div>
+                  <time class="font-inter text-xs font-medium text-accent-600 uppercase">March 2024 — Present</time>
+                </div>
+                <div class="text-slate-500 dark:text-slate-400 font-semibold text-sm mb-4">Full Stack Developer
+                </div>
+                <div class="text-slate-600 dark:text-slate-400 text-sm">
+                  <ul class="list-disc ml-4 space-y-2">
+                    <li>Developed and customized ERPNext and Frappe Framework applications.</li>
+                    <li>Designed responsive web apps using Python, JavaScript, Node.js, Vue.js, and React.</li>
+                    <li>Managed server deployments on Ubuntu, Docker, and AWS Infrastructure.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <!-- Icon -->
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-800 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2 .712V17a1 1 0 001 1z">
+                  </path>
+                </svg>
+              </div>
+              <!-- Content -->
+              <div
+                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+                <div class="flex items-center justify-between space-x-2 mb-1">
+                  <div class="font-bold text-slate-900 dark:text-white">Intern — Assimilate Technology</div>
+                  <time class="font-inter text-xs font-medium text-accent-600 uppercase">Dec 2023 — Mar 2024</time>
+                </div>
+                <div class="text-slate-500 dark:text-slate-400 font-semibold text-sm mb-4">Software Developer Intern
+                </div>
+                <div class="text-slate-600 dark:text-slate-400 text-sm">
+                  <ul class="list-disc ml-4 space-y-2">
+                    <li>Gained hands-on experience in ERPNext customization and MariaDB optimization.</li>
+                    <li>Assisted in building responsive frontend components using Bootstrap and Vue.js.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
       <!-- EDUCATION -->
-      <section id="education" class="py-5 bg-white dark:bg-slate-900">
+      <section id="education" class="py-20 bg-gray-50 dark:bg-slate-900/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-semibold">Education</h2>
+          <div class="mb-12">
+            <h2 class="text-3xl font-extrabold text-gradient inline-block">Academic Foundation</h2>
+          </div>
 
-          <div class="mt-6 grid md:grid-cols-3 gap-6">
-            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-4 border">
-              <div class="font-semibold">MCA — ASMA Institute of Management, Pune</div>
-              <div class="text-sm text-slate-500 dark:text-slate-400">Savitribai Phule Pune University · 2020 – 2022
-              </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="text-accent-600 font-bold text-sm mb-2">2020 – 2022</div>
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2">MCA</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400">ASMA Institute of Management, Pune</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Pune University</p>
             </div>
 
-            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-4 border">
-              <div class="font-semibold">BCA — New Arts, Commerce & Science College, Ahmednagar</div>
-              <div class="text-sm text-slate-500 dark:text-slate-400">Savitribai Phule Pune University · 2017 – 2020
-              </div>
+            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="text-accent-600 font-bold text-sm mb-2">2017 – 2020</div>
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2">BCA</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400">New Arts, Science College, Ahmednagar</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Pune University</p>
             </div>
 
-            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-4 border">
-              <div class="font-semibold">12th — Shri. Jalandhar High School, Raimoha, Aurangabad State Board</div>
-              <div class="text-sm text-slate-500 dark:text-slate-400">2016–2017</div>
+            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="text-accent-600 font-bold text-sm mb-2">2016 – 2017</div>
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2">12th Standard</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Shri. Jalandhar High School, Raimoha</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Aurangabad State Board</p>
             </div>
-            <div class="bg-gray-50 dark:bg-slate-800 rounded-xl p-4 border">
-              <div class="font-semibold">10th — Shri. Jalandhar High School, Raimoha, Aurangabad State Board</div>
-              <div class="text-sm text-slate-500 dark:text-slate-400">2014–2015</div>
+
+            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="text-accent-600 font-bold text-sm mb-2">2014 – 2015</div>
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2">10th Standard</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Shri. Jalandhar High School, Raimoha</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Aurangabad State Board</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- SKILLS -->
-      <section id="skills" class="py-5 bg-gray-50 dark:bg-slate-800">
+      <section id="skills" class="py-16 bg-gray-50 dark:bg-slate-900/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-semibold">Technical Skills</h2>
+          <div class="mb-12 text-left">
+            <h2 class="text-3xl font-extrabold text-gradient inline-block">Technical Expertise</h2>
+            <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl">
+              My toolkit spans from frontend mastery to backend architecture and cloud infrastructure management.
+            </p>
+          </div>
 
-          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
-              <h4 class="font-semibold">Programming Languages</h4>
-              <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700">Python</span>
-                <span class="px-3 py-1 rounded-full bg-sky-50 text-sky-700">TypeScript</span>
-                <span class="px-3 py-1 rounded-full bg-yellow-50 text-yellow-700">JavaScript</span>
-                <span class="px-3 py-1 rounded-full bg-rose-50 text-rose-700">Java</span>
-                <span class="px-3 py-1 rounded-full bg-gray-50 text-gray-700">C / C++</span>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Languages -->
+            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="p-3 rounded-xl bg-purple-500/10 text-purple-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold">Languages</h4>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge skill-blue">Python</span>
+                <span class="skill-badge skill-green">TypeScript</span>
+                <span class="skill-badge skill-red">JavaScript</span>
+                <span class="skill-badge skill-blue">Java</span>
+                <span class="skill-badge skill-yellow">C / C++</span>
               </div>
             </div>
 
-            <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
-              <h4 class="font-semibold">Frameworks & App Dev</h4>
-              <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                <span class="px-3 py-1 rounded-full bg-green-50 text-green-700">Angular</span>
-                <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700">Frappe / ERPNext</span>
-                <span class="px-3 py-1 rounded-full bg-purple-50 text-purple-700">Flask</span>
-                <span class="px-3 py-1 rounded-full bg-pink-50 text-pink-700">Android</span>
-                <span class="px-3 py-1 rounded-full bg-pink-50 text-pink-700">React Native</span>
+            <!-- Frameworks -->
+            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="p-3 rounded-xl bg-blue-500/10 text-blue-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 5a1 1 0 01.3-.7l7-7a1 1 0 011.4 0l7 7a1 1 0 01.3.7v4a1 1 0 01-.3.7l-7 7a1 1 0 01-1.4 0l-7-7a1 1 0 01-.3-.7V5z">
+                    </path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold">Frameworks</h4>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge skill-green">Angular</span>
+                <span class="skill-badge skill-blue">Frappe / ERPNext</span>
+                <span class="skill-badge skill-blue">Flask</span>
+                <span class="skill-badge skill-yellow">Node.js / Express</span>
+                <span class="skill-badge skill-blue">React / Native</span>
               </div>
             </div>
 
-            <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
-              <h4 class="font-semibold">Databases & Tools</h4>
-              <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">PostgreSQL</span>
-                <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">MySQL / MariaDB</span>
-                <span class="px-3 py-1 rounded-full bg-green-50 text-green-700">MongoDB</span>
+            <!-- Databases -->
+            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4">
+                    </path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold">Databases</h4>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge skill-grey">PostgreSQL</span>
+                <span class="skill-badge skill-yellow">MySQL / MariaDB</span>
+                <span class="skill-badge skill-grey">MongoDB</span>
+                <span class="skill-badge skill-red">Redis</span>
               </div>
             </div>
-            <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
-              <h4 class="font-semibold">Cloud & Hosting</h4>
-              <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                <span class="px-3 py-1 rounded-full bg-cyan-50 text-cyan-700">Docker</span>
-                <span class="px-3 py-1 rounded-full bg-slate-50 text-slate-700">AWS</span>
+
+            <!-- Infrastructure -->
+            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="p-3 rounded-xl bg-orange-500/10 text-orange-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                    </path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold">Cloud & DevOps</h4>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge skill-blue">Docker</span>
+                <span class="skill-badge skill-yellow">AWS</span>
+                <span class="skill-badge skill-red">Ubuntu / Linux</span>
+                <span class="skill-badge skill-indigo">DigitalOcean</span>
               </div>
             </div>
-            <div class="bg-white dark:bg-slate-900 rounded-xl p-4 border shadow-sm card-hover">
-              <h4 class="font-semibold">Other Tools and OS</h4>
-              <div class="mt-3 flex flex-wrap gap-2 text-xs">
-                <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Ubuntu</span>
-                <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Windows</span>
-                <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700">Android Studio</span>
-                <span class="px-3 py-1 rounded-full bg-green-50 text-green-700">VS Code</span>
+
+            <!-- Professional Tools -->
+            <div
+              class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover lg:col-span-2">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2H3a2 2 0 01-2-2V5a2 2 0 114 0m6 0v1a2 2 0 002 2h6a2 2 0 002-2V5a2 2 0 11-4 0M9 9a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2v-6a2 2 0 00-2-2H9z">
+                    </path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold">Tools & Environments</h4>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge skill-blue">VS Code</span>
+                <span class="skill-badge skill-grey">Git / GitHub</span>
+                <span class="skill-badge skill-green">Android Studio</span>
+                <span class="skill-badge skill-yellow">Postman</span>
+                <span class="skill-badge skill-purple">Figma</span>
+                <span class="skill-badge skill-blue">Docker Desktop</span>
               </div>
             </div>
           </div>
@@ -395,66 +472,82 @@
       <section id="projects" class="py-5 bg-white dark:bg-slate-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between">
-            <h2 class="text-2xl font-semibold">Featured Projects</h2>
-            <div class="text-sm text-slate-500 dark:text-slate-400">Selected work</div>
+            <h2 class="text-3xl font-extrabold text-gradient">Strategic Work</h2>
+            <div class="text-sm font-bold text-slate-500 uppercase tracking-widest hidden sm:block">Featured Portfolio
+            </div>
           </div>
 
           <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article
+              class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
               <div class="flex justify-between items-start">
                 <div>
-                  <h3 class="font-semibold">Renu Dashboards </h3>
-                  <div class="text-sm text-slate-500 dark:text-slate-400">April 2026 — April 2026 · Assimilate
-                    Technologies</div>
+                  <h3 class="font-bold text-lg">Renu Enterprise Analytics</h3>
+                  <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1 flex items-center gap-2">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                      </path>
+                    </svg>
+                    Assimilate Tech · 2026
+                  </div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version
-                  16</span>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 text-[10px] font-bold uppercase tracking-wider border border-indigo-500/20">Python</span>
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">Frappe
+                    16</span>
+                </div>
               </div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack development of sales, purchase,
-                accounts, stock, hr, india compliance, modules for ERPNext, deployed on AWS. Customization and new
-                modules like</p>
+              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300 flex-grow">
+                Developed a suite of high-performance analytics dashboards for Sales, Purchase, and Inventory modules.
+                Optimized data fetching with custom Frappe API endpoints and implemented real-time tracking for
+                India-specific compliance.
+              </p>
               <!-- Action Buttons -->
               <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                <a href="#" target="_blank" class="btn-premium">
                   View Project
                 </a>
 
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                <a href="#" target="_blank" class="btn-outline-premium">
                   Live Demo
                 </a>
               </div>
             </article>
 
             <!-- Use your project entries from resume -->
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Yash Plastic & Engineering Works Manufacturing ERP</h3>
                   <div class="text-sm text-slate-500 dark:text-slate-400">January 2026 — April 2026 · Assimilate
                     Technologies</div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version
-                  16</span>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 text-[10px] font-bold uppercase tracking-wider border border-indigo-500/20">Python</span>
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">Frappe
+                    16</span>
+                </div>
               </div>
               <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack development of sales, purchase,
                 accounts, stock, hr, manufacturing, mold managenent, india compliance, modules for ERPNext, deployed on
                 AWS. Customization and new modules like</p>
               <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <div class="mt-auto pt-4 flex gap-3">
+                <a href="#" target="_blank" class="btn-premium">
                   View Project
                 </a>
 
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                <a href="#" target="_blank" class="btn-outline-premium">
                   Live Demo
                 </a>
               </div>
             </article>
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold"> MSS- Monthly Production Scheduler and Rescheduler for Manufacturing ERP
@@ -462,27 +555,30 @@
                   <div class="text-sm text-slate-500 dark:text-slate-400">Oct 2025 — Nov 2026 · Assimilate Technologies
                   </div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">Python · Frappe version
-                  15</span>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-indigo-500/10 text-indigo-400 text-[10px] font-bold uppercase tracking-wider border border-indigo-500/20">Python</span>
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">Frappe
+                    15</span>
+                </div>
               </div>
               <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Plan and optimize monthly production with
                 intelligent scheduling based on molds, machine capacity, and resource availability. Manage machine
                 allocation, balance workloads, and efficiently reschedule work orders. Includes detailed reporting
                 dashboards for machine capacity utilization and production planning insights.</p>
               <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <div class="mt-auto pt-4 flex gap-3">
+                <a href="#" target="_blank" class="btn-premium">
                   View Project
                 </a>
 
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                <a href="#" target="_blank" class="btn-outline-premium">
                   Live Demo
                 </a>
               </div>
             </article>
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Renu Sales & Purchase Modules ERP </h3>
@@ -496,216 +592,313 @@
                 short close, mrp, india compliance, box customization, bulk credit note, frappe insights modules for
                 ERPNext, deployed on AWS and managed via Docker.</p>
               <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <div class="mt-auto pt-4 flex gap-3">
+                <a href="#" target="_blank" class="btn-premium">
                   View Project
                 </a>
 
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                <a href="#" target="_blank" class="btn-outline-premium">
                   Live Demo
                 </a>
               </div>
             </article>
 
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Resume Lens App</h3>
                   <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Developer · Assimilate Technologies
                   </div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">React · Frappe</span>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider border border-blue-500/20">React</span>
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-green-500/10 text-green-400 text-[10px] font-bold uppercase tracking-wider border border-green-500/20">Frappe</span>
+                </div>
               </div>
               <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Tool to parse and visualize resume data inside
                 ERPNext workflows.</p>
               <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <div class="mt-auto pt-4 flex gap-3">
+                <a href="#" target="_blank" class="btn-premium">
                   View Project
                 </a>
 
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                <a href="#" target="_blank" class="btn-outline-premium">
                   Live Demo
                 </a>
               </div>
             </article>
 
             <!-- Mold Management -->
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Mold Management</h3>
                   <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
+                <div
+                  class="flex flex-wrap gap-2 mb-3 text-[10px] font-bold uppercase tracking-wider text-indigo-400 border border-indigo-500/20 px-2 py-1 rounded-lg bg-indigo-500/10 inline-block">
+                  ERPNext Module
+                </div>
               </div>
               <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
                 Manage molds lifecycle, maintenance schedules, and production tracking efficiently.
               </p>
               <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <div class="mt-auto pt-4 flex gap-3">
+                <a href="#" target="_blank" class="btn-premium">
                   View Project
                 </a>
 
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                <a href="#" target="_blank" class="btn-outline-premium">
                   Live Demo
                 </a>
               </div>
             </article>
 
             <!-- Gate Management -->
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article
+              class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Gate Management</h3>
                   <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
+                <div
+                  class="flex flex-wrap gap-2 mb-3 text-[10px] font-bold uppercase tracking-wider text-indigo-400 border border-indigo-500/20 px-2 py-1 rounded-lg bg-indigo-500/10 inline-block">
+                  ERPNext Module
+                </div>
               </div>
               <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
                 Control entry/exit logs, visitor tracking, and vehicle movement with security integration.
               </p>
               <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <div class="mt-auto pt-4 flex gap-3">
+                <a href="#" target="_blank" class="btn-premium">
                   View Project
                 </a>
 
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                <a href="#" target="_blank" class="btn-outline-premium">
                   Live Demo
                 </a>
               </div>
             </article>
 
             <!-- HRMS -->
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
+            <article
+              class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="font-semibold">Biometric Integration App For HRMS</h3>
                   <div class="text-sm text-slate-500 dark:text-slate-400">ERPNext Module · Assimilate Technologies</div>
                 </div>
-                <span class="text-xs px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">ERPNext</span>
+                <div
+                  class="flex flex-wrap gap-2 mb-3 text-[10px] font-bold uppercase tracking-wider text-indigo-400 border border-indigo-500/20 px-2 py-1 rounded-lg bg-indigo-500/10 inline-block">
+                  ERPNext Module
+                </div>
               </div>
               <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
                 Employee management, attendance tracking, payroll processing, and biometric integration.
               </p>
               <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+              <div class="mt-auto pt-4 flex gap-3">
+                <a href="#" target="_blank" class="btn-premium">
                   View Project
                 </a>
 
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
+                <a href="#" target="_blank" class="btn-outline-premium">
                   Live Demo
                 </a>
               </div>
             </article>
 
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
-              <h3 class="font-semibold">SoftwareTechIT Website</h3>
-              <div class="text-sm text-slate-500 dark:text-slate-400">Nov 2022 — Jan 2023</div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Full stack website using Angular, Node.js,
-                Express, MongoDB and Bootstrap.</p>
-              <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-                  View Project
-                </a>
-
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-                  Live Demo
-                </a>
+            <article
+              class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-bold text-lg">SoftwareTechIT Website</h3>
+                <time
+                  class="text-[10px] font-bold uppercase tracking-wider text-accent-600 bg-accent-500/10 px-2 py-1 rounded-lg">2022-2023</time>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 rounded-md bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider border border-blue-500/20">Angular</span>
+                <span
+                  class="px-2 py-1 rounded-md bg-green-500/10 text-green-400 text-[10px] font-bold uppercase tracking-wider border border-green-500/20">Node.js</span>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+                Full stack educational portal for technology courses. Built using Angular, Node.js, Express, and
+                MongoDB.
+              </p>
+              <div class="flex gap-3 mt-auto">
+                <a href="#" target="_blank" class="btn-premium">View Project</a>
+                <a href="#" target="_blank" class="btn-outline-premium">Live Demo</a>
               </div>
             </article>
 
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
-              <h3 class="font-semibold">Android App — SoftwareTechIT</h3>
-              <div class="text-sm text-slate-500 dark:text-slate-400">Aug 2021 — Nov 2022</div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Android app using YouTube API and Figma for
-                design.</p>
-              <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-                  View Project
-                </a>
-
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-                  Live Demo
-                </a>
+            <article
+              class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-bold text-lg">Android App — SoftwareTechIT</h3>
+                <time
+                  class="text-[10px] font-bold uppercase tracking-wider text-accent-600 bg-accent-500/10 px-2 py-1 rounded-lg">2021-2022</time>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 rounded-md bg-rose-500/10 text-rose-400 text-[10px] font-bold uppercase tracking-wider border border-rose-500/20">Android</span>
+                <span
+                  class="px-2 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider border border-amber-500/20">YouTube
+                  API</span>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+                Native Android application providing curated technology tutorials. Integrated with YouTube Data API v3.
+              </p>
+              <div class="flex gap-3 mt-auto">
+                <a href="#" target="_blank" class="btn-premium">View Project</a>
+                <a href="#" target="_blank" class="btn-outline-premium">Live Demo</a>
               </div>
             </article>
 
-            <article class="p-6 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover">
-              <h3 class="font-semibold">Covid-19 Hospital Management System</h3>
-              <div class="text-sm text-slate-500 dark:text-slate-400">Java · PostgreSQL (MCA Project)</div>
-              <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">Hospital management system implemented using
-                Java and PostgreSQL.</p>
-              <!-- Action Buttons -->
-              <div class="mt-4 flex gap-3">
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
-                  View Project
-                </a>
-
-                <a href="#" target="_blank"
-                  class="text-sm px-4 py-2 rounded-lg border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-slate-700 transition">
-                  Live Demo
-                </a>
+            <article
+              class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="font-bold text-lg">Covid-19 Hospital System</h3>
+                <time
+                  class="text-[10px] font-bold uppercase tracking-wider text-accent-600 bg-accent-500/10 px-2 py-1 rounded-lg">MCA
+                  Project</time>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2 py-1 rounded-md bg-orange-500/10 text-orange-400 text-[10px] font-bold uppercase tracking-wider border border-orange-500/20">Java</span>
+                <span
+                  class="px-2 py-1 rounded-md bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider border border-blue-500/20">PostgreSQL</span>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+                Comprehensive hospital management system implementing critical care tracking and inventory monitoring.
+              </p>
+              <div class="flex gap-3 mt-auto">
+                <a href="#" target="_blank" class="btn-premium">View Project</a>
+                <a href="#" target="_blank" class="btn-outline-premium">Live Demo</a>
               </div>
             </article>
+          </div>
+          <div class="mt-12 text-center">
+            <a href="projects.html" class="btn-outline-premium">
+              View All Projects
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                </path>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- CERTIFICATIONS & ACHIEVEMENTS -->
-      <section id="certifications" class="py-5 bg-gray-50 dark:bg-slate-800">
+      <section id="certifications" class="py-20 bg-white dark:bg-slate-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-semibold">Certifications & Achievements</h2>
+          <div class="mb-12 text-left">
+            <h2 class="text-3xl font-extrabold text-gradient inline-block">Professional Recognition</h2>
+          </div>
 
-          <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border shadow-sm">
-              <div class="font-semibold">Angular Developer</div>
-              <div class="text-sm text-slate-500">SP Institute · 2022</div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="p-3 rounded-xl bg-orange-500/10 text-orange-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                    </path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Angular Developer</div>
+                  <div class="text-xs text-slate-500 font-medium">SP Institute · 2022</div>
+                </div>
+              </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border shadow-sm">
-              <div class="font-semibold">Java (Hibernate, Spring) & WCD</div>
-              <div class="text-sm text-slate-500">SEED InfoTech</div>
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="p-3 rounded-xl bg-blue-500/10 text-blue-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Java / Spring & WCD</div>
+                  <div class="text-xs text-slate-500 font-medium">SEED InfoTech</div>
+                </div>
+              </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border shadow-sm">
-              <div class="font-semibold">Android & C++ Courses</div>
-              <div class="text-sm text-slate-500">SEED InfoTech</div>
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="p-3 rounded-xl bg-purple-500/10 text-purple-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Android & C++</div>
+                  <div class="text-xs text-slate-500 font-medium">SEED InfoTech</div>
+                </div>
+              </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border shadow-sm">
-              <div class="font-semibold">Full Stack Web Developer Program</div>
-              <div class="text-sm text-slate-500">Edureka · Jul 2023</div>
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="p-3 rounded-xl bg-green-500/10 text-green-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Full Stack Development Program
+                  </div>
+                  <div class="text-xs text-slate-500 font-medium">Edureka · Jul 2023</div>
+                </div>
+              </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border shadow-sm">
-              <div class="font-semibold">Fest Dev-Tech 2019 — C Programming & Web Dev</div>
-              <div class="text-sm text-slate-500">IMS College</div>
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="p-3 rounded-xl bg-yellow-500/10 text-yellow-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Fest Dev-Tech Winner</div>
+                  <div class="text-xs text-slate-500 font-medium">IMS College · 2019</div>
+                </div>
+              </div>
             </div>
 
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border shadow-sm">
-              <div class="font-semibold">Android Workshop — Radiance IIT Bombay (3-day)</div>
-              <div class="text-sm text-slate-500">2017</div>
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-600">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">IIT Bombay Workshop</div>
+                  <div class="text-xs text-slate-500 font-medium">Radiance · 2017</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -715,7 +908,7 @@
       <section id="github-projects-section" class="py-5 bg-white dark:bg-slate-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between">
-            <h2 class="text-2xl font-semibold">GitHub Projects</h2>
+            <h2 class="text-3xl font-extrabold text-gradient inline-block">GitHub Projects</h2>
             <a href="https://github.com/maheshndev?tab=repositories" target="_blank" class="text-sm underline">View
               repos on GitHub →</a>
           </div>
@@ -725,44 +918,128 @@
       </section>
 
       <!-- CONTACT -->
-      <section id="contact" class="py-5 bg-gray-50 dark:bg-slate-800">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-2xl font-semibold text-center">Contact</h2>
-          <p class="text-center text-sm text-slate-600 dark:text-slate-300 mt-2">Interested in collaborating or hiring?
-            Send a message — I'll get back within 48 hours.</p>
+      <section id="contact" class="py-20 bg-gray-50 dark:bg-slate-900/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="glass-card p-8 sm:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden">
+            <!-- Decorative bg -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
 
-          <form id="contact-form" class="mt-6 grid grid-cols-1 gap-4">
-            <div class="grid md:grid-cols-2 gap-4">
-              <input name="name" type="text" required placeholder="Your name"
-                class="p-3 border rounded-md bg-white dark:bg-slate-900" />
-              <input name="email" type="email" required placeholder="Email address"
-                class="p-3 border rounded-md bg-white dark:bg-slate-900" />
-            </div>
-            <input name="subject" type="text" placeholder="Subject (optional)"
-              class="p-3 border rounded-md bg-white dark:bg-slate-900" />
-            <textarea name="message" rows="5" required placeholder="Message"
-              class="p-3 border rounded-md bg-white dark:bg-slate-900"></textarea>
-
-            <div class="flex items-center justify-between gap-4">
-              <button type="submit" class="btn-primary px-4 py-2">Send Message</button>
-              <div class="flex gap-2">
-                <a href="mailto:maheshnarasale1@gmail.com" class="px-3 py-2 rounded-md border text-sm">Email</a>
-                <a href="tel:" class="px-3 py-2 rounded-md border text-sm">Call</a>
+            <div class="relative z-10">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gradient inline-block">Get In Touch</h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+                  Interested in collaborating or hiring? Send a message — I'll get back to you within 48 hours.
+                </p>
               </div>
-            </div>
 
-            <div id="form-status" class="text-sm text-green-600 mt-2"></div>
-          </form>
+              <form id="contact-form" class="grid grid-cols-1 gap-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Full Name</label>
+                    <input name="name" type="text" required placeholder="Juana Doe"
+                      class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md focus:ring-2 focus:ring-accent-500 transition-all outline-none" />
+                  </div>
+                  <div class="space-y-2">
+                    <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Email Address</label>
+                    <input name="email" type="email" required placeholder="hello@example.com"
+                      class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md focus:ring-2 focus:ring-accent-500 transition-all outline-none" />
+                  </div>
+                </div>
+
+                <div class="space-y-2">
+                  <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Subject</label>
+                  <input name="subject" type="text" placeholder="Project Inquiry"
+                    class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md focus:ring-2 focus:ring-accent-500 transition-all outline-none" />
+                </div>
+
+                <div class="space-y-2">
+                  <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Your Message</label>
+                  <textarea name="message" rows="5" required placeholder="Describe your project or just say hi..."
+                    class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md focus:ring-2 focus:ring-accent-500 transition-all outline-none"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4">
+                  <button type="submit" class="btn-premium group w-full sm:w-auto">
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                    Send Message
+                  </button>
+                  <div class="flex gap-4">
+                    <a href="mailto:maheshnarasale1@gmail.com" class="btn-secondary-premium">
+                      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                      </svg>
+                      Email
+                    </a>
+                  </div>
+                </div>
+
+                <div id="form-status" class="text-sm font-semibold text-center h-4"></div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="py-6 bg-white dark:bg-slate-900 border-t">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500 dark:text-slate-400">
-        © <span id="year"></span> Copyright
+    <!-- Floating Email Action Button -->
+    <a href="mailto:maheshnarasale1@gmail.com"
+      class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl bg-accent-600 text-white shadow-2xl shadow-accent-600/40 hover:scale-110 hover:-translate-y-1 transition-all duration-300 group flex items-center gap-3 active:scale-95"
+      aria-label="Send Email">
+      <div class="relative">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+          </path>
+        </svg>
+        <span
+          class="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-accent-600 animate-ping"></span>
+      </div>
+      <span
+        class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 font-bold whitespace-nowrap">Email
+        Me</span>
+    </a>
+
+
+    <footer class="py-12 bg-white dark:bg-slate-900 border-t">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex justify-center gap-6 mb-8">
+          <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
+            class="text-slate-400 hover:text-accent-500 transition-all" aria-label="LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="https://github.com/maheshndev" target="_blank"
+            class="text-slate-400 hover:text-accent-500 transition-all" aria-label="GitHub">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.011-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.188.69.805.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="mailto:maheshnarasale1@gmail.com" class="text-slate-400 hover:text-accent-500 transition-all"
+            aria-label="Email">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+              </path>
+            </svg>
+          </a>
+        </div>
+        <div class="text-sm text-slate-500 dark:text-slate-400">
+          © <span id="year"></span> Mahesh Narsale. All rights reserved.
+        </div>
       </div>
     </footer>
+
   </div>
 
   <!-- Scripts -->
@@ -828,13 +1105,27 @@
         if (!Array.isArray(repos)) throw new Error('Unexpected repo data');
         repos.forEach(repo => {
           const el = document.createElement('article');
-          el.className = 'p-4 rounded-xl border bg-gray-50 dark:bg-slate-800 shadow-sm card-hover';
+          el.className = 'overflow-hidden rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col';
           el.innerHTML = `
-            <a href="${repo.html_url}" target="_blank" class="block font-semibold hover:underline">${repo.name}</a>
-            <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">${repo.description ? repo.description : 'No description'}</p>
-            <div class="mt-3 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-              <div>${repo.language ? `<span class="px-2 py-1 rounded-full border text-xs">${repo.language}</span>` : ''}</div>
-              <div>★ ${repo.stargazers_count}</div>
+            <div class="h-40 overflow-hidden bg-slate-100 dark:bg-slate-700 relative">
+              <img src="https://opengraph.githubassets.com/1/${user}/${repo.name}" alt="${repo.name}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&h=200&auto=format&fit=crop'">
+              <div class="absolute top-2 right-2 px-2 py-1 rounded-md glass text-[10px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">
+                ${repo.language || 'Code'}
+              </div>
+            </div>
+            <div class="p-5 flex-grow flex flex-col">
+              <a href="${repo.html_url}" target="_blank" class="block font-bold text-lg hover:text-accent-600 transition-colors truncate">${repo.name}</a>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-2 min-h-[2.5rem]">${repo.description || 'Modern web application developed with precision and clean architecture.'}</p>
+              <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
+                <div class="flex items-center gap-3">
+                  <span class="flex items-center gap-1">★ ${repo.stargazers_count}</span>
+                  <span class="flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75.1.797-.222 1.652-.333 2.503-.337.85.004 1.706.115 2.504.337 1.909-1.269 2.747-1 2.747-1 .546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+                    ${repo.forks_count || 0}
+                  </span>
+                </div>
+                <a href="${repo.html_url}" target="_blank" class="text-accent-600 hover:underline">Code →</a>
+              </div>
             </div>
           `;
           container.appendChild(el);
@@ -845,15 +1136,40 @@
       }
     })();
 
-    // ----- Simple contact form (client-side demo)
+    // ----- Contact form (opens default mail app)
     (function () {
       const form = document.getElementById('contact-form');
       const status = document.getElementById('form-status');
+
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        // demo only: show thank you & reset
-        status.textContent = 'Thanks — message received. Please email to reach me directly.';
-        form.reset();
+
+        // Get form values
+        const name = form.querySelector('[name="name"]').value;
+        const email = form.querySelector('[name="email"]').value;
+        const subject = form.querySelector('[name="subject"]').value || 'Contact From Portfolio';
+        const message = form.querySelector('[name="message"]').value;
+
+        // Prepare mailto link components
+        const recipient = "maheshnarasale1@gmail.com";
+        const emailSubject = encodeURIComponent(subject);
+        const emailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+        // Construct mailto URL
+        const mailtoLink = `mailto:${recipient}?subject=${emailSubject}&body=${emailBody}`;
+
+        // Open the user's mail application
+        window.location.href = mailtoLink;
+
+        // Provide visual feedback
+        status.textContent = 'Opening your email client...';
+        status.className = 'text-sm font-semibold text-center text-accent-600 animate-pulse';
+
+        setTimeout(() => {
+          status.textContent = 'Email client opened. Thanks!';
+          status.className = 'text-sm font-semibold text-center text-green-500';
+          form.reset();
+        }, 3000);
       });
     })();
 
