@@ -934,55 +934,16 @@
                 </p>
               </div>
 
-              <form id="contact-form" class="grid grid-cols-1 gap-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                  <div class="space-y-2">
-                    <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Full Name</label>
-                    <input name="name" type="text" required placeholder="Juana Doe"
-                      class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md focus:ring-2 focus:ring-accent-500 transition-all outline-none" />
-                  </div>
-                  <div class="space-y-2">
-                    <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Email Address</label>
-                    <input name="email" type="email" required placeholder="hello@example.com"
-                      class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md focus:ring-2 focus:ring-accent-500 transition-all outline-none" />
-                  </div>
-                </div>
-
-                <div class="space-y-2">
-                  <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Subject</label>
-                  <input name="subject" type="text" placeholder="Project Inquiry"
-                    class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md focus:ring-2 focus:ring-accent-500 transition-all outline-none" />
-                </div>
-
-                <div class="space-y-2">
-                  <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Your Message</label>
-                  <textarea name="message" rows="5" required placeholder="Describe your project or just say hi..."
-                    class="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md focus:ring-2 focus:ring-accent-500 transition-all outline-none"></textarea>
-                </div>
-
-                <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4">
-                  <button type="submit" class="btn-premium group w-full sm:w-auto">
-                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                    </svg>
-                    Send Message
-                  </button>
-                  <div class="flex gap-4">
-                    <a href="mailto:maheshnarasale1@gmail.com" class="btn-secondary-premium">
-                      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                        </path>
-                      </svg>
-                      Email
-                    </a>
-                  </div>
-                </div>
-
-                <div id="form-status" class="text-sm font-semibold text-center h-4"></div>
-              </form>
+              <div class="flex justify-center pt-8">
+                <a href="mailto:maheshnarasale1@gmail.com" class="btn-premium group !px-10 !py-5 text-lg flex items-center gap-4">
+                  <svg class="w-6 h-6 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                  Mail me
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1136,42 +1097,7 @@
       }
     })();
 
-    // ----- Contact form (opens default mail app)
-    (function () {
-      const form = document.getElementById('contact-form');
-      const status = document.getElementById('form-status');
 
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Get form values
-        const name = form.querySelector('[name="name"]').value;
-        const email = form.querySelector('[name="email"]').value;
-        const subject = form.querySelector('[name="subject"]').value || 'Contact From Portfolio';
-        const message = form.querySelector('[name="message"]').value;
-
-        // Prepare mailto link components
-        const recipient = "maheshnarasale1@gmail.com";
-        const emailSubject = encodeURIComponent(subject);
-        const emailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-
-        // Construct mailto URL
-        const mailtoLink = `mailto:${recipient}?subject=${emailSubject}&body=${emailBody}`;
-
-        // Open the user's mail application
-        window.location.href = mailtoLink;
-
-        // Provide visual feedback
-        status.textContent = 'Opening your email client...';
-        status.className = 'text-sm font-semibold text-center text-accent-600 animate-pulse';
-
-        setTimeout(() => {
-          status.textContent = 'Email client opened. Thanks!';
-          status.className = 'text-sm font-semibold text-center text-green-500';
-          form.reset();
-        }, 3000);
-      });
-    })();
 
     // ----- Smooth highlight active nav link on scroll (basic)
     (function () {
