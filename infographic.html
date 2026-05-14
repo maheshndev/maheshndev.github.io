@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesh Narsale | Interactive Infographic Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind theme extension (accent: purple -> blue -> green)
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9'
+                        },
+                        brandblue: '#2563eb',
+                        brandgreen: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sketch-color: #334155;
+            --paper-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--paper-bg);
+            background-image:
+                linear-gradient(#e5e7eb 1px, transparent 1px),
+                linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dark body {
+            background-color: #0f172a;
+            background-image:
+                linear-gradient(#1e293b 1px, transparent 1px),
+                linear-gradient(90deg, #1e293b 1px, transparent 1px);
+            color: #cbd5e1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(51, 65, 85, 0.5);
+        }
+
+        .marker-font {
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        .hand-font {
+            font-family: 'Gochi Hand', cursive;
+        }
+
+        .sketch-border {
+            border: 3px solid var(--sketch-color);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            transition: border-color 0.3s ease;
+        }
+
+        .dark .sketch-border {
+            border-color: #64748b;
+        }
+
+        .sketch-border-sm {
+            border: 2px solid var(--sketch-color);
+            border-radius: 10px 5px 12px 4px/4px 12px 5px 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        .dark .sketch-border-sm {
+            border-color: #64748b;
+        }
+
+        .roadmap-path {
+            fill: none;
+            stroke: #94a3b8;
+            stroke-width: 4;
+            stroke-dasharray: 10, 10;
+            stroke-linecap: round;
+            animation: animate-dash 20s linear infinite;
+            opacity: 0.4;
+        }
+
+        .dark .roadmap-path {
+            stroke: #334155;
+        }
+
+        @keyframes animate-dash {
+            to {
+                stroke-dashoffset: -200;
+            }
+        }
+
+        .node-title {
+            background: #f1f5f9;
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            transform: rotate(-1deg);
+            border: 2px solid var(--sketch-color);
+        }
+
+        .sticky-note {
+            background: #fef08a;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+            transform: rotate(2deg);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px) rotate(1deg);
+            transition: all 0.3s ease;
+        }
+
+        .icon-container {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--sketch-color);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body class="antialiased text-slate-800 dark:text-slate-100">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 glass border-b">
+        <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6">
+            <div class="flex items-center justify-between h-12">
+                <a href="index.html#hero" class="flex items-center gap-3 group">
+                    <img src="assets/cv.png" alt="Mahesh logo" class="w-8 h-8 rounded-md object-cover shadow-sm"
+                        onerror="this.style.display='none'">
+                    <div>
+                        <div
+                            class="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">
+                            Mahesh Narsale</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 -mt-0.5 uppercase tracking-tighter">
+                            Full Stack Specialist</div>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="index.html#about">About</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="index.html#skills">Skills</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="projects.html">Projects</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="gallery.html">Gallery</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="infographic.html">Infographic</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="career-roadmap.html">Roadmap</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="index.html#contact">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                    <button id="theme-toggle" aria-label="Toggle theme"
+                        class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <svg id="icon-sun" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path
+                                d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z">
+                            </path>
+                        </svg>
+                        <svg id="icon-moon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-btn"
+                        class="md:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile nav -->
+        <div id="mobile-menu" class="md:hidden hidden border-t">
+            <div class="px-4 py-3 space-y-1">
+                <a class="block py-2 rounded-md" href="index.html#about">About</a>
+                <a class="block py-2 rounded-md" href="projects.html">Projects</a>
+                <a class="block py-2 rounded-md" href="gallery.html">Gallery</a>
+                <a class="block py-2 rounded-md font-bold text-accent-600" href="infographic.html">Infographic</a>
+                <a class="block py-2 rounded-md font-bold text-accent-600" href="career-roadmap.html">Roadmap</a>
+                <a class="block py-2 rounded-md" href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto relative pt-10 px-4 md:px-10">
+
+        <!-- Header Section -->
+        <header class="mb-20 text-center relative">
+            <div class="inline-block relative">
+                <h1
+                    class="marker-font text-5xl md:text-7xl font-bold mb-4 z-10 relative text-slate-900 dark:text-white">
+                    Mr. MAHESH NARSALE</h1>
+                <h2 class="marker-font text-3xl md:text-5xl font-bold mb-6 text-blue-600 dark:text-blue-400">INFOGRAPHIC
+                    Career Roadmap</h2>
+                <div class="absolute -top-10 -right-20 hidden lg:block animate-bounce">
+                    <div class="sticky-note p-4 w-40 text-sm font-bold sketch-border-sm text-slate-800">
+                        "Full Stack Developer"
+                    </div>
+                </div>
+            </div>
+            <p class="hand-font text-2xl max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
+                From Logic Mazes to Manufacturing Ecosystems — A Visual Journey of a Full-Stack ERP Specialist.
+            </p>
+        </header>
+
+        <main class="max-w-7xl mx-auto relative">
+
+            <!-- Central SVG Roadmap Path (Full Length) -->
+            <svg class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20 hidden lg:block"
+                style="z-index: -1;">
+                <path class="roadmap-path" d="M 500,50 Q 700,200 300,400 T 500,800 T 300,1200 T 500,1600 T 300,2000" />
+            </svg>
+
+            <!-- STARTING POINT -->
+            <div class="flex justify-center mb-16">
+                <div
+                    class="bg-red-500 text-white px-8 py-3 rounded-full font-bold sketch-border-sm animate-pulse shadow-lg">
+                    YOU ARE HERE: START OF THE JOURNEY
+                </div>
+            </div>
+
+            <!-- MAIN GRID LAYOUT -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative">
+
+                <!-- COLUMN 1: THE FOUNDATION (ACADEMIC) -->
+                <div class="lg:col-span-4 space-y-12">
+                    <section>
+                        <h2 class="node-title text-xl font-bold mb-6 dark:bg-slate-800 dark:text-blue-400">1. ACADEMIC
+                            BASE</h2>
+                        <div class="space-y-6">
+                            <!-- 10th -->
+                            <div class="sketch-border p-5 bg-white dark:bg-slate-800/50 card-hover relative">
+                                <div
+                                    class="absolute -left-3 -top-3 w-8 h-8 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center font-bold border-2 border-slate-700 dark:border-slate-500">
+                                    01</div>
+                                <h3 class="font-bold dark:text-slate-200">SSC (10th Standard)</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">M.S. Board · 2017</p>
+                            </div>
+                            <!-- 12th -->
+                            <div class="sketch-border p-5 bg-white dark:bg-slate-800/50 card-hover relative">
+                                <div
+                                    class="absolute -left-3 -top-3 w-8 h-8 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center font-bold border-2 border-slate-700 dark:border-slate-500">
+                                    02</div>
+                                <h3 class="font-bold dark:text-slate-200">HSC (12th Standard)</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">M.S. Board · 2019</p>
+                            </div>
+                            <!-- BCA -->
+                            <div class="sketch-border p-5 bg-white dark:bg-slate-800/50 card-hover relative">
+                                <div
+                                    class="absolute -left-3 -top-3 w-8 h-8 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center font-bold border-2 border-slate-700 dark:border-slate-500">
+                                    03</div>
+                                <h3 class="font-bold text-lg text-blue-700 dark:text-blue-400">BCA (Bachelor's)</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 font-bold">Pune University · 2022
+                                </p>
+                                <p class="text-xs mt-2 italic text-slate-400 dark:text-slate-500">"The code logic
+                                    foundation was laid here."</p>
+                            </div>
+                            <!-- MCA -->
+                            <div
+                                class="sketch-border p-5 bg-white dark:bg-slate-800/50 card-hover relative border-dashed border-red-400 shadow-inner">
+                                <div
+                                    class="absolute -left-3 -top-3 w-8 h-8 bg-red-100 dark:bg-red-900/50 rounded-full flex items-center justify-center font-bold border-2 border-red-700 text-red-700 dark:text-red-400">
+                                    04</div>
+                                <h3 class="font-bold text-lg text-red-600 dark:text-red-500">MCA (Master's)</h3>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 font-bold">SPPU, Pune · 2025
+                                    (Expected)</p>
+                                <div class="mt-2 flex gap-1">
+                                    <span
+                                        class="text-[10px] px-2 py-0.5 bg-red-50 dark:bg-red-950/30 rounded border border-red-200 dark:border-red-800 font-bold uppercase text-red-600 dark:text-red-400">Current
+                                        Goal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="node-title text-xl font-bold mb-6 dark:bg-slate-800 dark:text-blue-400">2.
+                            PROFESSIONAL RECOGNITION</h2>
+                        <div class="grid grid-cols-1 gap-4">
+                            <div
+                                class="sketch-border-sm p-4 bg-orange-50 dark:bg-orange-950/20 flex items-center gap-4 card-hover">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                                    class="w-8 h-8" />
+                                <div>
+                                    <h4 class="font-bold text-sm dark:text-slate-200">Angular Developer</h4>
+                                    <p class="text-xs dark:text-slate-400">SP Institute · 2022</p>
+                                </div>
+                            </div>
+                            <div
+                                class="sketch-border-sm p-4 bg-blue-50 dark:bg-blue-950/20 flex items-center gap-4 card-hover">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                    class="w-8 h-8" />
+                                <div>
+                                    <h4 class="font-bold text-sm dark:text-slate-200">Java / Spring & WCD</h4>
+                                    <p class="text-xs dark:text-slate-400">SEED InfoTech</p>
+                                </div>
+                            </div>
+                            <div
+                                class="sketch-border-sm p-4 bg-purple-50 dark:bg-purple-950/20 flex items-center gap-4 card-hover">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+                                    class="w-8 h-8" />
+                                <div>
+                                    <h4 class="font-bold text-sm dark:text-slate-200">Android & C++</h4>
+                                    <p class="text-xs dark:text-slate-400">SEED InfoTech</p>
+                                </div>
+                            </div>
+                            <div
+                                class="sketch-border-sm p-4 bg-green-50 dark:bg-green-950/20 flex items-center gap-4 card-hover">
+                                <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-bold text-sm dark:text-slate-200">Full Stack Program</h4>
+                                    <p class="text-xs dark:text-slate-400">Edureka · Jul 2023</p>
+                                </div>
+                            </div>
+                            <div
+                                class="sketch-border-sm p-4 bg-yellow-50 dark:bg-yellow-950/20 flex items-center gap-4 card-hover">
+                                <svg class="w-8 h-8 text-yellow-600 dark:text-yellow-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z">
+                                    </path>
+                                </svg>
+                                <div>
+                                    <h4 class="font-bold text-sm dark:text-slate-200">Fest Dev-Tech Winner</h4>
+                                    <p class="text-xs dark:text-slate-400">IMS College · 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- COLUMN 2: THE FORGE (SKILLS & TOOLKIT) -->
+                <div class="lg:col-span-4 space-y-8">
+                    <section>
+                        <div class="sketch-border p-6 bg-slate-900 text-white relative shadow-2xl">
+                            <div
+                                class="absolute -right-4 -top-4 w-12 h-12 bg-yellow-400 text-black flex items-center justify-center font-bold sketch-border rotate-12">
+                                LIVE</div>
+                            <h2 class="marker-font text-3xl font-bold mb-6 text-yellow-400">MY TOOLKIT</h2>
+
+                            <div class="space-y-8">
+                                <!-- Languages -->
+                                <div>
+                                    <h3 class="marker-font text-xl mb-4 border-b border-slate-700">LANGUAGES</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-full text-sm font-bold border border-slate-700">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                                class="w-4 h-4" /> Python
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-full text-sm font-bold border border-slate-700">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                                                class="w-4 h-4" /> TypeScript
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-full text-sm font-bold border border-slate-700">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                                class="w-4 h-4" /> JavaScript
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-full text-sm font-bold border border-slate-700">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                                class="w-4 h-4" /> Java
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Frameworks -->
+                                <div>
+                                    <h3 class="marker-font text-xl mb-4 border-b border-slate-700">FRAMEWORKS</h3>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-lg text-sm border border-slate-700">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                                                class="w-4 h-4" /> Angular
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-lg text-sm border border-slate-700">
+                                            <img src="https://raw.githubusercontent.com/frappe/frappe/develop/frappe/public/images/frappe-framework-logo.png"
+                                                class="w-4 h-4" /> Frappe
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-lg text-sm border border-slate-700">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                                class="w-4 h-4" /> Node.js
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-800 px-3 py-1 rounded-lg text-sm border border-slate-700">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                                class="w-4 h-4" /> React
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Cloud -->
+                                <div>
+                                    <h3 class="marker-font text-xl mb-4 border-b border-slate-700">CLOUD & DEVOPS</h3>
+                                    <div class="space-y-3">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                                    class="w-6 h-6" />
+                                            </div>
+                                            <span class="text-sm font-bold">AWS Architecture</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                                    class="w-6 h-6" />
+                                            </div>
+                                            <span class="text-sm font-bold">Docker Containerization</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+                                                    class="w-6 h-6" />
+                                            </div>
+                                            <span class="text-sm font-bold">Linux Infrastructure</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Illustration -->
+                                <div
+                                    class="mt-8 border-2 border-dashed border-slate-700 p-4 rounded-xl text-center bg-slate-800/50">
+                                    <div class="hand-font text-xl text-yellow-200 mb-2">Architect of Automation</div>
+                                    <svg class="w-16 h-16 mx-auto text-yellow-400 opacity-80" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path
+                                            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                        </path>
+                                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <p class="text-[10px] text-slate-400 mt-2 italic">Scaling manufacturing workflows
+                                        with precision code.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- WORK EXPERIENCE -->
+                    <section>
+                        <h2 class="node-title text-xl font-bold mb-6 dark:bg-slate-800 dark:text-blue-400">3. EXPERIENCE
+                            JOURNEY</h2>
+                        <div class="space-y-6">
+                            <div
+                                class="sketch-border p-5 bg-white dark:bg-slate-800/50 border-blue-600 dark:border-blue-500 relative card-hover shadow-lg">
+                                <div
+                                    class="absolute -right-3 -top-3 w-10 h-10 bg-blue-600 dark:bg-blue-500 text-white rounded-full flex items-center justify-center font-bold border-2 border-slate-900 shadow-lg">
+                                    ERP</div>
+                                <h3 class="font-bold text-blue-800 dark:text-blue-400 text-lg">Assimilate Technology
+                                </h3>
+                                <p
+                                    class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
+                                    Dec 2023 — Present</p>
+                                <p class="text-sm mt-3 font-bold text-slate-700 dark:text-slate-200">Software Developer
+                                    (Full Stack / ERPNext)</p>
+                                <ul class="text-xs text-slate-600 dark:text-slate-400 mt-2 list-disc ml-4 space-y-1">
+                                    <li>End-to-end ERPNext Implementation & Customization</li>
+                                    <li>Manufacturing & Supply Chain Module Architecture</li>
+                                    <li>Production Scheduling (MSS) Development</li>
+                                    <li>AWS Infrastructure & Docker Orchestration</li>
+                                </ul>
+                            </div>
+
+                            <div
+                                class="sketch-border p-5 bg-white dark:bg-slate-800/50 border-green-600 dark:border-green-500 relative card-hover shadow-md">
+                                <h3 class="font-bold text-green-800 dark:text-green-400">SoftwareTechIT</h3>
+                                <p
+                                    class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
+                                    Internship · 2022</p>
+                                <p class="text-sm mt-3 font-medium text-slate-700 dark:text-slate-300 italic">Assisted
+                                    in developing education portals and Android modules.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- COLUMN 3: THE IMPACT (PROJECTS) -->
+                <div class="lg:col-span-4 space-y-8">
+                    <section>
+                        <h2 class="node-title text-xl font-bold mb-6 dark:bg-slate-800 dark:text-blue-400">4. STRATEGIC
+                            WORK</h2>
+                        <div class="space-y-4">
+                            <!-- Renu Sales -->
+                            <div
+                                class="sketch-border p-4 bg-white dark:bg-slate-800/50 card-hover shadow-sm border-indigo-200 dark:border-indigo-900/50">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="font-bold text-sm dark:text-slate-200">Renu Sales & Purchase ERP</h4>
+                                    <span
+                                        class="text-[10px] bg-indigo-50 dark:bg-indigo-950/30 px-2 py-0.5 rounded text-indigo-600 dark:text-indigo-400 font-bold border border-indigo-100 dark:border-indigo-800">V15</span>
+                                </div>
+                                <p class="text-[11px] text-slate-600 dark:text-slate-400 mb-2 leading-relaxed">Full
+                                    stack development of sales, purchase, HR, MRP, and India compliance modules.</p>
+                            </div>
+
+                            <!-- Yash Plastic -->
+                            <div
+                                class="sketch-border p-4 bg-white dark:bg-slate-800/50 card-hover shadow-sm border-blue-200 dark:border-blue-900/50">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="font-bold text-sm dark:text-slate-200">Manufacturing ERP (Yash Plastic)
+                                    </h4>
+                                    <span
+                                        class="text-[10px] bg-blue-50 dark:bg-blue-950/30 px-2 py-0.5 rounded text-blue-600 dark:text-blue-400 font-bold border border-blue-100 dark:border-blue-800">V16</span>
+                                </div>
+                                <p class="text-[11px] text-slate-600 dark:text-slate-400 mb-2 leading-relaxed">
+                                    Optimization of inventory, accounts, and stock management for engineering works.</p>
+                            </div>
+
+                            <!-- MSS -->
+                            <div
+                                class="sketch-border p-4 bg-white dark:bg-slate-800/50 card-hover shadow-sm border-green-200 dark:border-green-900/50">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="font-bold text-sm dark:text-slate-200">MSS - Production Scheduler</h4>
+                                    <span
+                                        class="text-[10px] bg-green-50 dark:bg-green-950/30 px-2 py-0.5 rounded text-green-600 dark:text-green-400 font-bold border border-green-100 dark:border-green-800">CORE</span>
+                                </div>
+                                <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">Intelligent
+                                    scheduling algorithm based on machine capacity and mold availability.</p>
+                            </div>
+
+                            <!-- Specialized Modules -->
+                            <div
+                                class="sketch-border p-4 bg-slate-50 dark:bg-slate-900/50 card-hover shadow-inner border-slate-200 dark:border-slate-800">
+                                <h4 class="font-bold text-sm mb-3 dark:text-slate-200">Custom Enterprise Modules</h4>
+                                <div class="space-y-2">
+                                    <div
+                                        class="text-[10px] p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center gap-2 dark:text-slate-300">
+                                        <span class="w-2 h-2 bg-indigo-400 rounded-full"></span> Mold Lifecycle
+                                        Management
+                                    </div>
+                                    <div
+                                        class="text-[10px] p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center gap-2 dark:text-slate-300">
+                                        <span class="w-2 h-2 bg-purple-400 rounded-full"></span> Biometric Attendance
+                                        (HRMS)
+                                    </div>
+                                    <div
+                                        class="text-[10px] p-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center gap-2 dark:text-slate-300">
+                                        <span class="w-2 h-2 bg-blue-400 rounded-full"></span> Gate & Vehicle Movement
+                                        Log
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="node-title text-xl font-bold mb-6 dark:bg-slate-800 dark:text-blue-400">5. LEGACY &
+                            EDUCATION</h2>
+                        <div class="sketch-border p-5 bg-white dark:bg-slate-800/50 shadow-lg space-y-5 border-dashed">
+                            <div
+                                class="flex items-center gap-3 border-b border-dashed dark:border-slate-700 pb-3 hover:bg-slate-50 dark:hover:bg-slate-800 p-2 transition-colors rounded-lg">
+                                <div
+                                    class="p-2 bg-rose-50 dark:bg-rose-950/20 rounded-xl border border-rose-100 dark:border-rose-900/50">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+                                        class="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-sm dark:text-slate-200">SoftwareTechIT App</h5>
+                                    <p
+                                        class="text-[10px] text-slate-500 dark:text-slate-400 font-medium uppercase tracking-tight">
+                                        Android Native + YouTube API</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 hover:bg-slate-50 dark:hover:bg-slate-800 p-2 transition-colors rounded-lg">
+                                <div
+                                    class="p-2 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border border-indigo-100 dark:border-indigo-900/50">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                                        class="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-sm dark:text-slate-200">Educational Portal</h5>
+                                    <p
+                                        class="text-[10px] text-slate-500 dark:text-slate-400 font-medium uppercase tracking-tight">
+                                        Full Stack Educational Suite</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    </section>
+
+                    <!-- CALL TO ACTION -->
+                    <section class="text-center pt-8">
+                        <div
+                            class="inline-block sketch-border p-6 bg-blue-600 text-white rotate-1 hover:rotate-0 transition-transform shadow-xl">
+                            <h3 class="marker-font text-2xl mb-3">READY TO BUILD SOMETHING?</h3>
+                            <p class="text-xs mb-4 opacity-90">I'm currently open to specialized ERP consulting &
+                                development.</p>
+                            <a href="mailto:maheshnarasale1@gmail.com"
+                                class="bg-white text-blue-600 px-6 py-2 rounded-lg font-bold hover:bg-yellow-400 hover:text-black transition-colors inline-block">EMAIL
+                                ME @ MAHESH</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- FOOTER DOODLE -->
+            <div class="mt-20 flex justify-between items-end opacity-40 pointer-events-none pb-10">
+                <div class="hand-font text-4xl transform -rotate-6">"Crafting Logic, One Line at a Time."</div>
+                <div class="flex flex-col items-center">
+                    <svg class="w-16 h-16 animate-pulse text-blue-600" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1">
+                        <path
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707"
+                            stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                    <div class="text-[10px] font-black mt-2 tracking-widest uppercase">PUNE, INDIA · EST. 2023</div>
+                </div>
+            </div>
+
+        </main>
+
+        <script>
+            // ----- Theme & Menu Logic
+            const themeToggle = document.getElementById('theme-toggle');
+            const iconSun = document.getElementById('icon-sun');
+            const iconMoon = document.getElementById('icon-moon');
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function setIcons(isDark) {
+                if (isDark) { iconMoon.classList.remove('hidden'); iconSun.classList.add('hidden'); }
+                else { iconSun.classList.remove('hidden'); iconMoon.classList.add('hidden'); }
+            }
+            (function initTheme() {
+                const saved = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const dark = saved ? saved === 'dark' : prefersDark;
+                document.documentElement.classList.toggle('dark', dark);
+                setIcons(dark);
+            })();
+            themeToggle.addEventListener('click', () => {
+                const isDark = document.documentElement.classList.toggle('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                setIcons(isDark);
+            });
+            mobileBtn?.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Reveal animation logic
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.style.transform = 'translateY(0) rotate(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.sketch-border').forEach(el => {
+                el.classList.add('opacity-0', 'transition-all', 'duration-1000', 'ease-out');
+                el.style.transform = 'translateY(30px) rotate(2deg)';
+                observer.observe(el);
+            });
+        </script>
+</body>
+
+</html>

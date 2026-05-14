@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesh Narsale | Career Roadmap - Sections & Levels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9'
+                        },
+                        brandblue: '#2563eb',
+                        brandgreen: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sketch-color: #334155;
+            --paper-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--paper-bg);
+            background-image:
+                linear-gradient(#e5e7eb 1px, transparent 1px),
+                linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dark body {
+            background-color: #0f172a;
+            background-image:
+                linear-gradient(#1e293b 1px, transparent 1px),
+                linear-gradient(90deg, #1e293b 1px, transparent 1px);
+            color: #cbd5e1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(51, 65, 85, 0.5);
+        }
+
+        .marker-font {
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        .hand-font {
+            font-family: 'Gochi Hand', cursive;
+        }
+
+        .sketch-border {
+            border: 3px solid var(--sketch-color);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            transition: all 0.3s ease;
+        }
+
+        .dark .sketch-border {
+            border-color: #64748b;
+        }
+
+        .sketch-border-sm {
+            border: 2px solid var(--sketch-color);
+            border-radius: 10px 5px 12px 4px/4px 12px 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        .dark .sketch-border-sm {
+            border-color: #64748b;
+        }
+
+        .roadmap-path-v2 {
+            fill: none;
+            stroke: #cbd5e1;
+            stroke-width: 8;
+            stroke-dasharray: 15, 10;
+            stroke-linecap: round;
+            opacity: 0.3;
+        }
+
+        .dark .roadmap-path-v2 {
+            stroke: #334155;
+        }
+
+        .level-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .level-card:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+
+        .section-header {
+            transform: rotate(-1deg);
+            background: #f1f5f9;
+            padding: 0.75rem 2rem;
+            display: inline-block;
+            border: 3px solid var(--sketch-color);
+        }
+
+        .dark .section-header {
+            background: #1e293b;
+            border-color: #64748b;
+        }
+
+        .progress-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: repeating-linear-gradient(to bottom,
+                    transparent,
+                    transparent 10px,
+                    #94a3b8 10px,
+                    #94a3b8 20px);
+            z-index: 0;
+            transform: translateX(-50%);
+        }
+
+        .dark .progress-line {
+            background: repeating-linear-gradient(to bottom,
+                    transparent,
+                    transparent 10px,
+                    #334155 10px,
+                    #334155 20px);
+        }
+
+        .sticky-note {
+            background: #fef08a;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+            transform: rotate(2deg);
+        }
+
+        @keyframes drawLine {
+            from { stroke-dashoffset: 1000; }
+            to { stroke-dashoffset: 0; }
+        }
+
+        .animate-draw {
+            animation: drawLine 3s ease-out forwards;
+        }
+
+        /* Custom scrollbar for better aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+    </style>
+</head>
+
+<body class="antialiased text-slate-800 dark:text-slate-100">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 glass border-b">
+        <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6">
+            <div class="flex items-center justify-between h-12">
+                <a href="index.html#hero" class="flex items-center gap-3 group">
+                    <img src="assets/cv.png" alt="Mahesh logo" class="w-8 h-8 rounded-md object-cover shadow-sm"
+                        onerror="this.style.display='none'">
+                    <div>
+                        <div
+                            class="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">
+                            Mahesh Narsale</div>
+                        <div class="text-[10px] text-slate-500 dark:text-slate-400 -mt-0.5 uppercase tracking-tighter">
+                            Full Stack Specialist</div>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="index.html#about">About</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="index.html#skills">Skills</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="projects.html">Projects</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="gallery.html">Gallery</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600" href="infographic.html">Infographic</a>
+                    <a class="text-sm font-bold text-accent-600 underline" href="career-roadmap.html">Roadmap</a>
+                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
+                        href="index.html#contact">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                    <button id="theme-toggle" aria-label="Toggle theme"
+                        class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <svg id="icon-sun" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path
+                                d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z">
+                            </path>
+                        </svg>
+                        <svg id="icon-moon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-btn"
+                        class="md:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile nav -->
+        <div id="mobile-menu" class="md:hidden hidden border-t">
+            <div class="px-4 py-3 space-y-1">
+                <a class="block py-2 rounded-md" href="index.html#about">About</a>
+                <a class="block py-2 rounded-md" href="projects.html">Projects</a>
+                <a class="block py-2 rounded-md" href="gallery.html">Gallery</a>
+                <a class="block py-2 rounded-md" href="infographic.html">Infographic</a>
+                <a class="block py-2 rounded-md font-bold text-accent-600" href="career-roadmap.html">Roadmap</a>
+                <a class="block py-2 rounded-md" href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto pt-16 pb-20 px-6">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-24 relative">
+            <div class="inline-block relative">
+                <h1 class="marker-font text-5xl md:text-8xl font-bold mb-4 text-slate-900 dark:text-white">Roadmap to <span class="text-accent-600">Mastery</span></h1>
+                <div class="absolute -top-12 -right-24 hidden lg:block animate-bounce">
+                    <div class="sticky-note p-3 w-36 text-xs font-bold sketch-border-sm text-slate-800">
+                        "Your Guide to Full-Stack ERP Excellence"
+                    </div>
+                </div>
+            </div>
+            <p class="hand-font text-2xl md:text-3xl text-slate-600 dark:text-slate-400 mt-4">
+                Structured by Domains, Measured by Experience.
+            </p>
+
+            <!-- LEGEND -->
+            <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm font-bold">
+                <div class="flex items-center gap-2">
+                    <span class="text-green-500">✔</span> <span>Mastered / Achieved</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-blue-500">➜</span> <span>Current Focus</span>
+                </div>
+                <div class="flex items-center gap-2 opacity-50">
+                    <span class="text-slate-400">○</span> <span>Future Milestone</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Roadmap Content -->
+        <div class="relative space-y-32">
+            
+            <!-- PROGRESS LINE (Vertical) -->
+            <div class="progress-line hidden lg:block"></div>
+
+            <!-- WINDING PATH SVG (Desktop Only) -->
+            <svg class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 hidden lg:block" style="z-index: -1;" viewBox="0 0 1000 2400">
+                <path class="roadmap-path-v2 animate-draw" d="
+                    M 500,50 
+                    C 800,200 800,400 500,500
+                    S 200,800 500,1000
+                    S 800,1300 500,1500
+                    S 200,1800 500,2000
+                    L 500,2400" 
+                />
+            </svg>
+
+            <!-- SECTION 1: THE WEB FOUNDATION -->
+            <section class="relative">
+                <div class="flex justify-center mb-16">
+                    <h2 class="section-header marker-font text-3xl font-bold text-blue-600 dark:text-blue-400">
+                        I. Web Foundation & UI/UX
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Level 1 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L1</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Novice</h3>
+                        <div class="absolute -right-10 top-0 hidden xl:block rotate-12">
+                            <div class="hand-font text-blue-500 text-sm">"The beginning!"</div>
+                        </div>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>HTML5 Semantic Structure</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>CSS3 Layouts (Flexbox/Grid)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>JS ES6 Fundamentals</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Level 2 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-blue-500/50">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L2</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Professional</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Angular/React Frameworks</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Tailwind CSS & Material UI</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>TypeScript Integration</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Level 3 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-dashed">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L3</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Advanced</h3>
+                        <div class="absolute -bottom-8 right-0 hidden xl:block -rotate-6">
+                            <div class="sticky-note p-2 text-[10px] font-bold sketch-border-sm text-slate-800 w-24">Next focus!</div>
+                        </div>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Performance Optimization</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Complex Animations (Framer)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Custom Component Libraries</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: BACKEND & LOGIC -->
+            <section class="relative">
+                <div class="flex justify-center mb-16">
+                    <h2 class="section-header marker-font text-3xl font-bold text-purple-600 dark:text-purple-400">
+                        II. Backend & Business Logic
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Level 1 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L1</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Developer</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Node.js / Express APIs</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>SQL Queries & CRUD</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Auth (JWT / OAuth)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Level 2 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-purple-500/50">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L2</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Specialist</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Python & Frappe Framework</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Data Modeling & Migration</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Redis & Background Tasks</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Level 3 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-dashed">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L3</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Architect</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Microservices Orchestration</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Serverless Architecture</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Distributed Systems Design</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: ERP & ENTERPRISE -->
+            <section class="relative">
+                <div class="flex justify-center mb-16">
+                    <h2 class="section-header marker-font text-3xl font-bold text-green-600 dark:text-green-400">
+                        III. ERP & Enterprise Solutions
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Level 1 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-green-500/50">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L1</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Consultant</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>ERPNext Module Customization</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Manufacturing Workflows</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Reporting (Query Reports)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Level 2 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-dashed">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L2</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Enterprise Expert</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Custom Core App Development</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>AI Integration in ERP</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Multi-Tenant Scalability</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: CLOUD & DEVOPS -->
+            <section class="relative">
+                <div class="flex justify-center mb-16">
+                    <h2 class="section-header marker-font text-3xl font-bold text-orange-600 dark:text-orange-400">
+                        IV. Cloud & Infrastructure
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Level 1 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L1</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Cloud Ready</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Linux Server Management</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Docker Basics</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>AWS EC2 & S3 Deployment</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Level 2 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-orange-500/50">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L2</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">DevOps Pro</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>CI/CD (GitHub Actions)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Kubernetes Orchestration</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Nginx & SSL Hardening</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Level 3 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-dashed">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L3</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Site Reliability</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Infrastructure as Code (Terraform)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Automated Recovery Systems</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Zero-Downtime Migration</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- SECTION 5: LEADERSHIP & IMPACT -->
+            <section class="relative">
+                <div class="flex justify-center mb-16">
+                    <h2 class="section-header marker-font text-3xl font-bold text-red-600 dark:text-red-400">
+                        V. Leadership & Impact
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Level 1 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L1</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Mentor</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Code Reviews & Standards</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 mt-1">✔</span> 
+                                <span>Technical Documentation</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Junior Dev Onboarding</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Level 2 -->
+                    <div class="level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative border-dashed">
+                        <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center font-bold border-2 border-slate-700">L2</div>
+                        <h3 class="font-bold text-xl mb-4 marker-font">Visionary</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Product Strategy & Design</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Open Source Leadership</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 mt-1">➜</span> 
+                                <span>Tech Evangelism</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Call to Action -->
+        <section class="mt-32 text-center">
+            <div class="inline-block sketch-border p-10 bg-accent-600 text-white transform hover:rotate-1 transition-all duration-300 shadow-2xl">
+                <h3 class="marker-font text-3xl mb-4">Want to Collaborate?</h3>
+                <p class="hand-font text-xl mb-8 opacity-90">Let's build the next generation of enterprise software together.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="mailto:maheshnarasale1@gmail.com" class="bg-white text-accent-600 px-8 py-3 rounded-xl font-bold hover:bg-yellow-400 hover:text-black transition-colors flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        Get in Touch
+                    </a>
+                    <a href="index.html" class="border-2 border-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">
+                        View Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-10 border-t border-dashed border-slate-300 dark:border-slate-700 flex justify-between items-center text-slate-500 text-sm">
+            <div class="hand-font text-lg">Designed by Mahesh Narsale</div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-accent-500">LinkedIn</a>
+                <a href="#" class="hover:text-accent-500">GitHub</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // ----- Theme & Menu Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const iconSun = document.getElementById('icon-sun');
+        const iconMoon = document.getElementById('icon-moon');
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function setIcons(isDark) {
+            if (isDark) { iconMoon.classList.remove('hidden'); iconSun.classList.add('hidden'); }
+            else { iconSun.classList.remove('hidden'); iconMoon.classList.add('hidden'); }
+        }
+        (function initTheme() {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const dark = saved ? saved === 'dark' : prefersDark;
+            document.documentElement.classList.toggle('dark', dark);
+            setIcons(dark);
+        })();
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            setIcons(isDark);
+        });
+        mobileBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.style.transform = 'translateY(0) rotate(0deg)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.level-card, .section-header').forEach((el, index) => {
+            el.classList.add('opacity-0', 'transition-all', 'duration-700', 'ease-out');
+            el.style.transform = `translateY(40px) rotate(${index % 2 === 0 ? '2' : '-2'}deg)`;
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
