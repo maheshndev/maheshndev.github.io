@@ -1,0 +1,147 @@
+:root {
+            --sketch-color: #334155;
+            --paper-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--paper-bg);
+            background-image:
+                linear-gradient(#e5e7eb 1px, transparent 1px),
+                linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dark body {
+            background-color: #0f172a;
+            background-image:
+                linear-gradient(#1e293b 1px, transparent 1px),
+                linear-gradient(90deg, #1e293b 1px, transparent 1px);
+            color: #cbd5e1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(51, 65, 85, 0.5);
+        }
+
+        .marker-font {
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        .hand-font {
+            font-family: 'Gochi Hand', cursive;
+        }
+
+        .sketch-border {
+            border: 3px solid var(--sketch-color);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            transition: all 0.3s ease;
+        }
+
+        .dark .sketch-border {
+            border-color: #64748b;
+        }
+
+        .sketch-border-sm {
+            border: 2px solid var(--sketch-color);
+            border-radius: 10px 5px 12px 4px/4px 12px 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        .dark .sketch-border-sm {
+            border-color: #64748b;
+        }
+
+        .roadmap-path-v2 {
+            fill: none;
+            stroke: #cbd5e1;
+            stroke-width: 8;
+            stroke-dasharray: 15, 10;
+            stroke-linecap: round;
+            opacity: 0.3;
+        }
+
+        .dark .roadmap-path-v2 {
+            stroke: #334155;
+        }
+
+        .level-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .level-card:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+
+        .section-header {
+            transform: rotate(-1deg);
+            background: #f1f5f9;
+            padding: 0.75rem 2rem;
+            display: inline-block;
+            border: 3px solid var(--sketch-color);
+        }
+
+        .dark .section-header {
+            background: #1e293b;
+            border-color: #64748b;
+        }
+
+        .progress-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: repeating-linear-gradient(to bottom,
+                    transparent,
+                    transparent 10px,
+                    #94a3b8 10px,
+                    #94a3b8 20px);
+            z-index: 0;
+            transform: translateX(-50%);
+        }
+
+        .dark .progress-line {
+            background: repeating-linear-gradient(to bottom,
+                    transparent,
+                    transparent 10px,
+                    #334155 10px,
+                    #334155 20px);
+        }
+
+        .sticky-note {
+            background: #fef08a;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+            transform: rotate(2deg);
+        }
+
+        @keyframes drawLine {
+            from { stroke-dashoffset: 1000; }
+            to { stroke-dashoffset: 0; }
+        }
+
+        .animate-draw {
+            animation: drawLine 3s ease-out forwards;
+        }
+
+        /* Custom scrollbar for better aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }

@@ -254,7 +254,7 @@
               d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.011-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.188.69.805.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
           </svg>
         </a>
-        <a href="mailto:maheshnarasale1@gmail.com" class="text-slate-400 hover:text-accent-500 transition-all"
+        <a href="mailto:__CONTACT_EMAIL__" class="text-slate-400 hover:text-accent-500 transition-all"
           aria-label="Email">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -269,58 +269,7 @@
 
 
   <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile menu
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-    // Theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const iconSun = document.getElementById('icon-sun');
-    const iconMoon = document.getElementById('icon-moon');
-
-    function setIcons(isDark) {
-      if (isDark) { iconMoon.classList.remove('hidden'); iconSun.classList.add('hidden'); }
-      else { iconSun.classList.remove('hidden'); iconMoon.classList.add('hidden'); }
-    }
-
-    (function initTheme() {
-      const saved = localStorage.getItem('theme');
-      const dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.classList.toggle('dark', dark);
-      setIcons(dark);
-    })();
-
-    themeToggle.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      setIcons(isDark);
-    });
-
-    // Filtering
-    const filters = document.querySelectorAll('.filter-btn');
-    const projects = document.querySelectorAll('#projects-grid article');
-
-    filters.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filters.forEach(f => f.classList.remove('active', 'bg-accent-600', 'text-white'));
-        btn.classList.add('active', 'bg-accent-600', 'text-white');
-
-        const filter = btn.getAttribute('data-filter');
-        projects.forEach(card => {
-          if (filter === 'all' || card.classList.contains(filter)) {
-            card.style.display = 'block';
-            card.classList.add('animate-fade-in');
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
+  <script src="js/projects.js"></script>
 </body>
 
 </html>

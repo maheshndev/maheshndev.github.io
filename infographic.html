@@ -33,117 +33,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
-    <style>
-        :root {
-            --sketch-color: #334155;
-            --paper-bg: #f8fafc;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--paper-bg);
-            background-image:
-                linear-gradient(#e5e7eb 1px, transparent 1px),
-                linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        .dark body {
-            background-color: #0f172a;
-            background-image:
-                linear-gradient(#1e293b 1px, transparent 1px),
-                linear-gradient(90deg, #1e293b 1px, transparent 1px);
-            color: #cbd5e1;
-        }
-
-        .glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        .dark .glass {
-            background: rgba(15, 23, 42, 0.8);
-            border-color: rgba(51, 65, 85, 0.5);
-        }
-
-        .marker-font {
-            font-family: 'Architects Daughter', cursive;
-        }
-
-        .hand-font {
-            font-family: 'Gochi Hand', cursive;
-        }
-
-        .sketch-border {
-            border: 3px solid var(--sketch-color);
-            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-            transition: border-color 0.3s ease;
-        }
-
-        .dark .sketch-border {
-            border-color: #64748b;
-        }
-
-        .sketch-border-sm {
-            border: 2px solid var(--sketch-color);
-            border-radius: 10px 5px 12px 4px/4px 12px 5px 10px;
-            transition: border-color 0.3s ease;
-        }
-
-        .dark .sketch-border-sm {
-            border-color: #64748b;
-        }
-
-        .roadmap-path {
-            fill: none;
-            stroke: #94a3b8;
-            stroke-width: 4;
-            stroke-dasharray: 10, 10;
-            stroke-linecap: round;
-            animation: animate-dash 20s linear infinite;
-            opacity: 0.4;
-        }
-
-        .dark .roadmap-path {
-            stroke: #334155;
-        }
-
-        @keyframes animate-dash {
-            to {
-                stroke-dashoffset: -200;
-            }
-        }
-
-        .node-title {
-            background: #f1f5f9;
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            transform: rotate(-1deg);
-            border: 2px solid var(--sketch-color);
-        }
-
-        .sticky-note {
-            background: #fef08a;
-            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
-            transform: rotate(2deg);
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px) rotate(1deg);
-            transition: all 0.3s ease;
-        }
-
-        .icon-container {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--sketch-color);
-            border-radius: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/infographic.css">
 </head>
 
 <body class="antialiased text-slate-800 dark:text-slate-100">
@@ -628,7 +518,7 @@
                             <h3 class="marker-font text-2xl mb-3">READY TO BUILD SOMETHING?</h3>
                             <p class="text-xs mb-4 opacity-90">I'm currently open to specialized ERP consulting &
                                 development.</p>
-                            <a href="mailto:maheshnarasale1@gmail.com"
+                            <a href="mailto:__CONTACT_EMAIL__"
                                 class="bg-white text-blue-600 px-6 py-2 rounded-lg font-bold hover:bg-yellow-400 hover:text-black transition-colors inline-block">EMAIL
                                 ME @ MAHESH</a>
                         </div>
@@ -652,50 +542,7 @@
 
         </main>
 
-        <script>
-            // ----- Theme & Menu Logic
-            const themeToggle = document.getElementById('theme-toggle');
-            const iconSun = document.getElementById('icon-sun');
-            const iconMoon = document.getElementById('icon-moon');
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            function setIcons(isDark) {
-                if (isDark) { iconMoon.classList.remove('hidden'); iconSun.classList.add('hidden'); }
-                else { iconSun.classList.remove('hidden'); iconMoon.classList.add('hidden'); }
-            }
-            (function initTheme() {
-                const saved = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const dark = saved ? saved === 'dark' : prefersDark;
-                document.documentElement.classList.toggle('dark', dark);
-                setIcons(dark);
-            })();
-            themeToggle.addEventListener('click', () => {
-                const isDark = document.documentElement.classList.toggle('dark');
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-                setIcons(isDark);
-            });
-            mobileBtn?.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Reveal animation logic
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100');
-                        entry.target.style.transform = 'translateY(0) rotate(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.sketch-border').forEach(el => {
-                el.classList.add('opacity-0', 'transition-all', 'duration-1000', 'ease-out');
-                el.style.transform = 'translateY(30px) rotate(2deg)';
-                observer.observe(el);
-            });
-        </script>
+        <script src="js/infographic.js"></script>
 </body>
 
 </html>
