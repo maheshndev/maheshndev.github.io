@@ -1,13 +1,16 @@
 
 // Mobile menu toggle
-const menuBtn = document.getElementById("menu-btn");
+const menuBtn = document.getElementById("mobile-menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+menuBtn?.addEventListener("click", () => {
+  mobileMenu?.classList.toggle("hidden");
 });
 
 // Dynamic Experience Years
 const experienceStartYear = 2021;
 const currentYear = new Date().getFullYear();
-document.getElementById("experience-years").textContent = `${currentYear - experienceStartYear}+ years`;
+const experienceYearsEl = document.getElementById("experience-years");
+if (experienceYearsEl) {
+  experienceYearsEl.textContent = `${currentYear - experienceStartYear}+ years`;
+}

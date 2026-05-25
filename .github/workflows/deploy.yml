@@ -28,6 +28,7 @@ jobs:
         run: |
           sed -i "s|__SUPABASE_URL__|${{ secrets.SUPABASE_URL }}|g" js/contact.js
           sed -i "s|__SUPABASE_ANON_KEY__|${{ secrets.SUPABASE_ANON_KEY }}|g" js/contact.js
+          sed -i "s|__CONTACT_EMAIL__|${{ secrets.CONTACT_EMAIL }}|g" js/contact.js
           # Inject Email and Phone into HTML files
           find . -name "*.html" -type f -exec sed -i "s|__CONTACT_EMAIL__|${{ secrets.CONTACT_EMAIL }}|g" {} +
           find . -name "*.html" -type f -exec sed -i "s|__CONTACT_PHONE__|${{ secrets.CONTACT_PHONE }}|g" {} +
