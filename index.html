@@ -49,76 +49,8 @@
   <!-- PAGE CONTAINER -->
   <div id="page" class="min-h-screen flex flex-col">
 
-    <!-- NAVBAR -->
-    <header class="sticky top-0 z-40 glass border-b">
-      <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6">
-        <div class="flex items-center justify-between h-10">
-          <a href="#hero" class="flex items-center gap-3 group">
-            <img src="assets/cv.png" alt="Mahesh logo" class="w-10 h-10 rounded-md object-cover shadow-sm"
-              onerror="this.style.display='none'">
-            <div>
-              <div
-                class="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">
-                Mahesh Narsale</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 -mt-0.5">Full Stack Developer</div>
-            </div>
-          </a>
-
-          <nav class="hidden md:flex items-center gap-6">
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="#about">About</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="#skills">Skills</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="projects.html">Projects</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="gallery.html">Gallery</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="infographic.html">Infographic</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600 font-bold"
-              href="career-roadmap.html">Roadmap</a>
-            <a class="nav-link text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-              href="#contact">Contact</a>
-          </nav>
-
-          <div class="flex items-center gap-3">
-            <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
-              class="hidden sm:inline-flex btn-secondary-premium !px-3 !py-1.5 !rounded-lg animate-pulse-subtle">LinkedIn</a>
-
-            <button id="theme-toggle" aria-label="Toggle theme"
-              class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
-              <!-- icons set by JS -->
-              <svg id="icon-sun" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path
-                  d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z">
-                </path>
-              </svg>
-              <svg id="icon-moon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-              </svg>
-            </button>
-
-            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile nav -->
-      <div id="mobile-menu" class="md:hidden hidden border-t">
-        <div class="px-4 py-3 space-y-1">
-          <a class="block py-2 rounded-md" href="index.html#about">About</a>
-          <a class="block py-2 rounded-md" href="projects.html">Projects</a>
-          <a class="block py-2 rounded-md" href="gallery.html">Gallery</a>
-          <a class="block py-2 rounded-md font-bold text-accent-600" href="infographic.html">Infographic</a>
-          <a class="block py-2 rounded-md font-bold text-accent-600" href="career-roadmap.html">Roadmap</a>
-          <a class="block py-2 rounded-md" href="index.html#contact">Contact</a>
-        </div>
-      </div>
-    </header>
+    <!-- NAVBAR (injected) -->
+    <div id="site-header"></div>
 
     <!-- HERO -->
     <main class="flex-grow">
@@ -357,191 +289,117 @@
       </section>
 
       <!-- SKILLS -->
-      <section id="skills" class="py-16 bg-gray-50 dark:bg-slate-900/50">
+      <section id="skills" class="py-16 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mb-12 text-left">
             <h2 class="text-3xl font-extrabold text-gradient inline-block">Technical Expertise</h2>
             <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl">
-              My toolkit spans from frontend mastery to backend architecture and cloud infrastructure management.
+              A clean, interactive skills matrix for frontend, backend, databases/devops and specialized ecosystem strengths.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Languages -->
-            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="p-3 rounded-xl bg-purple-500/10 text-purple-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                  </svg>
-                </div>
-                <h4 class="text-lg font-bold">Languages</h4>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-badge skill-blue flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    class="w-4 h-4" /> Python
-                </span>
-                <span class="skill-badge skill-green flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                    class="w-4 h-4" /> TypeScript
-                </span>
-                <span class="skill-badge skill-red flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    class="w-4 h-4" /> JavaScript
-                </span>
-                <span class="skill-badge skill-blue flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                    class="w-4 h-4" /> Java
-                </span>
-                <span class="skill-badge skill-yellow flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                    class="w-4 h-4" /> C / C++
-                </span>
-              </div>
+          <div class="skill-component rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/95 p-6 shadow-2xl shadow-slate-200/40 dark:shadow-slate-950/40">
+            <div class="skill-filter-group mb-8">
+              <button type="button" class="skill-filter-btn active" data-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="skill-filter-btn" data-filter="frontend" aria-pressed="false">Frontend</button>
+              <button type="button" class="skill-filter-btn" data-filter="backend" aria-pressed="false">Backend</button>
+              <button type="button" class="skill-filter-btn" data-filter="databases-devops" aria-pressed="false">Databases/DevOps</button>
+              <button type="button" class="skill-filter-btn" data-filter="specialized" aria-pressed="false">Specialized Ecosystems</button>
             </div>
 
-            <!-- Frameworks -->
-            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="p-3 rounded-xl bg-blue-500/10 text-blue-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 5a1 1 0 01.3-.7l7-7a1 1 0 011.4 0l7 7a1 1 0 01.3.7v4a1 1 0 01-.3.7l-7 7a1 1 0 01-1.4 0l-7-7a1 1 0 01-.3-.7V5z">
-                    </path>
-                  </svg>
-                </div>
-                <h4 class="text-lg font-bold">Frameworks</h4>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-badge skill-green flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-                    class="w-4 h-4" /> Angular
-                </span>
-                <span class="skill-badge skill-blue flex items-center gap-1">
-                  <img
-                    src="https://raw.githubusercontent.com/frappe/frappe/develop/frappe/public/images/frappe-framework-logo.png"
-                    class="w-4 h-4" /> Frappe / ERPNext
-                </span>
-                <span class="skill-badge skill-blue flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
-                    class="w-4 h-4" /> Flask
-                </span>
-                <span class="skill-badge skill-yellow flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                    class="w-4 h-4" /> Node.js / Express
-                </span>
-                <span class="skill-badge skill-blue flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                    class="w-4 h-4" /> React / Native
-                </span>
-              </div>
-            </div>
-
-            <!-- Databases -->
-            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4">
-                    </path>
-                  </svg>
-                </div>
-                <h4 class="text-lg font-bold">Databases</h4>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-badge skill-grey flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                    class="w-4 h-4" /> PostgreSQL
-                </span>
-                <span class="skill-badge skill-yellow flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                    class="w-4 h-4" /> MySQL / MariaDB
-                </span>
-                <span class="skill-badge skill-grey flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                    class="w-4 h-4" /> MongoDB
-                </span>
-                <span class="skill-badge skill-red flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-                    class="w-4 h-4" /> Redis
-                </span>
-              </div>
-            </div>
-
-            <!-- Infrastructure -->
-            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="p-3 rounded-xl bg-orange-500/10 text-orange-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
-                    </path>
-                  </svg>
-                </div>
-                <h4 class="text-lg font-bold">Cloud & DevOps</h4>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-badge skill-blue flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                    class="w-4 h-4" /> Docker
-                </span>
-                <span class="skill-badge skill-yellow flex items-center gap-1">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                    class="w-4 h-4" /> AWS
-                </span>
-                <span class="skill-badge skill-red flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
-                    class="w-4 h-4" /> Ubuntu / Linux
-                </span>
-                <span class="skill-badge skill-indigo flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
-                    class="w-4 h-4" /> DigitalOcean
-                </span>
-              </div>
-            </div>
-
-            <!-- Professional Tools -->
-            <div
-              class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover lg:col-span-2">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2H3a2 2 0 01-2-2V5a2 2 0 114 0m6 0v1a2 2 0 002 2h6a2 2 0 002-2V5a2 2 0 11-4 0M9 9a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2v-6a2 2 0 00-2-2H9z">
-                    </path>
-                  </svg>
-                </div>
-                <h4 class="text-lg font-bold">Tools & Environments</h4>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-badge skill-blue flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                    class="w-4 h-4" /> VS Code
-                </span>
-                <span class="skill-badge skill-grey flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                    class="w-4 h-4" /> Git / GitHub
-                </span>
-                <span class="skill-badge skill-green flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
-                    class="w-4 h-4" /> Android Studio
-                </span>
-                <span class="skill-badge skill-yellow flex items-center gap-1">
-                  <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" class="w-4 h-4" /> Postman
-                </span>
-                <span class="skill-badge skill-purple flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                    class="w-4 h-4" /> Figma
-                </span>
-                <span class="skill-badge skill-blue flex items-center gap-1">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                    class="w-4 h-4" /> Docker Desktop
-                </span>
-              </div>
+            <div class="skill-grid">
+              <button type="button" class="skill-item fade-in" data-category="frontend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" aria-hidden="true" /></span>
+                Angular
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="frontend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" aria-hidden="true" /></span>
+                React / Native
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="frontend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" aria-hidden="true" /></span>
+                HTML5
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="frontend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" aria-hidden="true" /></span>
+                CSS3
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="frontend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" aria-hidden="true" /></span>
+                Tailwind CSS
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="frontend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" aria-hidden="true" /></span>
+                JavaScript
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="frontend backend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" aria-hidden="true" /></span>
+                TypeScript
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="backend specialized">
+                <span class="skill-item-icon"><img src="https://raw.githubusercontent.com/frappe/frappe/develop/frappe/public/images/frappe-framework-logo.png" alt="Frappe" aria-hidden="true" /></span>
+                Frappe / ERPNext
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="backend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" aria-hidden="true" /></span>
+                Python
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="backend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" aria-hidden="true" /></span>
+                Flask
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="backend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" aria-hidden="true" /></span>
+                Node.js / Express
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="backend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" aria-hidden="true" /></span>
+                Java
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="backend">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" aria-hidden="true" /></span>
+                FastAPI / REST
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="databases-devops">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" aria-hidden="true" /></span>
+                PostgreSQL
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="databases-devops">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" aria-hidden="true" /></span>
+                MySQL / MariaDB
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="databases-devops">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" aria-hidden="true" /></span>
+                MongoDB
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="databases-devops">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" aria-hidden="true" /></span>
+                Redis
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="databases-devops">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" aria-hidden="true" /></span>
+                Docker
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="databases-devops">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" aria-hidden="true" /></span>
+                AWS
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="databases-devops">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu" aria-hidden="true" /></span>
+                Ubuntu / Linux
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="specialized">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" aria-hidden="true" /></span>
+                GitHub Workflows
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="specialized">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="NPM" aria-hidden="true" /></span>
+                Package Automation
+              </button>
+              <button type="button" class="skill-item fade-in" data-category="specialized">
+                <span class="skill-item-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" aria-hidden="true" /></span>
+                Git / Version Control
+              </button>
             </div>
           </div>
         </div>
@@ -1002,7 +860,7 @@
               repos on GitHub →</a>
           </div>
 
-          <div id="github-projects" class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+          <div id="github-projects" class="mt-6 grid gap-6 md:grid-cols-3 lg:grid-cols-3"></div>
         </div>
       </section>
 
@@ -1022,9 +880,9 @@
                   Interested in collaborating or hiring? Send a message — I'll get back to you within 48 hours.
                 </p>
                 <div class="mt-4 flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300">
-                  <a href="mailto:__CONTACT_EMAIL__" class="hover:text-accent-600 flex items-center gap-2">
+                  <a href="mailto:maheshnarasale1@gmail.com" class="hover:text-accent-600 flex items-center gap-2">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    __CONTACT_EMAIL__
+                    maheshnarasale1@gmail.com
                   </a>
                   <a href="tel:__CONTACT_PHONE__" class="hover:text-accent-600 flex items-center gap-2">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -1061,9 +919,9 @@
     </main>
 
     <!-- Floating Email Action Button -->
-    <a href="#contact"
-      class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl bg-accent-600 text-white shadow-2xl shadow-accent-600/40 hover:scale-110 hover:-translate-y-1 transition-all duration-300 group flex items-center gap-3 active:scale-95"
-      aria-label="Send Message">
+      <a href="mailto:maheshnarasale1@gmail.com"
+        class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl bg-accent-600 text-white shadow-2xl shadow-accent-600/40 hover:scale-110 hover:-translate-y-1 transition-all duration-300 group flex items-center gap-3 active:scale-95"
+        aria-label="Send Email">
       <div class="relative">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1079,46 +937,17 @@
     </a>
 
 
-    <footer class="py-12 bg-white dark:bg-slate-900 border-t">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="flex justify-center gap-6 mb-8">
-          <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
-            class="text-slate-400 hover:text-accent-500 transition-all" aria-label="LinkedIn">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-          </a>
-          <a href="https://github.com/maheshndev" target="_blank"
-            class="text-slate-400 hover:text-accent-500 transition-all" aria-label="GitHub">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.011-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.841 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.188.69.805.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
-          <a href="#contact" class="text-slate-400 hover:text-accent-500 transition-all"
-            aria-label="Email">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-              </path>
-            </svg>
-          </a>
-        </div>
-        <div class="text-sm text-slate-500 dark:text-slate-400">
-          © <span id="year"></span> Mahesh Narsale. All rights reserved.
-        </div>
-      </div>
-    </footer>
+    <div id="site-footer"></div>
 
   </div>
 
-  <!-- Scripts -->
-  <script src="js/index.js"></script>
+  <!-- Includes (header/footer) loader -->
+  <script src="js/includes.js"></script>
 
-  <!-- External Scripts -->
-  <script src="js/contact.js"></script>
-  
+  <!-- Page scripts (deferred until includes load) -->
+  <script type="text/template" data-deps="defer-after-includes" src="js/index.js"></script>
+  <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+
   <!-- Flowbite script (optional) -->
   <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
 </body>

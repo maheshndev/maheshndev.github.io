@@ -38,75 +38,8 @@
 
 <body class="antialiased text-slate-800 dark:text-slate-100">
 
-    <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 glass border-b">
-        <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6">
-            <div class="flex items-center justify-between h-12">
-                <a href="index.html#hero" class="flex items-center gap-3 group">
-                    <img src="assets/cv.png" alt="Mahesh logo" class="w-8 h-8 rounded-md object-cover shadow-sm"
-                        onerror="this.style.display='none'">
-                    <div>
-                        <div
-                            class="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">
-                            Mahesh Narsale</div>
-                        <div class="text-[10px] text-slate-500 dark:text-slate-400 -mt-0.5 uppercase tracking-tighter">
-                            Full Stack Specialist</div>
-                    </div>
-                </a>
-
-                <nav class="hidden md:flex items-center gap-6">
-                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-                        href="index.html#about">About</a>
-                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-                        href="index.html#skills">Skills</a>
-                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-                        href="projects.html">Projects</a>
-                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-                        href="gallery.html">Gallery</a>
-                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-                        href="infographic.html">Infographic</a>
-                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-                        href="career-roadmap.html">Roadmap</a>
-                    <a class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent-600"
-                        href="index.html#contact">Contact</a>
-                </nav>
-
-                <div class="flex items-center gap-3">
-                    <button id="theme-toggle" aria-label="Toggle theme"
-                        class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
-                        <svg id="icon-sun" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path
-                                d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z">
-                            </path>
-                        </svg>
-                        <svg id="icon-moon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor">
-                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-                        </svg>
-                    </button>
-
-                    <button id="mobile-menu-btn"
-                        class="md:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile nav -->
-        <div id="mobile-menu" class="md:hidden hidden border-t">
-            <div class="px-4 py-3 space-y-1">
-                <a class="block py-2 rounded-md" href="index.html#about">About</a>
-                <a class="block py-2 rounded-md" href="projects.html">Projects</a>
-                <a class="block py-2 rounded-md" href="gallery.html">Gallery</a>
-                <a class="block py-2 rounded-md font-bold text-accent-600" href="infographic.html">Infographic</a>
-                <a class="block py-2 rounded-md font-bold text-accent-600" href="career-roadmap.html">Roadmap</a>
-                <a class="block py-2 rounded-md" href="index.html#contact">Contact</a>
-            </div>
-        </div>
-    </header>
+    <!-- NAVBAR (injected) -->
+    <div id="site-header"></div>
 
     <main class="max-w-7xl mx-auto relative pt-10 px-4 md:px-10">
 
@@ -518,7 +451,7 @@
                             <h3 class="marker-font text-2xl mb-3">READY TO BUILD SOMETHING?</h3>
                             <p class="text-xs mb-4 opacity-90">I'm currently open to specialized ERP consulting &
                                 development.</p>
-                            <a href="mailto:__CONTACT_EMAIL__"
+                            <a href="mailto:maheshnarasale1@gmail.com"
                                 class="bg-white text-blue-600 px-6 py-2 rounded-lg font-bold hover:bg-yellow-400 hover:text-black transition-colors inline-block">EMAIL
                                 ME @ MAHESH</a>
                         </div>
@@ -542,8 +475,9 @@
 
         </main>
 
-        <script src="js/infographic.js"></script>
-        <script src="js/contact.js"></script>
+        <script src="js/includes.js"></script>
+        <script type="text/template" data-deps="defer-after-includes" src="js/infographic.js"></script>
+        <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
 </body>
 
 </html>

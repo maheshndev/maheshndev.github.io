@@ -1,32 +1,19 @@
 // ----- Mobile menu toggle
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     mobileBtn?.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // ----- Theme toggle (auto + save)
-    const themeToggle = document.getElementById('theme-toggle');
-    const iconSun = document.getElementById('icon-sun');
-    const iconMoon = document.getElementById('icon-moon');
-
-    function setIcons(isDark) {
-      if (isDark) { iconMoon.classList.remove('hidden'); iconSun.classList.add('hidden'); }
-      else { iconSun.classList.remove('hidden'); iconMoon.classList.add('hidden'); }
-    }
-    (function initTheme() {
-      const saved = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const dark = saved ? saved === 'dark' : prefersDark;
-      document.documentElement.classList.toggle('dark', dark);
-      setIcons(dark);
+    // Theme toggle is initialized in `js/includes.js` after header partials load.
+    // Leave a safe no-op here so other scripts can run without errors.
+    (function ensureThemeAvailable(){
+      const t = document.getElementById('theme-toggle');
+      if (!t) return;
+      // includes.js will wire up icons and the click handler; keep this as a sync point.
     })();
-    themeToggle.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      setIcons(isDark);
-    });
 
     // ----- Experience years auto-calc -----
     (function () {
@@ -44,20 +31,50 @@
       const label = roundedYears % 1 === 0 ? `${roundedYears}+ Years` : `${roundedYears}+ Years`;
 
       // Example: 1.9+ Years or 2+ Years
-      document.getElementById('experience-years').textContent = label;
+      const expEl = document.getElementById('experience-years');
+      if (expEl) expEl.textContent = label;
     })();
 
 
-    // ----- Fetch GitHub repos and render
-    (async function loadGitHubRepos() {
+    // ----- Fetch GitHub repos and render (run after includes are loaded)
+    async function loadGitHubRepos() {
       const container = document.getElementById('github-projects');
+      console.log('loadGitHubRepos: start, container found?', !!container);
+      if (!container) return console.warn('loadGitHubRepos: no container found');
       const user = 'maheshndev';
       try {
+        // show a loading placeholder so it's obvious something is happening
+        container.innerHTML = '<div class="text-sm text-slate-500">Loading GitHub projects…</div>';
         const res = await fetch(`https://api.github.com/users/${user}/repos?per_page=12&sort=updated`);
-        if (!res.ok) throw new Error('GitHub API rate or network issue');
+        console.log('loadGitHubRepos: fetch status', res.status, res.statusText);
+        if (!res.ok) {
+          const txt = await res.text().catch(() => '');
+          throw new Error(`GitHub API error: ${res.status} ${res.statusText} ${txt}`);
+        }
         const repos = await res.json();
+        console.log('loadGitHubRepos: repos received', Array.isArray(repos) ? repos.length : typeof repos);
         if (!Array.isArray(repos)) throw new Error('Unexpected repo data');
-        repos.forEach(repo => {
+        // Build a visible list up to 9 cards:
+        // Prefer non-archived, non-forks; if not enough, fill from non-archived forks, then any repo.
+        const params = new URLSearchParams(window.location.search || '');
+        const showAll = params.get('showAllRepos') === '1' || params.get('showAllRepos') === 'true';
+        let visible = [];
+        if (showAll) {
+          visible = repos.slice();
+        } else {
+          const nonArchived = repos.filter(r => !r.archived);
+          const primary = nonArchived.filter(r => !r.fork);
+          const secondary = nonArchived.filter(r => r.fork);
+          const tertiary = repos.filter(r => r.archived);
+          visible = primary.concat(secondary, tertiary);
+        }
+        if (!visible.length) {
+          container.innerHTML = '<div class="text-sm text-slate-500">No public repositories found.</div>';
+          return;
+        }
+        container.innerHTML = ''; // clear placeholder
+        // limit to 9 cards (3x3)
+        visible.slice(0, 9).forEach(repo => {
           const el = document.createElement('article');
           el.className = 'overflow-hidden rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col';
           el.innerHTML = `
@@ -73,10 +90,7 @@
               <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
                 <div class="flex items-center gap-3">
                   <span class="flex items-center gap-1">★ ${repo.stargazers_count}</span>
-                  <span class="flex items-center gap-1">
-                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75.1.797-.222 1.652-.333 2.503-.337.85.004 1.706.115 2.504.337 1.909-1.269 2.747-1 2.747-1 .546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
-                    ${repo.forks_count || 0}
-                  </span>
+                  <span class="flex items-center gap-1">${repo.forks_count || 0}</span>
                 </div>
                 <a href="${repo.html_url}" target="_blank" class="text-accent-600 hover:underline">Code →</a>
               </div>
@@ -88,7 +102,18 @@
         console.warn('Could not load GitHub repos', err);
         container.innerHTML = '<div class="text-sm text-slate-500">Unable to load GitHub projects right now.</div>';
       }
-    })();
+    }
+
+    // Try to load when includes are ready (includes.js dispatches `includes:loaded`), otherwise run immediately
+    if (document.getElementById('github-projects')) {
+      // If the placeholder exists already, attempt load now
+      loadGitHubRepos();
+    } else {
+      document.addEventListener('includes:loaded', () => {
+        // small defer to let includes finish DOM insertion
+        setTimeout(loadGitHubRepos, 50);
+      });
+    }
 
 
 
@@ -112,3 +137,97 @@
       window.addEventListener('scroll', onScroll);
       onScroll();
     })();
+
+    // ----- Skill filter grid behavior (delegated clicks + visual feedback)
+    function initSkillsFilter() {
+      const filterButtons = () => Array.from(document.querySelectorAll('.skill-filter-btn'));
+      const skillItems = () => Array.from(document.querySelectorAll('.skill-item'));
+
+      function updateFilter(selected) {
+        console.log('[skills] updateFilter called with:', selected);
+        const buttons = filterButtons();
+        const items = skillItems();
+        
+        console.log('[skills] found', buttons.length, 'buttons and', items.length, 'items');
+
+        buttons.forEach(button => {
+          const isActive = button.dataset.filter === selected;
+          button.classList.toggle('active', isActive);
+          button.setAttribute('aria-pressed', String(isActive));
+        });
+
+        items.forEach(item => {
+          const categories = (item.dataset.category || '').trim().split(/\s+/).filter(Boolean);
+          const shouldShow = selected === 'all' || categories.includes(selected);
+          const isHidden = item.classList.contains('hidden');
+
+          if (shouldShow && isHidden) {
+            item.classList.remove('hidden');
+            item.classList.remove('fade-out');
+            requestAnimationFrame(() => item.classList.add('fade-in'));
+          }
+
+          if (!shouldShow && !isHidden) {
+            item.classList.remove('fade-in');
+            item.classList.add('fade-out');
+            // Add hidden after transition; fallback timeout in case transitionend doesn't fire for opacity
+            const onTransitionEnd = (e) => {
+              // accept opacity or transform transition end
+              if (e.propertyName !== 'opacity' && e.propertyName !== 'transform') return;
+              item.classList.add('hidden');
+              item.removeEventListener('transitionend', onTransitionEnd);
+              clearTimeout(fallback);
+            };
+            item.addEventListener('transitionend', onTransitionEnd, { once: true });
+            const fallback = setTimeout(() => {
+              if (!item.classList.contains('hidden')) item.classList.add('hidden');
+              item.removeEventListener('transitionend', onTransitionEnd);
+            }, 300);
+          }
+        });
+      }
+
+      // Delegated clicks on filter buttons (attach globally, always works)
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.skill-filter-btn');
+        if (btn) {
+          console.log('[skills] filter button clicked:', btn.dataset.filter);
+          e.preventDefault();
+          e.stopPropagation();
+          const f = btn.dataset.filter;
+          if (f) {
+            console.log('[skills] calling updateFilter:', f);
+            updateFilter(f);
+          }
+        }
+
+        const skill = e.target.closest('.skill-item');
+        if (skill) {
+          console.log('[skills] skill item clicked:', skill.textContent.trim());
+          // Quick visual feedback for skill clicks
+          skill.classList.add('clicked');
+          setTimeout(() => skill.classList.remove('clicked'), 300);
+        }
+      });
+
+      // ensure an initial state
+      const buttons = filterButtons();
+      const items = skillItems();
+      if (buttons.length > 0 && items.length > 0) {
+        console.log('[skills] initializing with All filter');
+        updateFilter('all');
+      } else {
+        console.warn('[skills] init: buttons or items not found yet');
+      }
+    }
+
+    // init when DOM + includes ready
+    function safeInitSkills() {
+      try { initSkillsFilter(); } catch (e) { console.warn('initSkillsFilter failed', e); }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', safeInitSkills);
+    } else {
+      safeInitSkills();
+    }
