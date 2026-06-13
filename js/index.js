@@ -15,26 +15,47 @@
       // includes.js will wire up icons and the click handler; keep this as a sync point.
     })();
 
-    // ----- Experience years auto-calc -----
-    (function () {
-      // Set your actual career start date here:
-      const careerStart = new Date('2023-12-01'); // change if needed
-      const now = new Date();
+  // ----- Experience years auto-calc -----
+(function () {
+  // 1. Config: Set your exact career start month and year
+  const startMonth = 12; // December
+  const startYear = 2023;
 
-      const diffMs = now - careerStart;
-      const diffYears = diffMs / (1000 * 60 * 60 * 24 * 365.25);
+  // 2. Get current dates
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  // JS months are 0-11 (Jan=0, Dec=11), so we add 1 to match real-world numbering
+  const currentMonth = now.getMonth() + 1; 
 
-      // Round to one decimal, e.g., 1.9 or 2.1
-      const roundedYears = Math.round(diffYears * 10) / 10;
+  // 3. Calculate total months elapsed
+  const totalMonths = (currentYear - startYear) * 12 + (currentMonth - startMonth);
+  
+  // Guard clause: if the date is somehow set in the future
+  if (totalMonths <= 0) {
+    const expEl = document.getElementById('experience-years');
+    if (expEl) expEl.textContent = "0 months";
+    return;
+  }
 
-      // Add a '+' if not a clean integer
-      const label = roundedYears % 1 === 0 ? `${roundedYears}+ Years` : `${roundedYears}+ Years`;
+  // 4. Breakdown into Years and remaining Months
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
 
-      // Example: 1.9+ Years or 2+ Years
-      const expEl = document.getElementById('experience-years');
-      if (expEl) expEl.textContent = label;
-    })();
+  // 5. Build a clean, dynamic label strings
+  let label = "";
+  
+  if (years > 0 && months > 0) {
+    label = `${years} Year${years > 1 ? 's' : ''} ${months} Month${months > 1 ? 's' : ''}`;
+  } else if (years > 0) {
+    label = `${years}+ Year${years > 1 ? 's' : ''}`; // Clean integers get the "+"
+  } else {
+    label = `${months} Month${months > 1 ? 's' : ''}`; // Less than a year old
+  }
 
+  // 6. Update the DOM
+  const expEl = document.getElementById('experience-years');
+  if (expEl) expEl.textContent = label;
+})();
 
     // ----- Fetch GitHub repos and render (run after includes are loaded)
     async function loadGitHubRepos() {
