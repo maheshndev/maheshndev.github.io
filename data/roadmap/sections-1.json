@@ -1,0 +1,44 @@
+{
+  "roman": "VI",
+  "title": "Education & Foundation",
+  "colorClass": "text-blue-600 dark:text-blue-400",
+  "gridClass": "md:grid-cols-3",
+  "widthClass": "",
+  "subtitle": "2017 — 2022",
+  "levels": [
+    {
+      "badge": "10",
+      "badgeClass": "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300",
+      "title": "SSC (10th Standard)",
+      "note": { "text": "M.S. Board \u00b7 2017", "position": "absolute -right-10 top-0 hidden xl:block rotate-12", "class": "hand-font text-blue-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Completed secondary schooling" },
+        { "status": "done", "text": "Discovered interest in computers & technology" }
+      ]
+    },
+    {
+      "badge": "12",
+      "badgeClass": "bg-blue-500 text-white",
+      "title": "HSC (12th Standard)",
+      "borderClass": "border-blue-500/50",
+      "note": { "text": "M.S. Board \u00b7 2019", "position": "absolute -right-10 top-6 hidden xl:block rotate-6", "class": "hand-font text-blue-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Completed higher secondary schooling" },
+        { "status": "done", "text": "Chose computer science stream" }
+      ]
+    },
+    {
+      "badge": "BCA",
+      "badgeClass": "bg-slate-200 dark:bg-slate-700",
+      "title": "BCA (Bachelor's)",
+      "borderClass": "border-blue-500/50",
+      "note": { "text": "Pune University \u00b7 2022", "position": "absolute -right-10 top-12 hidden xl:block -rotate-6", "class": "hand-font text-blue-500 text-sm" },
+      "stickyNote": { "text": "The code logic foundation was laid here!", "position": "absolute -bottom-8 right-0 hidden xl:block -rotate-6", "size": "w-28" },
+      "items": [
+        { "status": "done", "text": "Bachelor of Computer Applications" },
+        { "status": "done", "text": "Core programming fundamentals (C, Java, DBMS)" },
+        { "status": "done", "text": "First web & database projects" }
+      ]
+    }
+  ]
+}

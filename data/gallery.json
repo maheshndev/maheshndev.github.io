@@ -1,0 +1,25 @@
+{
+  "gallery": [
+    {
+      "id": "gallery-1",
+      "title": "ERPNext Dashboard",
+      "subtitle": "Industrial Analytics Interface",
+      "image": "assets/img/erp-dashboard.png",
+      "modalDescription": "A high-performance dashboard designed for industrial monitoring, featuring real-time data visualization and glassmorphism UI elements."
+    },
+    {
+      "id": "gallery-2",
+      "title": "Full Stack Webapp",
+      "subtitle": "Modern Portal Design",
+      "image": "assets/img/webapp.png",
+      "modalDescription": "Customized web portal with a focus on clean typography and intuitive navigation. Built with Angular and Node.js."
+    },
+    {
+      "id": "gallery-3",
+      "title": "Mobile Application",
+      "subtitle": "Fintech UI Concept",
+      "image": "assets/img/mobile-app.png",
+      "modalDescription": "Financial management mobile app concept with a sleek dark theme and fluid interactive components."
+    }
+  ]
+}

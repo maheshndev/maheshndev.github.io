@@ -1,0 +1,55 @@
+{
+  "roman": "I",
+  "title": "Current ERP Projects",
+  "colorClass": "text-red-600 dark:text-red-400",
+  "gridClass": "md:grid-cols-2",
+  "widthClass": "max-w-5xl mx-auto",
+  "subtitle": "2025 — Present \u00b7 Enterprise ERP deliveries",
+  "levels": [
+    {
+      "badge": "MSS",
+      "badgeClass": "bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300",
+      "title": "MSS Monthly Production Scheduler",
+      "note": { "text": "Oct 2025 \u2013 Nov 2026", "position": "absolute -right-10 top-0 hidden xl:block rotate-12", "class": "hand-font text-red-500 text-sm" },
+      "items": [
+        { "status": "current", "text": "Monthly scheduling by mold, machine & resources" },
+        { "status": "current", "text": "Machine allocation, load balancing & rescheduling" },
+        { "status": "current", "text": "Capacity utilization dashboards" }
+      ]
+    },
+    {
+      "badge": "YPL",
+      "badgeClass": "bg-red-500 text-white",
+      "title": "Yash Plastic Manufacturing ERP",
+      "borderClass": "border-red-500/50",
+      "note": { "text": "Jan\u2013Apr 2026", "position": "absolute -right-10 top-0 hidden xl:block rotate-6", "class": "hand-font text-red-500 text-sm" },
+      "items": [
+        { "status": "current", "text": "Sales, purchase, accounts, stock, HR & manufacturing" },
+        { "status": "current", "text": "Mold management & India compliance on AWS" }
+      ]
+    },
+    {
+      "badge": "AN",
+      "badgeClass": "bg-slate-200 dark:bg-slate-700",
+      "title": "Renu Enterprise Analytics",
+      "borderClass": "border-red-500/50",
+      "note": { "text": "2026", "position": "absolute -right-10 top-0 hidden xl:block -rotate-6", "class": "hand-font text-red-500 text-sm" },
+      "items": [
+        { "status": "current", "text": "Sales, purchase & inventory dashboards" },
+        { "status": "current", "text": "Custom Frappe API endpoints for real-time data" },
+        { "status": "current", "text": "India-specific compliance tracking" }
+      ]
+    },
+    {
+      "badge": "RL",
+      "badgeClass": "bg-slate-200 dark:bg-slate-700",
+      "title": "Resume Lens App",
+      "borderClass": "border-dashed",
+      "note": { "text": "2026", "position": "absolute -right-10 top-0 hidden xl:block rotate-6", "class": "hand-font text-red-500 text-sm" },
+      "items": [
+        { "status": "current", "text": "Parse & visualize resume data" },
+        { "status": "current", "text": "Embedded in ERPNext workflows (React + Frappe)" }
+      ]
+    }
+  ]
+}

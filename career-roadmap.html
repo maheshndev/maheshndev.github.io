@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesh Narsale | Career Roadmap - Sections &amp; Levels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/career-roadmap.css">
+</head>
+
+<body class="antialiased text-slate-800 dark:text-slate-100">
+
+    <!-- NAVBAR (injected) -->
+    <div id="site-header"></div>
+
+    <main class="max-w-6xl mx-auto pt-16 pb-20 px-6">
+
+        <!-- Roadmap component (data-driven from multiple JSON) -->
+        <div data-roadmap-group data-src="data/roadmap.json"></div>
+
+        <div id="site-footer"></div>
+
+    </main>
+
+    <script src="js/components/icons.js"></script>
+    <script src="js/components/mount.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/footer.js"></script>
+    <script src="js/includes.js"></script>
+    <script src="js/components/roadmap.js"></script>
+    <script type="text/template" data-deps="defer-after-includes" src="js/career-roadmap.js"></script>
+</body>
+
+</html>

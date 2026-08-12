@@ -1,0 +1,53 @@
+{
+  "live": "LIVE",
+  "title": "MY TOOLKIT",
+  "groups": [
+    {
+      "title": "LANGUAGES",
+      "layout": "chips",
+      "items": [
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", "class": "w-4 h-4" }, "text": "Python" },
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "class": "w-4 h-4" }, "text": "TypeScript" },
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "class": "w-4 h-4" }, "text": "JavaScript" },
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", "class": "w-4 h-4" }, "text": "Java" }
+      ]
+    },
+    {
+      "title": "FRAMEWORKS",
+      "layout": "grid",
+      "items": [
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", "class": "w-4 h-4" }, "text": "Angular" },
+        { "icon": { "type": "img", "src": "https://raw.githubusercontent.com/frappe/frappe/develop/frappe/public/images/frappe-framework-logo.png", "class": "w-4 h-4" }, "text": "Frappe" },
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", "class": "w-4 h-4" }, "text": "Node.js" },
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "class": "w-4 h-4" }, "text": "React" }
+      ]
+    },
+    {
+      "title": "CLOUD \u0026 DEVOPS",
+      "layout": "rows",
+      "items": [
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg" }, "text": "AWS Architecture" },
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg" }, "text": "Docker Containerization" },
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg" }, "text": "Linux Infrastructure" }
+      ]
+    }
+  ],
+  "caption": {
+    "svg": {
+      "class": "w-16 h-16 mx-auto text-yellow-400 opacity-80",
+      "viewBox": "0 0 24 24",
+      "fill": "none",
+      "stroke": "currentColor",
+      "stroke-width": "1.5",
+      "paths": [
+        {
+          "d": "M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z",
+          "attrs": {}
+        },
+        { "d": "M21 12a9 9 0 11-18 0 9 9 0 0118 0z", "attrs": {} }
+      ]
+    },
+    "text": "Architect of Automation",
+    "note": "Scaling manufacturing workflows with precision code."
+  }
+}

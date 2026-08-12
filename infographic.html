@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesh Narsale | Interactive Infographic Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/infographic.css">
+</head>
+
+<body class="antialiased text-slate-800 dark:text-slate-100">
+
+    <!-- NAVBAR (injected) -->
+    <div id="site-header"></div>
+
+    <main class="max-w-7xl mx-auto relative pt-10 px-4 md:px-10">
+
+        <!-- Infographic component (data-driven from multiple JSON) -->
+        <div data-infographic-group data-src="data/infographic.json"></div>
+
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/components/icons.js"></script>
+    <script src="js/components/mount.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/footer.js"></script>
+    <script src="js/includes.js"></script>
+    <script src="js/components/infographic.js"></script>
+    <script type="text/template" data-deps="defer-after-includes" src="js/infographic.js"></script>
+    <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+</body>
+
+</html>

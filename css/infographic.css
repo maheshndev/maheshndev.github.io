@@ -1,0 +1,109 @@
+:root {
+            --sketch-color: #334155;
+            --paper-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--paper-bg);
+            background-image:
+                linear-gradient(#e5e7eb 1px, transparent 1px),
+                linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dark body {
+            background-color: #0f172a;
+            background-image:
+                linear-gradient(#1e293b 1px, transparent 1px),
+                linear-gradient(90deg, #1e293b 1px, transparent 1px);
+            color: #cbd5e1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(51, 65, 85, 0.5);
+        }
+
+        .marker-font {
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        .hand-font {
+            font-family: 'Gochi Hand', cursive;
+        }
+
+        .sketch-border {
+            border: 3px solid var(--sketch-color);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            transition: border-color 0.3s ease;
+        }
+
+        .dark .sketch-border {
+            border-color: #64748b;
+        }
+
+        .sketch-border-sm {
+            border: 2px solid var(--sketch-color);
+            border-radius: 10px 5px 12px 4px/4px 12px 5px 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        .dark .sketch-border-sm {
+            border-color: #64748b;
+        }
+
+        .roadmap-path {
+            fill: none;
+            stroke: #94a3b8;
+            stroke-width: 4;
+            stroke-dasharray: 10, 10;
+            stroke-linecap: round;
+            animation: animate-dash 20s linear infinite;
+            opacity: 0.4;
+        }
+
+        .dark .roadmap-path {
+            stroke: #334155;
+        }
+
+        @keyframes animate-dash {
+            to {
+                stroke-dashoffset: -200;
+            }
+        }
+
+        .node-title {
+            background: #f1f5f9;
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            transform: rotate(-1deg);
+            border: 2px solid var(--sketch-color);
+        }
+
+        .sticky-note {
+            background: #fef08a;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+            transform: rotate(2deg);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px) rotate(1deg);
+            transition: all 0.3s ease;
+        }
+
+        .icon-container {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--sketch-color);
+            border-radius: 50%;
+        }

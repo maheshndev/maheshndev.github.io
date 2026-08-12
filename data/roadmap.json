@@ -1,0 +1,29 @@
+{
+  "header": {
+    "title": "Career ",
+    "highlight": "Roadmap",
+    "subtitle": "From Today Back to Graduation \u2014 Projects, Work, Internships & Education.",
+    "sticky": "\u201cFrom BCA to Enterprise ERP\u201d"
+  },
+  "legend": [
+    { "symbol": "\u2714", "class": "text-green-500", "label": "Mastered / Achieved" },
+    { "symbol": "\u279c", "class": "text-blue-500", "label": "Current Focus" },
+    { "symbol": "\u25cb", "class": "text-slate-400", "label": "Future Milestone", "muted": true }
+  ],
+  "sections": [
+    { "src": "data/roadmap/sections-5.json" },
+    { "src": "data/roadmap/sections-4.json" },
+    { "src": "data/roadmap/sections-6.json" },
+    { "src": "data/roadmap/sections-3.json" },
+    { "src": "data/roadmap/sections-2.json" },
+    { "src": "data/roadmap/sections-1.json" }
+  ],
+  "cta": {
+    "title": "Want to Collaborate?",
+    "subtitle": "Let\u2019s build the next generation of enterprise software together.",
+    "email": "mailto:__CONTACT_EMAIL__",
+    "emailLabel": "Get in Touch",
+    "portfolioHref": "index.html",
+    "portfolioLabel": "View Portfolio"
+  }
+}

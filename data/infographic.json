@@ -1,0 +1,77 @@
+{
+  "header": {
+    "title": "Mr. MAHESH NARSALE",
+    "subtitle": "INFOGRAPHIC Career Roadmap",
+    "subtitleClass": "marker-font text-3xl md:text-5xl font-bold mb-6 text-blue-600 dark:text-blue-400",
+    "sticky": "\u201cFull Stack Developer\u201d",
+    "tagline": "From Logic Mazes to Manufacturing Ecosystems \u2014 A Visual Journey of a Full-Stack ERP Specialist.",
+    "startBadge": "YOU ARE HERE: START OF THE JOURNEY",
+    "path": "M 500,50 Q 700,200 300,400 T 500,800 T 300,1200 T 500,1600 T 300,2000"
+  },
+  "columns": [
+    {
+      "class": "lg:col-span-4 space-y-12",
+      "sections": [
+        {
+          "type": "links",
+          "title": "QUICK NAVIGATION",
+          "src": "data/infographic/links.json"
+        },
+        {
+          "type": "academic",
+          "title": "1. ACADEMIC BASE",
+          "src": "data/infographic/academic.json"
+        },
+        {
+          "type": "recognition",
+          "title": "2. PROFESSIONAL RECOGNITION",
+          "src": "data/infographic/recognition.json"
+        }
+      ]
+    },
+    {
+      "class": "lg:col-span-4 space-y-8",
+      "sections": [
+        {
+          "type": "toolkit",
+          "src": "data/infographic/toolkit.json"
+        },
+        {
+          "type": "experience",
+          "title": "3. EXPERIENCE JOURNEY",
+          "src": "data/infographic/experience.json"
+        }
+      ]
+    },
+    {
+      "class": "lg:col-span-4 space-y-8",
+      "sections": [
+        {
+          "type": "work",
+          "title": "4. STRATEGIC WORK",
+          "src": "data/infographic/work.json"
+        },
+        {
+          "type": "legacy",
+          "title": "5. LEGACY \u0026 EDUCATION",
+          "src": "data/infographic/legacy.json"
+        },
+        {
+          "type": "stats",
+          "title": "6. CAREER STATS",
+          "src": "data/infographic/stats.json"
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "READY TO BUILD SOMETHING?",
+    "subtitle": "I\u2019m currently open to specialized ERP consulting \u0026 development.",
+    "email": "mailto:__CONTACT_EMAIL__",
+    "label": "EMAIL ME @ MAHESH"
+  },
+  "footer": {
+    "left": "\u201cCrafting Logic, One Line at a Time.\u201d",
+    "right": "PUNE, INDIA \u00b7 EST. 2023"
+  }
+}

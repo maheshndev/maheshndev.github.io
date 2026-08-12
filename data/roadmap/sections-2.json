@@ -1,0 +1,45 @@
+{
+  "roman": "V",
+  "title": "First Projects & Internship",
+  "colorClass": "text-purple-600 dark:text-purple-400",
+  "gridClass": "md:grid-cols-3",
+  "widthClass": "",
+  "subtitle": "2021 — 2023",
+  "levels": [
+    {
+      "badge": "L1",
+      "badgeClass": "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300",
+      "title": "Android Developer",
+      "note": { "text": "SoftwareTechIT \u00b7 2021\u201322", "position": "absolute -right-10 top-0 hidden xl:block rotate-12", "class": "hand-font text-purple-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Native Android app for tech tutorials" },
+        { "status": "done", "text": "Integrated YouTube Data API v3" },
+        { "status": "done", "text": "First end-to-end mobile build" }
+      ]
+    },
+    {
+      "badge": "L2",
+      "badgeClass": "bg-purple-500 text-white",
+      "title": "Full Stack Web",
+      "borderClass": "border-purple-500/50",
+      "note": { "text": "SoftwareTechIT \u00b7 2022\u201323", "position": "absolute -right-10 top-0 hidden xl:block rotate-6", "class": "hand-font text-purple-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Educational portal built with Angular" },
+        { "status": "done", "text": "Node.js, Express & MongoDB backend" },
+        { "status": "done", "text": "Shipped full student-facing portal" }
+      ]
+    },
+    {
+      "badge": "INT",
+      "badgeClass": "bg-slate-200 dark:bg-slate-700",
+      "title": "Internship",
+      "borderClass": "border-dashed",
+      "note": { "text": "SoftwareTechIT \u00b7 2022", "position": "absolute -right-10 top-0 hidden xl:block -rotate-6", "class": "hand-font text-purple-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Education portal development" },
+        { "status": "done", "text": "Android module assistance" },
+        { "status": "done", "text": "Real-world exposure to product work" }
+      ]
+    }
+  ]
+}

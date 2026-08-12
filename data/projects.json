@@ -1,0 +1,172 @@
+{
+  "projects": [
+    {
+      "title": "Renu Enterprise Analytics",
+      "image": "assets/project-color.png",
+      "bg": "bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-indigo-900/40 dark:to-purple-900/40",
+      "textColor": "text-indigo-600 dark:text-indigo-300",
+      "tags": [
+        { "label": "Python", "color": "indigo" },
+        { "label": "Frappe 16", "color": "purple" }
+      ],
+      "date": "2026",
+      "company": "Assimilate Technologies",
+      "description": "Developed a suite of high-performance analytics dashboards for Sales, Purchase, and Inventory modules. Optimized data fetching with custom Frappe API endpoints and implemented real-time tracking for India-specific compliance.",
+      "filter": "erpnext",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "Yash Plastic & Engineering Works Manufacturing ERP",
+      "image": "assets/project.png",
+      "bg": "bg-gradient-to-br from-cyan-50 to-sky-100 dark:from-cyan-900/40 dark:to-sky-900/40",
+      "textColor": "text-cyan-700 dark:text-cyan-300",
+      "tags": [
+        { "label": "Python", "color": "indigo" },
+        { "label": "Frappe 16", "color": "purple" }
+      ],
+      "date": "January 2026 — April 2026",
+      "company": "Assimilate Technologies",
+      "description": "Full stack development of sales, purchase, accounts, stock, hr, manufacturing, mold management, india compliance, modules for ERPNext, deployed on AWS, along with several custom modules.",
+      "filter": "erpnext",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "MSS- Monthly Production Scheduler and Rescheduler for Manufacturing ERP",
+      "bg": "bg-gradient-to-br from-violet-50 to-fuchsia-100 dark:from-violet-900/40 dark:to-fuchsia-900/40",
+      "textColor": "text-violet-600 dark:text-violet-300",
+      "tags": [
+        { "label": "Python", "color": "indigo" },
+        { "label": "Frappe 15", "color": "purple" }
+      ],
+      "date": "Oct 2025 — Nov 2026",
+      "company": "Assimilate Technologies",
+      "description": "Plan and optimize monthly production with intelligent scheduling based on molds, machine capacity, and resource availability. Manage machine allocation, balance workloads, and efficiently reschedule work orders. Includes detailed reporting dashboards for machine capacity utilization and production planning insights.",
+      "filter": "erpnext",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "Renu Sales & Purchase Modules ERP",
+      "image": "assets/project-grediant.png",
+      "bg": "bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-emerald-900/40 dark:to-teal-900/40",
+      "textColor": "text-emerald-700 dark:text-emerald-300",
+      "tags": [
+        { "label": "Python", "color": "indigo" },
+        { "label": "Frappe 15", "color": "purple" }
+      ],
+      "date": "Aug 2025 — Sep 2025",
+      "company": "Assimilate Technologies",
+      "description": "Full stack development of sales & purchase, hr, short close, mrp, india compliance, box customization, bulk credit note, frappe insights modules for ERPNext, deployed on AWS and managed via Docker.",
+      "filter": "erpnext",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "Resume Lens App",
+      "bg": "bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/40 dark:to-indigo-900/40",
+      "textColor": "text-blue-700 dark:text-blue-300",
+      "tags": [
+        { "label": "React", "color": "blue" },
+        { "label": "Frappe", "color": "green" }
+      ],
+      "date": "2026",
+      "company": "Assimilate Technologies",
+      "description": "Tool to parse and visualize resume data inside ERPNext workflows.",
+      "filter": "erpnext",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "Mold Management",
+      "bg": "bg-gradient-to-br from-amber-50 to-orange-100 dark:from-amber-900/40 dark:to-orange-900/40",
+      "textColor": "text-amber-700 dark:text-amber-300",
+      "tags": [
+        { "label": "ERPNext Module", "color": "indigo" }
+      ],
+      "date": "2025",
+      "company": "Assimilate Technologies",
+      "description": "Manage molds lifecycle, maintenance schedules, and production tracking efficiently, ensuring optimal usage and minimal downtime.",
+      "filter": "erpnext",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "Gate Management",
+      "bg": "bg-gradient-to-br from-slate-100 to-blue-100 dark:from-slate-700/40 dark:to-blue-900/40",
+      "textColor": "text-slate-700 dark:text-slate-200",
+      "tags": [
+        { "label": "ERPNext Module", "color": "indigo" }
+      ],
+      "date": "2025",
+      "company": "Assimilate Technologies",
+      "description": "Control entry/exit logs, visitor tracking, and vehicle movement with security integration.",
+      "filter": "erpnext",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "Biometric Integration App For HRMS",
+      "bg": "bg-gradient-to-br from-rose-50 to-pink-100 dark:from-rose-900/40 dark:to-pink-900/40",
+      "textColor": "text-rose-600 dark:text-rose-300",
+      "tags": [
+        { "label": "ERPNext Module", "color": "indigo" }
+      ],
+      "date": "2024",
+      "company": "Assimilate Technologies",
+      "description": "Employee management, attendance tracking, payroll processing, and biometric integration for seamless HR operations.",
+      "filter": "erpnext",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "SoftwareTechIT Website",
+      "image": "assets/softwaretechit-website.png",
+      "bg": "bg-gradient-to-br from-blue-50 to-green-100 dark:from-blue-900/40 dark:to-green-900/40",
+      "textColor": "text-blue-700 dark:text-blue-300",
+      "tags": [
+        { "label": "Angular", "color": "blue" },
+        { "label": "Node.js", "color": "green" }
+      ],
+      "date": "2022-2023",
+      "company": "SoftwareTechIT",
+      "description": "Full stack educational portal for technology courses. Built using Angular, Node.js, Express, and MongoDB.",
+      "filter": "fullstack",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "Android App — SoftwareTechIT",
+      "image": "assets/softwaretechit-app.png",
+      "bg": "bg-gradient-to-br from-rose-50 to-amber-100 dark:from-rose-900/40 dark:to-amber-900/40",
+      "textColor": "text-rose-600 dark:text-rose-300",
+      "tags": [
+        { "label": "Android", "color": "rose" },
+        { "label": "YouTube API", "color": "amber" }
+      ],
+      "date": "2021-2022",
+      "company": "SoftwareTechIT",
+      "description": "Native Android application providing curated technology tutorials. Integrated with YouTube Data API v3.",
+      "filter": "mobile",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    },
+    {
+      "title": "Covid-19 Hospital System",
+      "image": "assets/project-color.png",
+      "bg": "bg-gradient-to-br from-orange-50 to-red-100 dark:from-orange-900/40 dark:to-red-900/40",
+      "textColor": "text-orange-600 dark:text-orange-300",
+      "tags": [
+        { "label": "Java", "color": "orange" },
+        { "label": "PostgreSQL", "color": "blue" }
+      ],
+      "date": "MCA Project",
+      "company": "Academic",
+      "description": "Comprehensive hospital management system implementing critical care tracking and inventory monitoring.",
+      "filter": "fullstack",
+      "viewUrl": "#",
+      "demoUrl": "#"
+    }
+  ]
+}

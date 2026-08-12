@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "icon": {
+        "type": "img",
+        "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        "class": "w-8 h-8"
+      },
+      "title": "Angular Developer",
+      "meta": "SP Institute \u00b7 2022",
+      "cardClass": "bg-orange-50 dark:bg-orange-950/20"
+    },
+    {
+      "icon": {
+        "type": "img",
+        "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        "class": "w-8 h-8"
+      },
+      "title": "Java / Spring \u0026 WCD",
+      "meta": "SEED InfoTech",
+      "cardClass": "bg-blue-50 dark:bg-blue-950/20"
+    },
+    {
+      "icon": {
+        "type": "img",
+        "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+        "class": "w-8 h-8"
+      },
+      "title": "Android \u0026 C++",
+      "meta": "SEED InfoTech",
+      "cardClass": "bg-purple-50 dark:bg-purple-950/20"
+    },
+    {
+      "icon": {
+        "type": "svg",
+        "class": "w-8 h-8 text-green-600 dark:text-green-400",
+        "fill": "none",
+        "stroke": "currentColor",
+        "viewBox": "0 0 24 24",
+        "paths": [
+          {
+            "attrs": { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2" },
+            "d": "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          }
+        ]
+      },
+      "title": "Full Stack Program",
+      "meta": "Edureka \u00b7 Jul 2023",
+      "cardClass": "bg-green-50 dark:bg-green-950/20"
+    },
+    {
+      "icon": {
+        "type": "svg",
+        "class": "w-8 h-8 text-yellow-600 dark:text-yellow-400",
+        "fill": "none",
+        "stroke": "currentColor",
+        "viewBox": "0 0 24 24",
+        "paths": [
+          {
+            "attrs": { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2" },
+            "d": "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"
+          }
+        ]
+      },
+      "title": "Fest Dev-Tech Winner",
+      "meta": "IMS College \u00b7 2019",
+      "cardClass": "bg-yellow-50 dark:bg-yellow-950/20"
+    }
+  ]
+}

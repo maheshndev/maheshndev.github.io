@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "num": "01",
+      "numClass": "bg-blue-100 dark:bg-blue-900/50",
+      "title": "SSC (10th Standard)",
+      "meta": "M.S. Board \u00b7 2017"
+    },
+    {
+      "num": "02",
+      "numClass": "bg-blue-100 dark:bg-blue-900/50",
+      "title": "HSC (12th Standard)",
+      "meta": "M.S. Board \u00b7 2019"
+    },
+    {
+      "num": "03",
+      "numClass": "bg-blue-100 dark:bg-blue-900/50",
+      "title": "BCA (Bachelor's)",
+      "titleClass": "text-lg text-blue-700 dark:text-blue-400",
+      "meta": "Pune University \u00b7 2022",
+      "metaClass": "font-bold",
+      "note": "\u201cThe code logic foundation was laid here.\u201d"
+    },
+    {
+      "num": "04",
+      "numClass": "bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-400 border-red-700 dark:border-red-500",
+      "title": "MCA (Master's)",
+      "titleClass": "text-lg text-red-600 dark:text-red-500",
+      "meta": "SPPU, Pune \u00b7 2025 (Expected)",
+      "metaClass": "font-bold",
+      "cardClass": "border-dashed border-red-400 shadow-inner",
+      "chip": {
+        "text": "Current Goal",
+        "class": "bg-red-50 dark:bg-red-950/30 rounded border border-red-200 dark:border-red-800 font-bold uppercase text-red-600 dark:text-red-400"
+      }
+    }
+  ]
+}

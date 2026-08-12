@@ -1,0 +1,45 @@
+{
+  "roman": "II",
+  "title": "Full Stack Developer",
+  "colorClass": "text-orange-600 dark:text-orange-400",
+  "gridClass": "md:grid-cols-3",
+  "widthClass": "",
+  "subtitle": "Mar 2024 — Present \u00b7 Assimilate Technology",
+  "levels": [
+    {
+      "badge": "ERP",
+      "badgeClass": "bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300",
+      "title": "ERPNext Engineer",
+      "note": { "text": "8+ custom modules", "position": "absolute -right-10 top-0 hidden xl:block rotate-12", "class": "hand-font text-orange-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "HRMS, CRM, Inventory & Real Estate modules" },
+        { "status": "done", "text": "Frappe extensions: Gate Mgmt & Dashboards" },
+        { "status": "done", "text": "Automated 500+ daily transactions" }
+      ]
+    },
+    {
+      "badge": "FE",
+      "badgeClass": "bg-orange-500 text-white",
+      "title": "Frontend Optimization",
+      "borderClass": "border-orange-500/50",
+      "note": { "text": "Vue.js & Angular", "position": "absolute -right-10 top-0 hidden xl:block rotate-6", "class": "hand-font text-orange-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Vue.js component architecture & state" },
+        { "status": "done", "text": "25% faster page load times" },
+        { "status": "current", "text": "TypeScript integration & optimization" }
+      ]
+    },
+    {
+      "badge": "CLD",
+      "badgeClass": "bg-slate-200 dark:bg-slate-700",
+      "title": "Cloud & DevOps",
+      "borderClass": "border-dashed",
+      "note": { "text": "AWS + Docker", "position": "absolute -right-10 top-0 hidden xl:block -rotate-6", "class": "hand-font text-orange-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "REST APIs with Python, Express.js & MariaDB" },
+        { "status": "done", "text": "Containerized apps on Ubuntu (Docker + AWS)" },
+        { "status": "current", "text": "Cut deployment times & boost reliability" }
+      ]
+    }
+  ]
+}

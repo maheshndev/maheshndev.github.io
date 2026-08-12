@@ -1,0 +1,51 @@
+{
+  "name": "Mahesh Narsale",
+  "title": "Full Stack Developer",
+  "location": "Pune, Maharashtra",
+  "languages": ["English", "Marathi", "Hindi"],
+  "email": "__CONTACT_EMAIL__",
+  "phone": "__CONTACT_PHONE__",
+  "social": {
+    "github": "https://github.com/maheshndev",
+    "linkedin": "https://www.linkedin.com/in/mahesh-narsale"
+  },
+  "summary": "Full Stack Developer with 3+ years of experience designing, developing, and deploying scalable web applications using Python (Frappe/FastAPI), JavaScript/TypeScript, Angular, and Vue.js.",
+  "skills": {
+    "frontend": ["Angular", "React", "HTML5", "CSS3", "Tailwind CSS", "JavaScript", "TypeScript"],
+    "backend": ["Frappe/ERPNext", "Python", "Flask", "Node.js/Express", "Java", "FastAPI"],
+    "database": ["PostgreSQL", "MySQL/MariaDB", "MongoDB", "Redis"],
+    "devops": ["Docker", "AWS", "GitHub Workflows", "Git", "Ubuntu/Linux"]
+  },
+  "experience": [
+    {
+      "company": "Assimilate Technology",
+      "role": "Full Stack Developer",
+      "period": "March 2024 — Present",
+      "current": true
+    },
+    {
+      "company": "Assimilate Technology",
+      "role": "Software Developer Intern",
+      "period": "Dec 2023 — Feb 2024",
+      "current": false
+    }
+  ],
+  "education": [
+    {
+      "degree": "MCA",
+      "institution": "SPPU, Pune",
+      "year": "2025 (Expected)"
+    },
+    {
+      "degree": "BCA",
+      "institution": "Pune University",
+      "year": "2022"
+    }
+  ],
+  "certifications": [
+    "Angular Developer - SP Institute (2022)",
+    "Java / Spring & WCD - SEED InfoTech",
+    "Android & C++ - SEED InfoTech",
+    "Full Stack Development - Edureka (Jul 2023)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "roman": "IV",
+  "title": "Software Developer Intern",
+  "colorClass": "text-green-600 dark:text-green-400",
+  "gridClass": "md:grid-cols-3",
+  "widthClass": "",
+  "subtitle": "Dec 2023 — Feb 2024 \u00b7 Assimilate Technology",
+  "levels": [
+    {
+      "badge": "BE",
+      "badgeClass": "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300",
+      "title": "Backend Logic",
+      "note": { "text": "KUULI platform", "position": "absolute -right-10 top-0 hidden xl:block rotate-12", "class": "hand-font text-green-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Python, Express.js, PostgreSQL & MariaDB" },
+        { "status": "done", "text": "Maintained platform backend logic" },
+        { "status": "done", "text": "Optimized database queries" }
+      ]
+    },
+    {
+      "badge": "FP",
+      "badgeClass": "bg-green-500 text-white",
+      "title": "Frappe Modules",
+      "borderClass": "border-green-500/50",
+      "note": { "text": "Custom ERPNext work", "position": "absolute -right-10 top-0 hidden xl:block rotate-6", "class": "hand-font text-green-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Developed custom Frappe modules" },
+        { "status": "done", "text": "Cut query response times" },
+        { "status": "done", "text": "Improved overall platform performance" }
+      ]
+    },
+    {
+      "badge": "STAR",
+      "badgeClass": "bg-slate-200 dark:bg-slate-700",
+      "title": "Star Employee",
+      "borderClass": "border-dashed",
+      "stickyNote": { "text": "Zero-defect fixes!", "position": "absolute -bottom-8 right-0 hidden xl:block -rotate-6", "size": "w-24" },
+      "items": [
+        { "status": "done", "text": "Recognized as Star Employee" },
+        { "status": "done", "text": "Delivered zero-defect bug fixes" },
+        { "status": "done", "text": "Converted to full-time role" }
+      ]
+    }
+  ]
+}

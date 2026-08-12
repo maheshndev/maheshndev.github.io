@@ -1,0 +1,119 @@
+{
+  "skills": [
+    {
+      "name": "Angular",
+      "category": ["Frontend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+    },
+    {
+      "name": "React / Native",
+      "category": ["Frontend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    },
+    {
+      "name": "HTML5",
+      "category": ["Frontend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+    },
+    {
+      "name": "CSS3",
+      "category": ["Frontend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": ["Frontend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+    },
+    {
+      "name": "JavaScript",
+      "category": ["Frontend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    },
+    {
+      "name": "TypeScript",
+      "category": ["Frontend", "Backend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+    },
+    {
+      "name": "Frappe / ERPNext",
+      "category": ["Backend"],
+      "icon": "https://raw.githubusercontent.com/frappe/frappe/develop/frappe/public/images/frappe-framework-logo.png"
+    },
+    {
+      "name": "Python",
+      "category": ["Backend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+    },
+    {
+      "name": "Flask",
+      "category": ["Backend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+    },
+    {
+      "name": "Node.js / Express",
+      "category": ["Backend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+    },
+    {
+      "name": "Java",
+      "category": ["Backend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+    },
+    {
+      "name": "FastAPI / REST",
+      "category": ["Backend"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": ["Database & ORM"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+    },
+    {
+      "name": "MySQL / MariaDB",
+      "category": ["Database & ORM"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+    },
+    {
+      "name": "MongoDB",
+      "category": ["Database & ORM"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+    },
+    {
+      "name": "Redis",
+      "category": ["Database & ORM"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+    },
+    {
+      "name": "Docker",
+      "category": ["Cloud & DevOps"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+    },
+    {
+      "name": "AWS",
+      "category": ["Cloud & DevOps"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+    },
+    {
+      "name": "GitHub Workflows",
+      "category": ["Cloud & DevOps"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+    },
+    {
+      "name": "Ubuntu / Linux",
+      "category": ["OS"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+    },
+    {
+      "name": "Package Automation",
+      "category": ["Cloud & DevOps"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+    },
+    {
+      "name": "Git / Version Control",
+      "category": ["Cloud & DevOps"],
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+    }
+  ]
+}

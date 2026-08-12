@@ -1,0 +1,61 @@
+{
+  "cards": [
+    {
+      "cardClass": "border-indigo-200 dark:border-indigo-900/50",
+      "title": "Renu Enterprise Analytics",
+      "tag": "V16",
+      "tagClass": "bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400 border-indigo-100 dark:border-indigo-800",
+      "desc": "High-performance analytics dashboards for Sales, Purchase, and Inventory. Real-time tracking for India compliance.",
+      "link": "projects.html",
+      "linkText": "View Project"
+    },
+    {
+      "cardClass": "border-blue-200 dark:border-blue-900/50",
+      "title": "Manufacturing ERP (Yash Plastic)",
+      "tag": "V16",
+      "tagClass": "bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 border-blue-100 dark:border-blue-800",
+      "desc": "Full stack sales, purchase, accounts, stock, HR, manufacturing, mold management modules.",
+      "link": "projects.html",
+      "linkText": "View Project"
+    },
+    {
+      "cardClass": "border-green-200 dark:border-green-900/50",
+      "title": "MSS - Production Scheduler",
+      "tag": "CORE",
+      "tagClass": "bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400 border-green-100 dark:border-green-800",
+      "desc": "Intelligent scheduling based on machine capacity, mold availability, and resource optimization.",
+      "link": "projects.html",
+      "linkText": "View Project"
+    },
+    {
+      "cardClass": "border-purple-200 dark:border-purple-900/50",
+      "title": "Renu Sales & Purchase ERP",
+      "tag": "V15",
+      "tagClass": "bg-purple-50 dark:bg-purple-950/30 text-purple-600 dark:text-purple-400 border-purple-100 dark:border-purple-800",
+      "desc": "Sales, purchase, HR, MRP, India compliance modules deployed on AWS with Docker.",
+      "link": "projects.html",
+      "linkText": "View Project"
+    },
+    {
+      "cardClass": "border-amber-200 dark:border-amber-900/50",
+      "title": "Biometric Integration HRMS",
+      "tag": "MODULE",
+      "tagClass": "bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400 border-amber-100 dark:border-amber-800",
+      "desc": "Employee management, attendance tracking, payroll processing, and biometric integration.",
+      "link": "projects.html",
+      "linkText": "View Project"
+    }
+  ],
+  "special": {
+    "title": "Custom Enterprise Modules",
+    "rows": [
+      { "dot": "bg-indigo-400", "text": "Mold Lifecycle Management" },
+      { "dot": "bg-purple-400", "text": "Biometric Attendance (HRMS)" },
+      { "dot": "bg-blue-400", "text": "Gate & Vehicle Movement Log" },
+      { "dot": "bg-green-400", "text": "Production Scheduling (MSS)" },
+      { "dot": "bg-amber-400", "text": "Real Estate Module" }
+    ],
+    "link": "projects.html",
+    "linkText": "View All Projects"
+  }
+}

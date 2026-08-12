@@ -1,0 +1,53 @@
+{
+  "roman": "III",
+  "title": "ERP Module Projects",
+  "colorClass": "text-green-600 dark:text-green-400",
+  "gridClass": "md:grid-cols-2",
+  "widthClass": "max-w-5xl mx-auto",
+  "subtitle": "2024 — 2025 \u00b7 Custom ERPNext modules in production",
+  "levels": [
+    {
+      "badge": "HR",
+      "badgeClass": "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300",
+      "title": "Biometric Integration App (HRMS)",
+      "note": { "text": "2024", "position": "absolute -right-10 top-0 hidden xl:block rotate-12", "class": "hand-font text-green-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Employee, attendance & payroll automation" },
+        { "status": "done", "text": "Biometric integration for HR operations" }
+      ]
+    },
+    {
+      "badge": "MD",
+      "badgeClass": "bg-green-500 text-white",
+      "title": "Mold Management Module",
+      "borderClass": "border-green-500/50",
+      "note": { "text": "2025", "position": "absolute -right-10 top-0 hidden xl:block rotate-6", "class": "hand-font text-green-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Mold lifecycle, maintenance & production tracking" },
+        { "status": "done", "text": "Optimal usage & minimal downtime" }
+      ]
+    },
+    {
+      "badge": "GT",
+      "badgeClass": "bg-slate-200 dark:bg-slate-700",
+      "title": "Gate Management Module",
+      "borderClass": "border-green-500/50",
+      "note": { "text": "2025", "position": "absolute -right-10 top-0 hidden xl:block -rotate-6", "class": "hand-font text-green-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Entry/exit logs, visitor & vehicle tracking" },
+        { "status": "done", "text": "Security integration" }
+      ]
+    },
+    {
+      "badge": "SP",
+      "badgeClass": "bg-slate-200 dark:bg-slate-700",
+      "title": "Renu Sales & Purchase ERP",
+      "borderClass": "border-dashed",
+      "note": { "text": "Aug\u2013Sep 2025", "position": "absolute -right-10 top-0 hidden xl:block rotate-12", "class": "hand-font text-green-500 text-sm" },
+      "items": [
+        { "status": "done", "text": "Sales, purchase, HR, MRP & India compliance modules" },
+        { "status": "done", "text": "Deployed on AWS, managed via Docker" }
+      ]
+    }
+  ]
+}

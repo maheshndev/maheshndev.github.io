@@ -1,0 +1,32 @@
+{
+  "experience": [
+    {
+      "id": "assimilate-fullstack",
+      "company": "Assimilate Technology",
+      "role": "Full Stack Developer",
+      "period": "March 2024 — Present",
+      "current": true,
+      "icon": "briefcase",
+      "points": [
+        "Engineered and maintained 8+ custom ERPNext modules (HRMS, CRM, Inventory, Real Estate) driving adoption across multiple client sites.",
+        "Designed and deployed specialized Frappe extensions including Gate Management and Dashboards, automating 500+ daily operational transactions.",
+        "Optimized Vue.js component architecture and state management, accelerating frontend page load speed by 25%.",
+        "Architected REST APIs and database layers with Python, Express.js, and MariaDB, reducing data transfer errors by 15% and speeding up queries.",
+        "Configured server setups and deployed containerized applications on Ubuntu using Docker and AWS, boosting reliability and cutting deployment times."
+      ]
+    },
+    {
+      "id": "assimilate-intern",
+      "company": "Intern — Assimilate Technology",
+      "role": "Software Developer Intern",
+      "period": "Dec 2023 — Feb 2024",
+      "current": false,
+      "icon": "academic",
+      "points": [
+        "Maintained backend logic for the KUULI platform using Python, Express.js, PostgreSQL, and MariaDB.",
+        "Developed custom Frappe modules and optimized database queries, reducing query response time and improving platform performance.",
+        "Recognized as Star Employee for delivering zero-defect bug fixes during the internship."
+      ]
+    }
+  ]
+}

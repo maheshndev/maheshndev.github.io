@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Mahesh Narsale</title>
+  <meta name="description" content="Projects and Portfolio of Mahesh Narsale — Full Stack Software Engineer." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <link href="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+
+<body class="antialiased bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+
+  <div id="site-header"></div>
+
+  <main class="flex-grow pt-16 pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Explore My <span class="text-gradient">Portfolio</span>
+        </h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          A collection of full-stack applications, ERP solutions, and open-source contributions.
+          Each project represents a unique challenge solved with clean code and modern technology.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div id="project-filters" class="flex flex-wrap justify-center gap-3 mb-12">
+        <button
+          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn active"
+          data-filter="all">All Projects</button>
+        <button
+          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn"
+          data-filter="erpnext">ERPNext / Frappe</button>
+        <button
+          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn"
+          data-filter="fullstack">Full Stack</button>
+        <button
+          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn"
+          data-filter="mobile">Mobile Apps</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div data-projects-group
+        data-src="data/projects.json"
+        data-show-footer="false"
+        data-show-title="false"
+        data-desc-limit="120"></div>
+
+      <!-- More Projects Banner -->
+      <div class="mt-20 p-8 rounded-3xl glass border shadow-xl relative overflow-hidden text-center">
+        <div class="relative z-10">
+          <h2 class="text-2xl font-bold mb-4">Want to see all my work?</h2>
+          <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
+            I have dozens of repositories showcasing various experiments, utilities, and components.
+            Check out my GitHub for the full history of my technical journey.
+          </p>
+          <a href="https://github.com/maheshndev" target="_blank" class="btn-premium">
+            Experience on GitHub
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+        <!-- Decorative bg -->
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+
+  <script src="js/components/icons.js"></script>
+  <script src="js/components/mount.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/footer.js"></script>
+  <script src="js/includes.js"></script>
+  <script defer src="js/components/projects.js"></script>
+  <script type="text/template" data-deps="defer-after-includes" src="js/projects.js"></script>
+  <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+  <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
+</body>
+
+</html>

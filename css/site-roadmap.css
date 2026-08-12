@@ -1,0 +1,12 @@
+/* Site Roadmap (sitemap) page */
+
+.sitemap-card {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sitemap-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px -12px rgba(139, 92, 246, 0.2);
+}
