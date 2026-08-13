@@ -23,6 +23,7 @@
   <script src="js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/3d.css">
@@ -36,16 +37,16 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 [perspective:1200px]">
       <!-- Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 [transform-style:preserve-3d] [transform:translateZ(20px)]">
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Explore My <span class="text-gradient [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Portfolio</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 animate-fade-up">Explore My <span class="text-gradient bg-[length:200%_auto] animate-gradient-x [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Portfolio</span>
         </h1>
-        <p class="text-lg text-slate-600 dark:text-slate-400">
+        <p class="text-lg text-slate-600 dark:text-slate-400 animate-fade-up" style="animation-delay: 120ms">
           A collection of full-stack applications, ERP solutions, and open-source contributions.
           Each project represents a unique challenge solved with clean code and modern technology.
         </p>
       </div>
 
       <!-- Filters -->
-      <div id="project-filters" class="flex flex-wrap justify-center gap-3 mb-12">
+      <div id="project-filters" class="flex flex-wrap justify-center gap-3 mb-12 animate-fade-up" style="animation-delay: 200ms">
         <button
           class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn btn-3d active"
           data-filter="all">All Projects</button>
@@ -68,9 +69,9 @@
         data-desc-limit="120"></div>
 
       <!-- More Projects Banner -->
-      <div class="mt-20 p-8 rounded-3xl glass border shadow-xl relative overflow-hidden text-center [transform-style:preserve-3d] [perspective:1000px] gloss-edge">
+      <div class="mt-20 p-8 rounded-3xl glass border shadow-xl relative overflow-hidden text-center [transform-style:preserve-3d] [perspective:1000px] gloss-edge group" data-reveal="fade-up">
         <div class="relative z-10 [transform:translateZ(20px)]">
-          <h2 class="text-2xl font-bold mb-4">Want to see all my work?</h2>
+          <h2 class="text-2xl font-bold mb-4 transition-colors group-hover:text-accent-600">Want to see all my work?</h2>
           <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
             I have dozens of repositories showcasing various experiments, utilities, and components.
             Check out my GitHub for the full history of my technical journey.
@@ -98,6 +99,7 @@
   <script defer src="js/components/projects.js"></script>
   <script type="text/template" data-deps="defer-after-includes" src="js/projects.js"></script>
   <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+  <script src="js/reveal.js" defer></script>
   <script src="js/3d.js" defer></script>
 </body>
 

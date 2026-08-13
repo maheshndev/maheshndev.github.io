@@ -183,7 +183,7 @@
       // badge
       const badge = el(
         'div',
-        `absolute -top-4 -left-4 w-10 h-10 ${level.badgeClass || 'bg-slate-200 dark:bg-slate-700'} rounded-full flex items-center justify-center font-bold border-2 border-slate-700`
+        `tag-pill absolute -top-4 -left-4 w-10 h-10 ${level.badgeClass || 'bg-slate-200 dark:bg-slate-700'} rounded-full flex items-center justify-center font-bold border-2 border-slate-700`
       );
       badge.textContent = level.badge;
       card.appendChild(badge);

@@ -112,7 +112,7 @@ buildItem(item, index) {
 
     // Timeline icon — on the left line (mobile) / centered on the line (desktop)
     const iconColors = ['bg-indigo-500', 'bg-emerald-500', 'bg-amber-500', 'bg-rose-500', 'bg-violet-500'];
-    const iconBox = el('div', 'absolute z-10 top-0 left-6 -translate-x-1/2 md:relative md:top-auto md:left-auto md:translate-x-0 md:order-2 flex-shrink-0 w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 shadow-lg flex items-center justify-center ' + iconColors[index % iconColors.length]);
+    const iconBox = el('div', 'hover-wiggle absolute z-10 top-0 left-6 -translate-x-1/2 md:relative md:top-auto md:left-auto md:translate-x-0 md:order-2 flex-shrink-0 w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 shadow-lg flex items-center justify-center ' + iconColors[index % iconColors.length]);
     const name = ICONS8[item.icon] || ICONS8.briefcase;
     const img = document.createElement('img');
     img.className = 'i8 w-8 h-8';
@@ -142,7 +142,7 @@ buildItem(item, index) {
     const yearInner = el('div', '');
     yearInner.appendChild(el('span', 'text-lg md:text-xl font-extrabold text-accent-600 tracking-tight leading-tight', yearText));
     if (item.current) {
-      const currentBadge = el('span', 'inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800');
+      const currentBadge = el('span', 'tag-pill inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800');
       currentBadge.textContent = 'CURRENT';
       yearInner.appendChild(currentBadge);
     }

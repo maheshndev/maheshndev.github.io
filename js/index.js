@@ -76,9 +76,9 @@ container.innerHTML = ''; // clear placeholder
       const el = document.createElement('article');
       el.className = 'overflow-hidden rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge flex flex-col preserve-3d';
       el.innerHTML = `
-        <div class="h-40 overflow-hidden bg-slate-100 dark:bg-slate-700 relative">
-          <img src="https://opengraph.githubassets.com/1/${user}/${repo.name}" alt="${repo.name}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&h=200&auto=format&fit=crop'">
-          <div class="absolute top-2 right-2 px-2 py-1 rounded-md glass text-[10px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">
+        <div class="h-40 overflow-hidden bg-slate-100 dark:bg-slate-700 relative group">
+          <img src="https://opengraph.githubassets.com/1/${user}/${repo.name}" alt="${repo.name}" class="media-img w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&h=200&auto=format&fit=crop'">
+          <div class="tag-pill absolute top-2 right-2 px-2 py-1 rounded-md glass text-[10px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">
             ${repo.language || 'Code'}
           </div>
         </div>

@@ -23,6 +23,7 @@
   <script src="js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/gallery.css">
   <link rel="stylesheet" href="css/3d.css">
@@ -37,8 +38,8 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 [perspective:1200px]">
       <!-- Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 [transform-style:preserve-3d] [transform:translateZ(20px)]">
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Project <span class="text-gradient [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Gallery</span></h1>
-        <p class="text-lg text-slate-600 dark:text-slate-400">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 animate-fade-up">Project <span class="text-gradient bg-[length:200%_auto] animate-gradient-x [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Gallery</span></h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400 animate-fade-up" style="animation-delay: 120ms">
           Visual glimpses into the interfaces, dashboards, and systems I've built. 
           A picture is worth a thousand lines of code.
         </p>
@@ -46,7 +47,7 @@
 
       <!-- Gallery Grid -->
       <div data-gallery-group
-        data-src="data/gallery.json"></div>
+        data-src="data/gallery.json" data-reveal="fade-up"></div>
     </div>
   </main>
 
@@ -59,6 +60,7 @@
   <script src="js/includes.js"></script>
   <script defer src="js/components/gallery.js"></script>
   <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+  <script src="js/reveal.js" defer></script>
   <script src="js/3d.js" defer></script>
 </body>
 </html>

@@ -71,7 +71,7 @@ if (c.subtitle) {
 
 const links = el('div', 'mt-4 flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300');
 if (c.email) {
-  const mail = el('a', 'hover:text-accent-600 flex items-center gap-2', c.email);
+  const mail = el('a', 'contact-link hover:text-accent-600 flex items-center gap-2', c.email);
   mail.setAttribute('href', `mailto:${c.email}`);
   mail.insertBefore(this.mailIcon(), mail.firstChild);
   links.appendChild(mail);

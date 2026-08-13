@@ -1,0 +1,374 @@
+/* ============================================================
+   Custom animation utilities (plain CSS — no Tailwind CDN
+   dependency, so they always work even when classes are added
+   at runtime by js/reveal.js).
+   Usage examples:
+     animate-fade-up / animate-fade-down / animate-fade-in
+     animate-zoom-in / animate-slide-left / animate-slide-right
+     animate-pop / animate-shimmer / animate-blob
+     animate-gradient-x / animate-marquee / animate-typing
+     animate-wiggle / animate-pulse-glow / animate-float-y
+     animate-spin-slow
+   ============================================================ */
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(26px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  0% { opacity: 0; transform: translateY(-26px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale(0.92); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes slideLeft {
+  0% { opacity: 0; transform: translateX(34px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+  0% { opacity: 0; transform: translateX(-34px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes pop {
+  0% { opacity: 0; transform: scale(0.6); }
+  60% { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(28px, -34px) scale(1.1); }
+  66% { transform: translate(-24px, 22px) scale(0.94); }
+}
+@keyframes gradientX {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Utilities ---------- */
+.animate-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.animate-fade-down {
+  animation: fadeDown 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+.animate-zoom-in {
+  animation: zoomIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.animate-slide-left {
+  animation: slideLeft 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.animate-slide-right {
+  animation: slideRight 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.animate-pop {
+  animation: pop 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.animate-shimmer {
+  animation: shimmer 1.8s linear infinite;
+}
+.animate-blob {
+  animation: blob 14s ease-in-out infinite;
+}
+.animate-gradient-x {
+  background-size: 200% auto;
+  animation: gradientX 6s ease infinite;
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+.animate-typing {
+  animation: typing 2.8s steps(24) both;
+}
+.animate-wiggle {
+  animation: wiggle 1.2s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulseGlow 3.5s ease-in-out infinite;
+}
+.animate-float-y {
+  animation: floatY 6s ease-in-out infinite;
+}
+.animate-spin-slow {
+  animation: spinSlow 14s linear infinite;
+}
+
+/* ---------- Scroll reveal states (js/reveal.js) ---------- */
+[data-reveal].reveal-init {
+  opacity: 0;
+}
+[data-reveal].is-revealed {
+  opacity: 1;
+}
+
+/* ---------- Hover glow (was tailwind-config boxShadow) ---------- */
+.hover\:shadow-glow-purple:hover {
+  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.22), 0 18px 45px -18px rgba(139, 92, 246, 0.55);
+}
+
+/* ============================================================
+   Hover & micro-interaction animations — plain CSS.
+   No Tailwind dependency, so they work reliably on every page
+   (including dynamically injected component markup).
+
+   Quick reference:
+     section[id]:hover        -> accent line sweeps across the top
+     .card-hover, .tilt-3d    -> lift + border accent + glow
+     .tag-pill                -> badges/tags pop up on hover
+     .site-header-nav a       -> animated underline
+     .site-header-mobile-link -> slide-right on hover
+     .btn-premium             -> shine sweep on hover
+     .hover-wiggle            -> gentle wiggle (icons, emoji)
+     .hover-bob               -> float up/down (floating accents)
+   ============================================================ */
+
+/* ---------- Sections: accent line sweeps in on hover ---------- */
+section[id] {
+  position: relative;
+}
+section[id]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.4s ease, left 0.55s cubic-bezier(0.22, 0.61, 0.36, 1),
+    right 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+section[id]:hover::before {
+  opacity: 1;
+  left: 0;
+  right: 0;
+}
+
+/* ---------- Cards: border accent + shadow already handled by card-hover/tilt-3d ---------- */
+.card-hover:hover,
+.sitemap-card:hover,
+.level-card:hover {
+  border-color: rgba(139, 92, 246, 0.45);
+}
+
+/* Title inside cards tints toward accent on hover */
+.card-hover:hover h3:not(.group-hover\:text-accent-600),
+.card-hover:hover h2:not(.group-hover\:text-accent-600),
+.level-card:hover h3,
+.sitemap-card:hover h2 {
+  color: var(--accent);
+}
+
+/* Media image in project / github cards zooms gently on hover */
+.card-hover .media-img,
+.card-hover > .group img {
+  transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.card-hover:hover .media-img,
+.card-hover:hover > .group img {
+  transform: scale(1.08);
+}
+
+/* ---------- Badges / tags: pop on hover ---------- */
+.tag-pill,
+.tag-pill-sm {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.25s ease;
+}
+.tag-pill:hover,
+.tag-pill-sm:hover {
+  transform: translateY(-3px) scale(1.07);
+  box-shadow: 0 8px 18px -8px rgba(139, 92, 246, 0.5);
+}
+
+/* ---------- Menu: animated underline on desktop nav ---------- */
+.site-header-nav a {
+  position: relative;
+}
+.site-header-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  border-radius: 9999px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.site-header-nav a:hover::after,
+.site-header-nav a.site-header-nav-active::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Menu: mobile links slide right ---------- */
+.site-header-mobile-link {
+  transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1), color 0.2s ease;
+}
+.site-header-mobile-link:hover {
+  transform: translateX(6px);
+}
+
+/* ---------- Buttons: shine sweep on primary buttons ---------- */
+.btn-premium,
+.btn-outline-premium,
+.btn-secondary-premium {
+  position: relative;
+  overflow: hidden;
+}
+.btn-premium::after,
+.btn-outline-premium::after,
+.btn-secondary-premium::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -80%;
+  width: 55%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  transition: left 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.btn-premium:hover::after,
+.btn-outline-premium:hover::after,
+.btn-secondary-premium:hover::after {
+  left: 130%;
+}
+.dark .btn-premium::after,
+.dark .btn-outline-premium::after,
+.dark .btn-secondary-premium::after {
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+}
+
+/* ---------- Small utility hover animations ---------- */
+/* Gentle wiggle (icons, emoji chips) */
+.hover-wiggle {
+  transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.hover-wiggle:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+/* Bob up and down (floating accents) */
+.hover-bob {
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.hover-bob:hover {
+  transform: translateY(-5px);
+}
+
+/* Social icon chips: scale + accent tint */
+.site-footer-socials a,
+.site-header-socials a {
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), color 0.2s ease;
+}
+.site-footer-socials a:hover,
+.site-header-socials a:hover {
+  transform: translateY(-4px) scale(1.12);
+}
+
+/* Contact quick-link rows */
+.contact-link {
+  transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.25s ease;
+}
+.contact-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(139, 92, 246, 0.4);
+}
+
+/* ---------- Reduced motion (animations) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-down,
+  .animate-fade-in,
+  .animate-zoom-in,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-pop,
+  .animate-shimmer,
+  .animate-blob,
+  .animate-gradient-x,
+  .animate-marquee,
+  .animate-typing,
+  .animate-wiggle,
+  .animate-pulse-glow,
+  .animate-float-y,
+  .animate-spin-slow {
+    animation: none !important;
+  }
+}
+
+/* ---------- Reduced motion (hover/micro-interactions) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  section[id]::before,
+  .site-header-nav a::after,
+  .btn-premium::after,
+  .btn-outline-premium::after,
+  .btn-secondary-premium::after,
+  .card-hover .media-img,
+  .card-hover:hover > .group img,
+  .tag-pill,
+  .tag-pill-sm,
+  .site-header-mobile-link,
+  .hover-wiggle,
+  .hover-bob,
+  .site-footer-socials a,
+  .site-header-socials a,
+  .contact-link {
+    transition: none !important;
+    animation: none !important;
+  }
+}

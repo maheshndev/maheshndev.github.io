@@ -20,6 +20,7 @@
     <script src="js/tailwind-config.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/infographic.css">
     <link rel="stylesheet" href="css/charts.css">
@@ -35,9 +36,9 @@
 
         <!-- Page header: name + role (two lines) -->
         <div class="text-center mb-10 [transform-style:preserve-3d] [transform:translateZ(20px)]">
-            <h1 class="marker-font text-3xl md:text-4xl font-bold text-slate-900 dark:text-white text-3d">Mahesh
+            <h1 class="marker-font text-3xl md:text-4xl font-bold text-slate-900 dark:text-white text-3d animate-fade-up">Mahesh
                 Narsale</h1>
-            <p class="hand-font text-xl text-slate-600 dark:text-slate-400">Full Stack Developer</p>
+            <p class="hand-font text-xl text-slate-600 dark:text-slate-400 animate-fade-up" style="animation-delay: 100ms">Full Stack Developer</p>
         </div>
 
         <!-- Infographic component (data-driven from multiple JSON) -->
@@ -59,6 +60,7 @@
     <script src="js/components/charts.js"></script>
     <script type="text/template" data-deps="defer-after-includes" src="js/infographic.js"></script>
     <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+    <script src="js/reveal.js" defer></script>
     <script src="js/3d.js" defer></script>
 </body>
 

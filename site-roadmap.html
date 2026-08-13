@@ -23,6 +23,7 @@
   <script src="js/tailwind-config.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/site-roadmap.css">
   <link rel="stylesheet" href="css/3d.css">
@@ -34,56 +35,56 @@
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-24 [perspective:1200px]">
     <div class="text-center max-w-3xl mx-auto mb-16 [transform-style:preserve-3d] [transform:translateZ(20px)]">
-      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Site <span class="text-gradient [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Roadmap</span></h1>
-      <p class="text-lg text-slate-600 dark:text-slate-400">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 animate-fade-up">Site <span class="text-gradient bg-[length:200%_auto] animate-gradient-x [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Roadmap</span></h1>
+      <p class="text-lg text-slate-600 dark:text-slate-400 animate-fade-up" style="animation-delay: 120ms">
         A quick guide to every section and page on this portfolio.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [transform-style:preserve-3d]">
-      <a href="index.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#127968;</div>
-        <h2 class="text-xl font-bold mb-1">Home</h2>
+      <a href="index.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="0">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#127968;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">Home</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">Hero, about, skills, featured work, and contact entry points.</p>
       </a>
-      <a href="index.html#about" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#128100;</div>
-        <h2 class="text-xl font-bold mb-1">About</h2>
+      <a href="index.html#about" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="60">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#128100;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">About</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">Background, experience, and what I do.</p>
       </a>
-      <a href="index.html#skills" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#128161;</div>
-        <h2 class="text-xl font-bold mb-1">Skills</h2>
+      <a href="index.html#skills" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="120">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#128161;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">Skills</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">Technologies and tools I work with, filterable by category.</p>
       </a>
-      <a href="projects.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#128736;</div>
-        <h2 class="text-xl font-bold mb-1">Projects</h2>
+      <a href="projects.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="180">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#128736;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">Projects</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">Full-stack applications, ERP solutions, and open-source work.</p>
       </a>
-      <a href="gallery.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#128247;</div>
-        <h2 class="text-xl font-bold mb-1">Gallery</h2>
+      <a href="gallery.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="240">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#128247;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">Gallery</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">Visual showcase of interfaces, dashboards, and systems.</p>
       </a>
-      <a href="infographic.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#128202;</div>
-        <h2 class="text-xl font-bold mb-1">Infographic</h2>
+      <a href="infographic.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="300">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#128202;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">Infographic</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">Interactive visual summary of the journey and skills.</p>
       </a>
-      <a href="career-roadmap.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#128215;</div>
-        <h2 class="text-xl font-bold mb-1">Career Roadmap</h2>
+      <a href="career-roadmap.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="360">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#128215;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">Career Roadmap</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">Career sections and levels mapped as a sketch-style roadmap.</p>
       </a>
-      <a href="site-roadmap.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#128506;</div>
-        <h2 class="text-xl font-bold mb-1">Site Roadmap</h2>
+      <a href="site-roadmap.html" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="420">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#128506;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">Site Roadmap</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">You are here — the site roadmap for this portfolio.</p>
       </a>
-      <a href="index.html#contact" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge">
-        <div class="text-2xl mb-2">&#128231;</div>
-        <h2 class="text-xl font-bold mb-1">Contact</h2>
+      <a href="index.html#contact" class="sitemap-card glass-card card-hover p-6 rounded-2xl block tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="480">
+        <div class="text-2xl mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">&#128231;</div>
+        <h2 class="text-xl font-bold mb-1 transition-colors group-hover:text-accent-600">Contact</h2>
         <p class="text-sm text-slate-600 dark:text-slate-400">Reach out via the contact form or direct email.</p>
       </a>
     </div>
@@ -96,6 +97,7 @@
   <script src="js/components/header.js"></script>
   <script src="js/components/footer.js"></script>
   <script src="js/includes.js"></script>
+  <script src="js/reveal.js" defer></script>
   <script src="js/3d.js" defer></script>
 </body>
 

@@ -126,7 +126,7 @@
     buildTag(tag) {
       const span = el(
         'span',
-        'px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ' +
+        'tag-pill px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ' +
         (TAG_COLORS[tag.color] || TAG_COLORS.indigo),
         tag.label
       );
@@ -141,13 +141,13 @@
       );
 
       // 0) Image header — real image if provided, else light gradient with title text
-      const mediaRow = el('div', 'relative w-full aspect-video overflow-hidden rounded-xl mb-4');
+      const mediaRow = el('div', 'relative w-full aspect-video overflow-hidden rounded-xl mb-4 group');
       if (project.image) {
         const img = document.createElement('img');
         img.src = project.image;
         img.alt = project.title;
         img.loading = 'lazy';
-        img.className = 'w-full h-full object-cover';
+        img.className = 'media-img w-full h-full object-cover transition-transform duration-500';
         img.onerror = () => {
           img.remove();
           mediaRow.appendChild(this.buildFallbackMedia(project));

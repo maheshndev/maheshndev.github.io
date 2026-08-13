@@ -24,6 +24,7 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/3d.css">
@@ -42,52 +43,52 @@
       <section id="hero" class="relative py-5 md:py-5">
         <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center [perspective:1200px]">
           <div class="space-y-5 [transform-style:preserve-3d] [transform:translateZ(24px)]">
-            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight animate-fade-up">
               <span
-                class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400 [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Mahesh
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400 bg-[length:200%_auto] animate-gradient-x [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Mahesh
                 Narsale</span>
-              <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1">Full Stack Developer —
+              <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1 animate-fade-up" style="animation-delay: 100ms">Full Stack Developer —
                 Python · Angular · Frappe · Flask . FastAPI . Node.js . Express.js </span>
-              <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1">JavaScript . Typescript .
+              <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1 animate-fade-up" style="animation-delay: 160ms">JavaScript . Typescript .
                 MySQL . PostgreSQL . MongoDB </span>
             </h1>
 
-            <p class="text-base text-slate-700 dark:text-slate-300 max-w-2xl fade-in" style="animation-delay: 0.2s">
+            <p class="text-base text-slate-700 dark:text-slate-300 max-w-2xl animate-fade-up" style="animation-delay: 220ms">
               I build scalable web applications, customize ERPNext/Frappe solutions, and design robust cloud
               deployments. Passionate about automation, mentoring, and open-source collaboration.
             </p>
 
-            <div class="flex flex-wrap gap-4 mt-6">
-              <a href="projects.html" class="btn-premium group">
+            <div class="flex flex-wrap gap-4 mt-6 animate-fade-up" style="animation-delay: 280ms">
+              <a href="projects.html" class="btn-premium group hover:scale-[1.03] active:scale-[0.98] transition-transform">
                 <img class="i8 w-5 h-5 transition-transform group-hover:rotate-12" src="https://img.icons8.com/3d-fluency/96/briefcase.png" alt="" loading="lazy">
                 View Projects
               </a>
-              <a href="#contact" class="btn-outline-premium group">
+              <a href="#contact" class="btn-outline-premium group hover:scale-[1.03] active:scale-[0.98] transition-transform">
                 <img class="i8 w-5 h-5 transition-transform group-hover:scale-110" src="https://img.icons8.com/3d-fluency/96/email.png" alt="" loading="lazy">
                 Hire Me
               </a>
-              <a href="assets/resume/Mahesh-Narsale-Resume.pdf" download class="btn-secondary-premium group">
+              <a href="assets/resume/Mahesh-Narsale-Resume.pdf" download class="btn-secondary-premium group hover:scale-[1.03] active:scale-[0.98] transition-transform">
                 <img class="i8 w-5 h-5 transition-transform group-hover:-translate-y-1" src="https://img.icons8.com/3d-fluency/96/download.png" alt="" loading="lazy">
                 Resume
               </a>
             </div>
 
-            <div class="mt-4 text-sm text-slate-600 dark:text-slate-400">
+            <div class="mt-4 text-sm text-slate-600 dark:text-slate-400 animate-fade-up" style="animation-delay: 340ms">
               Location: Pune, Maharashtra · Languages: English, Marathi, Hindi
             </div>
 
-            <div class="mt-4 text-sm text-slate-700 dark:text-slate-300">Experience: <span id="experience-years"
+            <div class="mt-4 text-sm text-slate-700 dark:text-slate-300 animate-fade-up" style="animation-delay: 400ms">Experience: <span id="experience-years"
                 class="font-semibold">—</span></div>
 
-            <div class="flex gap-3 mt-6">
+            <div class="flex gap-3 mt-6 animate-fade-up" style="animation-delay: 460ms">
               <a href="https://github.com/maheshndev" target="_blank"
-                class="btn-secondary-premium !px-4 !py-2">GitHub</a>
+                class="btn-secondary-premium !px-4 !py-2 hover:-translate-y-0.5 transition-transform">GitHub</a>
               <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
-                class="btn-secondary-premium !px-4 !py-2">LinkedIn</a>
+                class="btn-secondary-premium !px-4 !py-2 hover:-translate-y-0.5 transition-transform">LinkedIn</a>
             </div>
           </div>
 
-          <div class="flex justify-center md:justify-end relative [transform-style:preserve-3d]">
+          <div class="flex justify-center md:justify-end relative [transform-style:preserve-3d] animate-fade-up" style="animation-delay: 200ms">
             <div class="absolute -top-12 -right-12 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-float-3d-blob">
             </div>
             <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-float-3d-blob"
@@ -104,7 +105,7 @@
 
       <!-- ABOUT -->
       <section id="about" class="py-5 bg-white dark:bg-slate-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal="fade-up">
           <div class="grid md:grid-cols-3 gap-8 items-start">
             <div class="md:col-span-2">
               <h2 class="text-3xl font-extrabold text-gradient inline-block">About</h2>
@@ -137,11 +138,11 @@
               <div class="mt-2 font-semibold">Mahesh Narsale</div>
               <div class="mt-3 flex flex-col gap-2">
                 <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
-                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-[#0077b5] hover:text-white flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/linkedin.png" alt="" loading="lazy">LinkedIn</a>
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0077b5] hover:text-white hover:shadow-glow-purple flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/linkedin.png" alt="" loading="lazy">LinkedIn</a>
                 <a href="https://github.com/maheshndev" target="_blank"
-                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-[#333] hover:text-white flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/github.png" alt="" loading="lazy">GitHub</a>
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#333] hover:text-white hover:shadow-glow-purple flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/github.png" alt="" loading="lazy">GitHub</a>
                 <a href="mailto:__CONTACT_EMAIL__"
-                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-accent-600 hover:text-white flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/email.png" alt="" loading="lazy">Email</a>
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-600 hover:text-white hover:shadow-glow-purple flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/email.png" alt="" loading="lazy">Email</a>
               </div>
             </aside>
           </div>
@@ -150,7 +151,7 @@
 
       <!-- EXPERIENCE -->
       <section id="experience" class="py-16 bg-white dark:bg-slate-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal="fade-up">
           <div data-experience-group
             data-src="data/experience.json"
             data-title="Work Experience"></div>
@@ -159,14 +160,14 @@
 
 <!-- EDUCATION -->
 <section id="education" class="py-16 bg-gray-50 dark:bg-slate-900/50">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal="fade-up">
     <div data-education-group data-src="data/education.json"></div>
   </div>
 </section>
 
       <!-- SKILLS -->
       <section id="skills" class="py-16 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal="fade-up">
           <div class="mb-12 text-left">
             <h2 class="text-3xl font-extrabold text-gradient inline-block">Technical Expertise</h2>
             <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -183,7 +184,7 @@
 
       <!-- PROJECTS (featured) -->
       <section id="projects" class="py-16 bg-white dark:bg-slate-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal="fade-up">
           <div data-projects-group
             data-src="data/projects.json"
             data-title="Projects"
@@ -194,80 +195,80 @@
 
       <!-- CERTIFICATIONS & ACHIEVEMENTS -->
       <section id="certifications" class="py-16 bg-white dark:bg-slate-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal="fade-up">
           <div class="mb-12 text-left">
             <h2 class="text-3xl font-extrabold text-gradient inline-block">Professional Recognition</h2>
           </div>
 
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="0">
               <div class="flex items-center gap-4 mb-4">
-                <div class="p-3 rounded-xl bg-orange-500/10 text-orange-600">
+                <div class="p-3 rounded-xl bg-orange-500/10 text-orange-600 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                   <img class="i8 w-6 h-6" src="https://img.icons8.com/color/96/angularjs.png" alt="" loading="lazy">
                 </div>
                 <div>
-                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Angular Developer</div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1 transition-colors group-hover:text-accent-600">Angular Developer</div>
                   <div class="text-xs text-slate-500 font-medium">SP Institute · 2022</div>
                 </div>
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="80">
               <div class="flex items-center gap-4 mb-4">
-                <div class="p-3 rounded-xl bg-blue-500/10 text-blue-600">
+                <div class="p-3 rounded-xl bg-blue-500/10 text-blue-600 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                   <img class="i8 w-6 h-6" src="https://img.icons8.com/color/96/coffee.png" alt="" loading="lazy">
                 </div>
                 <div>
-                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Java / Spring & WCD</div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1 transition-colors group-hover:text-accent-600">Java / Spring & WCD</div>
                   <div class="text-xs text-slate-500 font-medium">SEED InfoTech</div>
                 </div>
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="160">
               <div class="flex items-center gap-4 mb-4">
-                <div class="p-3 rounded-xl bg-purple-500/10 text-purple-600">
+                <div class="p-3 rounded-xl bg-purple-500/10 text-purple-600 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                   <img class="i8 w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="" loading="lazy">
                 </div>
                 <div>
-                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Android & C++</div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1 transition-colors group-hover:text-accent-600">Android & C++</div>
                   <div class="text-xs text-slate-500 font-medium">SEED InfoTech</div>
                 </div>
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="240">
               <div class="flex items-center gap-4 mb-4">
-                <div class="p-3 rounded-xl bg-green-500/10 text-green-600">
+                <div class="p-3 rounded-xl bg-green-500/10 text-green-600 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                   <img class="i8 w-6 h-6" src="https://img.icons8.com/3d-fluency/96/code.png" alt="" loading="lazy">
                 </div>
                 <div>
-                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Full Stack Development Program
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1 transition-colors group-hover:text-accent-600">Full Stack Development Program
                   </div>
                   <div class="text-xs text-slate-500 font-medium">Edureka · Jul 2023</div>
                 </div>
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="320">
               <div class="flex items-center gap-4 mb-4">
-                <div class="p-3 rounded-xl bg-yellow-500/10 text-yellow-600">
+                <div class="p-3 rounded-xl bg-yellow-500/10 text-yellow-600 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                   <img class="i8 w-6 h-6" src="https://img.icons8.com/3d-fluency/96/lightning-bolt.png" alt="" loading="lazy">
                 </div>
                 <div>
-                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Fest Dev-Tech Winner</div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1 transition-colors group-hover:text-accent-600">Fest Dev-Tech Winner</div>
                   <div class="text-xs text-slate-500 font-medium">IMS College · 2019</div>
                 </div>
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge group hover:shadow-glow-purple" data-reveal="fade-up" data-reveal-delay="400">
               <div class="flex items-center gap-4 mb-4">
-                <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-600">
+                <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-600 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
                   <img class="i8 w-6 h-6" src="https://img.icons8.com/3d-fluency/96/graduation-cap.png" alt="" loading="lazy">
                 </div>
                 <div>
-                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1">IIT Bombay Workshop</div>
+                  <div class="font-bold text-slate-900 dark:text-white line-clamp-1 transition-colors group-hover:text-accent-600">IIT Bombay Workshop</div>
                   <div class="text-xs text-slate-500 font-medium">Radiance · 2017</div>
                 </div>
               </div>
@@ -280,11 +281,11 @@
 
       <!-- GITHUB PROJECTS (auto-loaded) -->
       <section id="github-projects-section" class="py-16 bg-white dark:bg-slate-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal="fade-up">
+          <div class="flex items-center justify-between group">
             <h2 class="text-3xl font-extrabold text-gradient inline-block">GitHub Projects</h2>
-            <a href="https://github.com/maheshndev?tab=repositories" target="_blank" class="text-sm underline">View
-              repos on GitHub →</a>
+            <a href="https://github.com/maheshndev?tab=repositories" target="_blank" class="text-sm underline hover:text-accent-600 transition-colors inline-flex items-center gap-1">View
+              repos on GitHub <span class="transition-transform duration-300 group-hover:translate-x-1">→</span></a>
           </div>
 
           <div id="github-projects" class="mt-6 grid gap-6 md:grid-cols-3 lg:grid-cols-3 [perspective:1400px]"></div>
@@ -293,7 +294,7 @@
 
       <!-- CONTACT -->
       <section id="contact" class="py-16 bg-gray-50 dark:bg-slate-900/50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" data-reveal="fade-up">
           <div
             class="glass-card p-8 sm:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden [transform-style:preserve-3d] gloss-edge"
             data-contact-group
@@ -304,10 +305,10 @@
 
     <!-- Floating Email Action Button -->
       <a href="mailto:__CONTACT_EMAIL__"
-        class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl bg-accent-600 text-white shadow-2xl shadow-accent-600/40 hover:scale-110 hover:-translate-y-1 transition-all duration-300 group flex items-center gap-3 active:scale-95"
+        class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl bg-accent-600 text-white shadow-2xl shadow-accent-600/40 hover:scale-110 hover:-translate-y-1 transition-all duration-300 group flex items-center gap-3 active:scale-95 hover-bob"
         aria-label="Send Email">
       <div class="relative">
-        <img class="i8 w-6 h-6" src="https://img.icons8.com/3d-fluency/96/email.png" alt="" loading="lazy">
+        <img class="i8 w-6 h-6 animate-pulse-glow" src="https://img.icons8.com/3d-fluency/96/email.png" alt="" loading="lazy">
         <span
           class="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-accent-600 animate-ping"></span>
       </div>
@@ -349,6 +350,8 @@
   <script type="text/template" data-deps="defer-after-includes" src="js/index.js"></script>
   <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
 
+   <!-- Scroll reveal (Tailwind animation utilities) -->
+   <script src="js/reveal.js" defer></script>
    <!-- 3D interactions (mouse-follow tilt) -->
    <script src="js/3d.js" defer></script>
 </body>

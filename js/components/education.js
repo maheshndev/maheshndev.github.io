@@ -101,7 +101,7 @@
       row.appendChild(connector);
 
       // Center icon on the line
-      const iconBox = el('div', 'relative z-10 flex-shrink-0 w-12 h-12 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 rounded-full border-4 border-white dark:border-slate-900 shadow-lg flex items-center justify-center ' + colorClass);
+      const iconBox = el('div', 'hover-wiggle relative z-10 flex-shrink-0 w-12 h-12 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 rounded-full border-4 border-white dark:border-slate-900 shadow-lg flex items-center justify-center ' + colorClass);
       iconBox.appendChild(this.buildIcon(item.icon));
       row.appendChild(iconBox);
 
