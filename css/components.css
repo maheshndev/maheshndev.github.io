@@ -264,16 +264,13 @@
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--accent);
-  background: linear-gradient(to right, var(--accent), var(--brandblue));
+  background: linear-gradient(to right, #a855f7, #3b82f6, #34d399);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 0 rgba(0, 0, 0, 0.05),
-    0 6px 16px rgba(139, 92, 246, 0.25);
 }
 .dark .site-footer-brand {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05), 0 2px 0 rgba(0, 0, 0, 0.5),
-    0 6px 18px rgba(167, 139, 250, 0.4);
+  -webkit-text-fill-color: transparent;
 }
 .site-footer-tagline {
   color: var(--muted);
