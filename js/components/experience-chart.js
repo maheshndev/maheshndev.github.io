@@ -1,1 +1,0 @@
-// File reverted - Chart.js functionality removed as per request
