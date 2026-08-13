@@ -7,7 +7,7 @@
 //
 // Usage:
 //   <div data-roadmap-group
-//        data-src="data/roadmap.json"></div>
+//        data-src="data/career-roadmap.json"></div>
 //
 // Index JSON shape:
 //   { header, legend, sections: [{ src }], cta }
@@ -38,7 +38,7 @@
   class RoadmapSection {
     constructor(host, options) {
       this.host = host;
-      this.src = options.src || 'data/roadmap.json';
+      this.src = options.src || 'data/career-roadmap.json';
       this.data = null;
       this.sections = [];
 
@@ -76,7 +76,7 @@
     render() {
       this.host.innerHTML = '';
 
-      const wrap = el('div', 'relative space-y-32');
+      const wrap = el('div', 'relative space-y-32 [perspective:1500px]');
 
       // progress line (desktop)
       wrap.appendChild(el('div', 'progress-line hidden lg:block'));
@@ -113,7 +113,7 @@
 
       const inline = el('div', 'inline-block relative');
       const h1 = document.createElement('h1');
-      h1.className = 'marker-font text-5xl md:text-8xl font-bold mb-4 text-slate-900 dark:text-white';
+      h1.className = 'marker-font text-5xl md:text-8xl font-bold mb-4 text-slate-900 dark:text-white text-3d';
       if (d.header.title) h1.appendChild(document.createTextNode(d.header.title));
       if (d.header.highlight) {
         const span = el('span', 'text-accent-600', d.header.highlight);
@@ -178,6 +178,7 @@
     buildLevelCard(section, level) {
       const cardClass = `level-card sketch-border p-6 bg-white dark:bg-slate-800/50 relative ${level.borderClass || ''}`;
       const card = el('div', cardClass);
+      card.classList.add('tilt-3d', 'gloss-edge');
 
       // badge
       const badge = el(
@@ -188,7 +189,7 @@
       card.appendChild(badge);
 
       // title
-      card.appendChild(el('h3', 'font-bold text-xl mb-4 marker-font', level.title));
+      card.appendChild(el('h3', 'font-bold text-xl mb-4 marker-font dark:text-slate-100', level.title));
 
       // side note
       if (level.note) {
@@ -224,7 +225,7 @@
     buildCTA() {
       const cta = this.data.cta || {};
       const section = el('section', 'mt-32 text-center');
-      const box = el('div', 'inline-block sketch-border p-10 bg-accent-600 text-white transform hover:rotate-1 transition-all duration-300 shadow-2xl');
+      const box = el('div', 'inline-block sketch-border p-10 bg-accent-600 text-white transform hover:rotate-1 transition-all duration-300 shadow-2xl tilt-3d');
 
       box.appendChild(el('h3', 'marker-font text-3xl mb-4', cta.title || 'Want to Collaborate?'));
       box.appendChild(el('p', 'hand-font text-xl mb-8 opacity-90', cta.subtitle || ''));
@@ -234,14 +235,11 @@
       const mailBtn = document.createElement('a');
       mailBtn.className = 'bg-white text-accent-600 px-8 py-3 rounded-xl font-bold hover:bg-yellow-400 hover:text-black transition-colors flex items-center gap-2';
       mailBtn.href = cta.email || '__CONTACT_EMAIL__';
-      const mailIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      mailIcon.setAttribute('class', 'w-5 h-5');
-      mailIcon.setAttribute('fill', 'none');
-      mailIcon.setAttribute('stroke', 'currentColor');
-      mailIcon.setAttribute('viewBox', '0 0 24 24');
-      const p1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      p1.setAttribute('d', 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z');
-      mailIcon.appendChild(p1);
+      const mailIcon = document.createElement('img');
+      mailIcon.className = 'i8 w-5 h-5';
+      mailIcon.src = 'https://img.icons8.com/3d-fluency/96/email.png';
+      mailIcon.alt = '';
+      mailIcon.loading = 'lazy';
       mailBtn.appendChild(mailIcon);
       mailBtn.appendChild(document.createTextNode(cta.emailLabel || 'Get in Touch'));
       row.appendChild(mailBtn);
@@ -266,7 +264,7 @@
       document.querySelectorAll('[data-roadmap-group]').forEach((host) => {
         if (host._roadmapComponent) return;
         const options = {
-          src: host.getAttribute('data-src') || 'data/roadmap.json'
+          src: host.getAttribute('data-src') || 'data/career-roadmap.json'
         };
         host._roadmapComponent = new RoadmapSection(host, options);
       });

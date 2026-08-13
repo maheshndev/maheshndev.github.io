@@ -2,8 +2,7 @@
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Interested in collaborating or hiring? Send a message — I'll get back to you within 48 hours.",
-    "email": "__CONTACT_EMAIL__",
-    "phone": "__CONTACT_PHONE__",
+"email": "__CONTACT_EMAIL__",
     "form": {
       "nameLabel": "Name",
       "namePlaceholder": "John Doe",

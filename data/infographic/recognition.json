@@ -3,7 +3,7 @@
     {
       "icon": {
         "type": "img",
-        "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        "src": "https://img.icons8.com/color/96/angularjs.png",
         "class": "w-8 h-8"
       },
       "title": "Angular Developer",
@@ -13,7 +13,7 @@
     {
       "icon": {
         "type": "img",
-        "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        "src": "https://img.icons8.com/color/96/coffee.png",
         "class": "w-8 h-8"
       },
       "title": "Java / Spring \u0026 WCD",
@@ -32,17 +32,9 @@
     },
     {
       "icon": {
-        "type": "svg",
-        "class": "w-8 h-8 text-green-600 dark:text-green-400",
-        "fill": "none",
-        "stroke": "currentColor",
-        "viewBox": "0 0 24 24",
-        "paths": [
-          {
-            "attrs": { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2" },
-            "d": "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-          }
-        ]
+        "type": "img",
+        "src": "https://img.icons8.com/3d-fluency/96/checkmark.png",
+        "class": "w-8 h-8"
       },
       "title": "Full Stack Program",
       "meta": "Edureka \u00b7 Jul 2023",
@@ -50,21 +42,23 @@
     },
     {
       "icon": {
-        "type": "svg",
-        "class": "w-8 h-8 text-yellow-600 dark:text-yellow-400",
-        "fill": "none",
-        "stroke": "currentColor",
-        "viewBox": "0 0 24 24",
-        "paths": [
-          {
-            "attrs": { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2" },
-            "d": "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"
-          }
-        ]
+        "type": "img",
+        "src": "https://img.icons8.com/3d-fluency/96/trophy.png",
+        "class": "w-8 h-8"
       },
       "title": "Fest Dev-Tech Winner",
       "meta": "IMS College \u00b7 2019",
       "cardClass": "bg-yellow-50 dark:bg-yellow-950/20"
+    },
+    {
+      "icon": {
+        "type": "img",
+        "src": "https://img.icons8.com/3d-fluency/96/graduation-cap.png",
+        "class": "w-8 h-8"
+      },
+      "title": "IIT Bombay Workshop",
+      "meta": "Radiance \u00b7 2017",
+      "cardClass": "bg-cyan-50 dark:bg-cyan-950/20"
     }
   ]
 }

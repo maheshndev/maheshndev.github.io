@@ -4,17 +4,9 @@
       "value": "3+",
       "label": "Years Experience",
       "icon": {
-        "type": "svg",
-        "class": "w-6 h-6 text-blue-500",
-        "fill": "none",
-        "stroke": "currentColor",
-        "viewBox": "0 0 24 24",
-        "paths": [
-          {
-            "attrs": { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2" },
-            "d": "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          }
-        ]
+        "type": "img",
+        "src": "https://img.icons8.com/3d-fluency/96/briefcase.png",
+        "class": "w-6 h-6"
       },
       "cardClass": "bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800"
     },
@@ -22,17 +14,9 @@
       "value": "11+",
       "label": "Projects Completed",
       "icon": {
-        "type": "svg",
-        "class": "w-6 h-6 text-green-500",
-        "fill": "none",
-        "stroke": "currentColor",
-        "viewBox": "0 0 24 24",
-        "paths": [
-          {
-            "attrs": { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2" },
-            "d": "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-          }
-        ]
+        "type": "img",
+        "src": "https://img.icons8.com/3d-fluency/96/checkmark.png",
+        "class": "w-6 h-6"
       },
       "cardClass": "bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800"
     },
@@ -40,17 +24,9 @@
       "value": "8+",
       "label": "ERP Modules Built",
       "icon": {
-        "type": "svg",
-        "class": "w-6 h-6 text-purple-500",
-        "fill": "none",
-        "stroke": "currentColor",
-        "viewBox": "0 0 24 24",
-        "paths": [
-          {
-            "attrs": { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2" },
-            "d": "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-          }
-        ]
+        "type": "img",
+        "src": "https://img.icons8.com/3d-fluency/96/database.png",
+        "class": "w-6 h-6"
       },
       "cardClass": "bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-800"
     },
@@ -58,17 +34,9 @@
       "value": "25%",
       "label": "Performance Improvement",
       "icon": {
-        "type": "svg",
-        "class": "w-6 h-6 text-amber-500",
-        "fill": "none",
-        "stroke": "currentColor",
-        "viewBox": "0 0 24 24",
-        "paths": [
-          {
-            "attrs": { "stroke-linecap": "round", "stroke-linejoin": "round", "stroke-width": "2" },
-            "d": "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-          }
-        ]
+        "type": "img",
+        "src": "https://img.icons8.com/3d-fluency/96/bar-chart.png",
+        "class": "w-6 h-6"
       },
       "cardClass": "bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800"
     }

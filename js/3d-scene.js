@@ -1,0 +1,1 @@
+// File reverted - Three.js functionality removed as per request

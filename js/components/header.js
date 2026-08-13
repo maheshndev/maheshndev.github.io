@@ -13,7 +13,7 @@
     { href: 'gallery.html', label: 'Gallery' },
     { href: 'infographic.html', label: 'Infographic' },
     { href: 'career-roadmap.html', label: 'Career Roadmap' },
-    { href: 'site-roadmap.html', label: 'Site Map' },
+    { href: 'site-roadmap.html', label: 'Site Roadmap' },
     { href: 'index.html#contact', label: 'Contact' },
   ];
 
@@ -61,7 +61,7 @@
 <header class="site-header">
   <div class="site-header-inner">
     <a href="index.html" class="site-header-brand" aria-label="Home">
-      <img src="assets/cv.png" alt="Mahesh logo" onerror="this.style.display='none'">
+      <img src="https://avatars.githubusercontent.com/maheshndev" alt="Mahesh Narsale" onerror="this.style.display='none'">
       <span class="site-header-brand-text">
         <span class="site-header-brand-name">Mahesh Narsale</span>
         <span class="site-header-brand-sub">Full Stack Developer</span>

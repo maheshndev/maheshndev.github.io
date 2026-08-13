@@ -34,7 +34,7 @@
     }
 
     renderShell() {
-      this.grid = el('div', 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6');
+      this.grid = el('div', 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 [perspective:1400px]');
       this.grid.setAttribute('aria-live', 'polite');
       this.host.appendChild(this.grid);
     }
@@ -63,7 +63,7 @@
     buildItem(item) {
       const box = el(
         'div',
-        'gallery-item group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer'
+        'gallery-item group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer tilt-3d preserve-3d'
       );
       box.setAttribute('tabindex', '0');
       box.setAttribute('role', 'button');
@@ -83,18 +83,12 @@
       overlay.appendChild(el('span', 'text-white font-bold text-lg mb-2', item.title));
       if (item.subtitle) overlay.appendChild(el('span', 'text-slate-300 text-sm', item.subtitle));
       const zoomWrap = el('div', 'mt-4 p-2 rounded-full bg-white/20 backdrop-blur-md');
-      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.setAttribute('class', 'w-6 h-6 text-white');
-      svg.setAttribute('fill', 'none');
-      svg.setAttribute('stroke', 'currentColor');
-      svg.setAttribute('viewBox', '0 0 24 24');
-      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      path.setAttribute('stroke-linecap', 'round');
-      path.setAttribute('stroke-linejoin', 'round');
-      path.setAttribute('stroke-width', '2');
-      path.setAttribute('d', 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7');
-      svg.appendChild(path);
-      zoomWrap.appendChild(svg);
+      const zoom = document.createElement('img');
+      zoom.className = 'i8 w-6 h-6';
+      zoom.src = 'https://img.icons8.com/3d-fluency/96/search.png';
+      zoom.alt = '';
+      zoom.loading = 'lazy';
+      zoomWrap.appendChild(zoom);
       overlay.appendChild(zoomWrap);
       box.appendChild(overlay);
 
@@ -124,13 +118,13 @@
 
       const content = el(
         'div',
-        'relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-800 rounded-2xl shadow-2xl'
+        'relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white dark:bg-slate-800 rounded-2xl shadow-2xl [transform-style:preserve-3d] animate-[modalPop_0.3s_ease-out]'
       );
 
       const closeBtn = el('button', 'absolute top-4 right-4 z-10 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white rounded-lg text-sm p-1.5');
       closeBtn.setAttribute('aria-label', 'Close');
       closeBtn.innerHTML =
-        '<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>';
+        '<img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/cancel.png" alt="" loading="lazy">';
       closeBtn.addEventListener('click', () => this.closeModal());
       content.appendChild(closeBtn);
 

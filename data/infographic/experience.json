@@ -6,7 +6,7 @@
       "cardClass": "border-green-600 dark:border-green-500 shadow-lg",
       "title": "Assimilate Technology",
       "titleClass": "text-green-800 dark:text-green-400 text-lg",
-      "period": "March 2024 — Present",
+      "period": "April 2024 — Present",
       "role": "Full Stack Developer (ERPNext / Frappe)",
       "roleClass": "font-bold",
       "points": [
@@ -17,7 +17,12 @@
         "Deployed containerized apps on Ubuntu using Docker & AWS"
       ],
       "link": "index.html#experience",
-      "linkText": "View Full Experience"
+      "linkText": "View Full Experience",
+      "icon": {
+        "type": "img",
+        "src": "https://img.icons8.com/color/96/python.png",
+        "class": "w-5 h-5 text-green-600"
+      }
     },
     {
       "badge": "INTERN",
@@ -25,24 +30,19 @@
       "cardClass": "border-blue-600 dark:border-blue-500 shadow-md",
       "title": "Assimilate Technology",
       "titleClass": "text-blue-800 dark:text-blue-400",
-      "period": "Dec 2023 — Feb 2024",
+      "period": "Dec 2023 — March 2024",
       "role": "Software Developer Intern",
       "roleClass": "font-medium italic",
       "points": [
         "Maintained backend for KUULI platform (Python, Express.js, PostgreSQL)",
         "Developed custom Frappe modules & optimized DB queries",
         "Recognized as Star Employee for zero-defect bug fixes"
-      ]
-    },
-    {
-      "badge": null,
-      "cardClass": "border-slate-400 dark:border-slate-600 shadow-sm",
-      "title": "SoftwareTechIT",
-      "titleClass": "text-slate-800 dark:text-slate-300",
-      "period": "Internship · 2022",
-      "role": "Assisted in developing education portals and Android modules.",
-      "roleClass": "font-medium italic text-slate-600 dark:text-slate-400",
-      "points": []
+      ],
+      "icon": {
+        "type": "img",
+        "src": "https://img.icons8.com/color/96/nodejs.png",
+        "class": "w-5 h-5 text-blue-600"
+      }
     }
   ]
 }

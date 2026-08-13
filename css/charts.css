@@ -1,0 +1,12 @@
+/* ============================================================
+   Hand-drawn SVG charts (career-roadmap / infographic pages)
+   Used together with Tailwind utilities and css/3d.css
+   ============================================================ */
+
+/* chart center / bar text stays readable in both themes */
+.chart-center-total {
+  font-family: 'Architects Daughter', cursive;
+}
+.dark .chart-center-total {
+  fill: #e2e8f0 !important;
+}

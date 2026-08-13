@@ -27,13 +27,13 @@
 
   // Tag pill color mapping (matches existing Tailwind classes)
   const TAG_COLORS = {
-    indigo: 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20',
-    purple: 'bg-purple-500/10 text-purple-400 border border-purple-500/20',
-    blue: 'bg-blue-500/10 text-blue-400 border border-blue-500/20',
-    green: 'bg-green-500/10 text-green-400 border border-green-500/20',
-    rose: 'bg-rose-500/10 text-rose-400 border border-rose-500/20',
-    amber: 'bg-amber-500/10 text-amber-400 border border-amber-500/20',
-    orange: 'bg-orange-500/10 text-orange-400 border border-orange-500/20'
+    indigo: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 border border-indigo-500/20',
+    purple: 'bg-purple-500/10 text-purple-600 dark:text-purple-300 border border-purple-500/20',
+    blue: 'bg-blue-500/10 text-blue-600 dark:text-blue-300 border border-blue-500/20',
+    green: 'bg-green-500/10 text-green-600 dark:text-green-300 border border-green-500/20',
+    rose: 'bg-rose-500/10 text-rose-600 dark:text-rose-300 border border-rose-500/20',
+    amber: 'bg-amber-500/10 text-amber-600 dark:text-amber-300 border border-amber-500/20',
+    orange: 'bg-orange-500/10 text-orange-600 dark:text-orange-300 border border-orange-500/20'
   };
 
   // ============================================================
@@ -69,7 +69,7 @@
       }
 
       // grid
-      this.grid = el('div', 'project-grid mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3');
+      this.grid = el('div', 'project-grid mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3 [perspective:1400px]');
       this.grid.setAttribute('aria-live', 'polite');
       this.host.appendChild(this.grid);
 
@@ -77,20 +77,14 @@
       if (this.showFooter) {
         this.footer = el('div', 'mt-12 text-center');
         const btn = document.createElement('a');
-        btn.className = 'btn-outline-premium';
+        btn.className = 'btn-outline-premium btn-3d';
         btn.setAttribute('href', this.showAllHref);
         btn.appendChild(document.createTextNode('View All Projects'));
-        const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        arrow.setAttribute('class', 'w-5 h-5 ml-2');
-        arrow.setAttribute('fill', 'none');
-        arrow.setAttribute('stroke', 'currentColor');
-        arrow.setAttribute('viewBox', '0 0 24 24');
-        const arrowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        arrowPath.setAttribute('stroke-linecap', 'round');
-        arrowPath.setAttribute('stroke-linejoin', 'round');
-        arrowPath.setAttribute('stroke-width', '2');
-        arrowPath.setAttribute('d', 'M17 8l4 4m0 0l-4 4m4-4H3');
-        arrow.appendChild(arrowPath);
+        const arrow = document.createElement('img');
+        arrow.className = 'i8 w-5 h-5 ml-2';
+        arrow.src = 'https://img.icons8.com/3d-fluency/96/forward.png';
+        arrow.alt = '';
+        arrow.loading = 'lazy';
         btn.appendChild(arrow);
         this.footer.appendChild(btn);
         this.host.appendChild(this.footer);
@@ -143,7 +137,7 @@
       // Equal-height card: flex-col + flex-grow sections + mt-auto buttons
       const article = el(
         'article',
-        'p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover flex flex-col h-full'
+        'p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge flex flex-col h-full preserve-3d'
       );
 
       // 0) Image header — real image if provided, else light gradient with title text

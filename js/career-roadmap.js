@@ -8,7 +8,7 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('opacity-100');
-        entry.target.style.transform = 'translateY(0) rotate(0deg)';
+        entry.target.style.removeProperty('transform');
         observer.unobserve(entry.target);
       }
     });

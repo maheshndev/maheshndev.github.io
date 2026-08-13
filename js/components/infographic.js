@@ -28,7 +28,7 @@
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     Object.keys(attrs || {}).forEach(k => svg.setAttribute(k, attrs[k]));
     (children || []).forEach(c => {
-      if (c.type === 'path') {
+      if (c.type === 'path' || c.d) {
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         Object.keys(c.attrs || {}).forEach(k => path.setAttribute(k, c.attrs[k]));
         path.setAttribute('d', c.d);
@@ -83,7 +83,7 @@
 
     render() {
       this.host.innerHTML = '';
-      const wrap = el('div', 'relative');
+      const wrap = el('div', 'relative [perspective:1500px]');
 
       // central SVG roadmap path
       if (this.data.header && this.data.header.path) {
@@ -94,6 +94,18 @@
         path.setAttribute('class', 'roadmap-path');
         path.setAttribute('d', this.data.header.path);
         svg.appendChild(path);
+
+        // Add connector markers at key points along the path
+        const markersData = this.data.header.pathMarkers || this.getDefaultMarkers();
+        markersData.forEach(marker => {
+          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          circle.setAttribute('cx', marker.cx);
+          circle.setAttribute('cy', marker.cy);
+          circle.setAttribute('r', '6');
+          circle.setAttribute('class', 'marker-dot');
+          svg.appendChild(circle);
+        });
+
         wrap.appendChild(svg);
       }
 
@@ -119,11 +131,11 @@
 
       const inline = el('div', 'inline-block relative');
 
-      const h1 = el('h1', 'marker-font text-5xl md:text-7xl font-bold mb-4 z-10 relative text-slate-900 dark:text-white', h.title || '');
+      const h1 = el('h1', 'marker-font text-5xl md:text-7xl font-bold mb-4 z-10 relative text-slate-900 dark:text-white text-3d', h.title || '');
       inline.appendChild(h1);
 
       if (h.subtitle) {
-        const h2 = el('h2', h.subtitleClass || 'marker-font text-3xl md:text-5xl font-bold mb-6 text-blue-600 dark:text-blue-400', h.subtitle);
+        const h2 = el('h2', h.subtitleClass || 'marker-font text-3xl md:text-5xl font-bold mb-6 text-blue-600 dark:text-blue-400 text-3d', h.subtitle);
         inline.appendChild(h2);
       }
 
@@ -180,13 +192,18 @@
     render_academic(data) {
       const box = el('div', 'space-y-6');
       (data.items || []).forEach(item => {
-        const card = el('div', `sketch-border p-5 bg-white dark:bg-slate-800/50 card-hover relative ${item.cardClass || ''}`);
+        const card = el('div', `sketch-border p-5 bg-white dark:bg-slate-800/50 card-hover tilt-3d relative ${item.cardClass || ''}`);
         const num = el(
           'div',
           `absolute -left-3 -top-3 w-8 h-8 ${item.numClass || 'bg-blue-100 dark:bg-blue-900/50'} rounded-full flex items-center justify-center font-bold border-2 border-slate-700 dark:border-slate-500`,
           item.num
         );
         card.appendChild(num);
+        if (item.icon) {
+          const iconBox = el('div', 'absolute -right-3 -top-3 w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700');
+          iconBox.appendChild(this.buildIcon(item.icon));
+          card.appendChild(iconBox);
+        }
         card.appendChild(el('h3', `font-bold ${item.titleClass || 'dark:text-slate-200'}`, item.title));
         card.appendChild(el('p', `text-sm text-slate-500 dark:text-slate-400 ${item.metaClass || ''}`, item.meta));
         if (item.note) {
@@ -206,7 +223,7 @@
     render_recognition(data) {
       const box = el('div', 'grid grid-cols-1 gap-4');
       (data.items || []).forEach(item => {
-        const card = el('div', `sketch-border-sm p-4 ${item.cardClass || 'bg-white dark:bg-slate-800/50'} flex items-center gap-4 card-hover`);
+        const card = el('div', `sketch-border-sm p-4 ${item.cardClass || 'bg-white dark:bg-slate-800/50'} flex items-center gap-4 card-hover tilt-3d`);
         card.appendChild(this.buildIcon(item.icon));
         const txt = el('div');
         txt.appendChild(el('h4', 'font-bold text-sm dark:text-slate-200', item.title));
@@ -219,7 +236,7 @@
 
     // LIVE / MY TOOLKIT box
     render_toolkit(data) {
-      const box = el('div', 'sketch-border p-6 bg-slate-900 text-white relative shadow-2xl');
+      const box = el('div', 'sketch-border p-6 bg-slate-900 text-white relative shadow-2xl tilt-3d');
 
       if (data.live) {
         const live = el('div', 'absolute -right-4 -top-4 w-12 h-12 bg-yellow-400 text-black flex items-center justify-center font-bold sketch-border rotate-12', data.live);
@@ -231,7 +248,7 @@
       const groups = el('div', 'space-y-8');
       (data.groups || []).forEach(group => {
         const g = el('div');
-        g.appendChild(el('h3', 'marker-font text-xl mb-4 border-b border-slate-700', group.title));
+        g.appendChild(el('h3', 'marker-font text-xl mb-4 border-b border-slate-700 text-white', group.title));
 
         if (group.layout === 'rows') {
           const rows = el('div', 'space-y-3');
@@ -286,11 +303,17 @@
     render_experience(data) {
       const box = el('div', 'space-y-6');
       (data.items || []).forEach(item => {
-        const card = el('div', `sketch-border p-5 bg-white dark:bg-slate-800/50 ${item.cardClass || ''} relative card-hover`);
+        const card = el('div', `sketch-border p-5 bg-white dark:bg-slate-800/50 ${item.cardClass || ''} relative card-hover tilt-3d`);
 
         if (item.badge) {
           const badge = el('div', `absolute -right-3 -top-3 w-10 h-10 ${item.badgeClass || 'bg-blue-600 text-white'} rounded-full flex items-center justify-center font-bold border-2 border-slate-900 shadow-lg`, item.badge);
           card.appendChild(badge);
+        }
+
+        if (item.icon) {
+          const iconBox = el('div', 'absolute -left-3 -top-3 w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700');
+          iconBox.appendChild(this.buildIcon(item.icon));
+          card.appendChild(iconBox);
         }
 
         card.appendChild(el('h3', `font-bold ${item.titleClass || 'dark:text-slate-200'}`, item.title));
@@ -309,7 +332,7 @@
           const linkEl = document.createElement('a');
           linkEl.href = item.link;
           linkEl.className = 'inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 dark:text-blue-400 hover:underline mt-3';
-          linkEl.innerHTML = `${item.linkText || 'View More'} <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>`;
+          linkEl.innerHTML = `${item.linkText || 'View More'} <img class="i8 w-3 h-3" src="https://img.icons8.com/ios/16/8b5cf6/forward.png" alt="">`;
           card.appendChild(linkEl);
         }
 
@@ -323,7 +346,7 @@
       const box = el('div', 'space-y-4');
 
       (data.cards || []).forEach(item => {
-        const card = el('div', `sketch-border p-4 bg-white dark:bg-slate-800/50 card-hover shadow-sm ${item.cardClass || ''}`);
+        const card = el('div', `sketch-border p-4 bg-white dark:bg-slate-800/50 card-hover tilt-3d shadow-sm ${item.cardClass || ''}`);
 
         const head = el('div', 'flex justify-between items-start mb-2');
         head.appendChild(el('h4', 'font-bold text-sm dark:text-slate-200', item.title));
@@ -373,7 +396,7 @@
 
     // 5. LEGACY & EDUCATION
     render_legacy(data) {
-      const box = el('div', 'sketch-border p-5 bg-white dark:bg-slate-800/50 shadow-lg space-y-5 border-dashed');
+      const box = el('div', 'sketch-border p-5 bg-white dark:bg-slate-800/50 shadow-lg space-y-5 border-dashed tilt-3d');
       (data.items || []).forEach(item => {
         const row = el('div', `flex items-center gap-3 ${item.divider ? 'border-b border-dashed dark:border-slate-700 pb-3' : ''} hover:bg-slate-50 dark:hover:bg-slate-800 p-2 transition-colors rounded-lg`);
         const iconBox = el('div', `p-2 ${item.iconBoxClass || 'bg-rose-50 dark:bg-rose-950/20'} rounded-xl border`);
@@ -381,6 +404,8 @@
         img.src = item.img;
         img.alt = item.title;
         img.className = 'w-6 h-6';
+        img.loading = 'lazy';
+        img.onerror = () => { img.style.display = 'none'; };
         iconBox.appendChild(img);
         row.appendChild(iconBox);
 
@@ -406,7 +431,7 @@
     render_links(data) {
       const box = el('div', 'space-y-3');
       (data.items || []).forEach(item => {
-        const card = el('div', `sketch-border-sm p-4 ${item.cardClass || 'bg-white dark:bg-slate-800/50'} relative card-hover cursor-pointer`);
+        const card = el('div', `sketch-border-sm p-4 ${item.cardClass || 'bg-white dark:bg-slate-800/50'} relative card-hover tilt-3d cursor-pointer`);
         
         const head = el('div', 'flex items-center gap-3 mb-2');
         if (item.icon) {
@@ -437,7 +462,7 @@
     render_stats(data) {
       const grid = el('div', 'grid grid-cols-2 gap-4');
       (data.items || []).forEach(item => {
-        const card = el('div', `sketch-border-sm p-4 ${item.cardClass || 'bg-white dark:bg-slate-800/50'} text-center card-hover`);
+        const card = el('div', `sketch-border-sm p-4 ${item.cardClass || 'bg-white dark:bg-slate-800/50'} text-center card-hover tilt-3d`);
         
         if (item.icon) {
           const iconWrap = el('div', 'flex justify-center mb-2');
@@ -462,6 +487,7 @@
         img.alt = icon.text || '';
         img.className = icon.class || 'w-8 h-8';
         img.loading = 'lazy';
+        img.onerror = () => { img.style.display = 'none'; };
         return img;
       }
       if (icon.type === 'svg') {
@@ -499,22 +525,48 @@
       row.appendChild(el('div', 'hand-font text-4xl transform -rotate-6', f.left || ''));
 
       const col = el('div', 'flex flex-col items-center');
-      col.appendChild(svgEl({
-        class: 'w-16 h-16 animate-pulse text-blue-600',
-        viewBox: '0 0 24 24',
-        fill: 'none',
-        stroke: 'currentColor',
-        'stroke-width': '1'
-      }, [
-        {
-          type: 'path',
-          attrs: { 'stroke-width': '2', 'stroke-linecap': 'round' },
-          d: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707'
-        }
-      ]));
+      const sun = document.createElement('img');
+      sun.className = 'i8 w-16 h-16 animate-pulse';
+      sun.src = 'https://img.icons8.com/3d-fluency/96/sun.png';
+      sun.alt = '';
+      sun.loading = 'lazy';
+      col.appendChild(sun);
       col.appendChild(el('div', 'text-[10px] font-black mt-2 tracking-widest uppercase', f.right || ''));
       row.appendChild(col);
       return row;
+    }
+
+    getDefaultMarkers() {
+      const path = this.data.header.path || '';
+      const points = [];
+
+      const startMatch = path.match(/M\s+([\d.]+),\s*([\d.]+)/);
+      if (startMatch) {
+        points.push({ cx: parseFloat(startMatch[1]), cy: parseFloat(startMatch[2]) });
+      }
+
+      const matches = path.match(/[QT]\s+([\d.]+),\s*([\d.]+)/g) || [];
+      matches.forEach(m => {
+        const coords = m.match(/[QT]\s+([\d.]+),\s*([\d.]+)/);
+        if (coords) {
+          points.push({ cx: parseFloat(coords[1]), cy: parseFloat(coords[2]) });
+        }
+      });
+
+      const endMatch = path.match(/T\s+([\d.]+),\s*([\d.]+)$/);
+      if (endMatch) {
+        points.push({ cx: parseFloat(endMatch[1]), cy: parseFloat(endMatch[2]) });
+      }
+
+      const unique = [];
+      points.forEach(p => {
+        if (unique.length >= 6) return;
+        if (!unique.some(u => Math.abs(u.cx - p.cx) < 5 && Math.abs(u.cy - p.cy) < 5)) {
+          unique.push(p);
+        }
+      });
+
+      return unique;
     }
   }
 

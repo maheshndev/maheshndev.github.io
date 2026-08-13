@@ -4,7 +4,8 @@
       "id": "assimilate-fullstack",
       "company": "Assimilate Technology",
       "role": "Full Stack Developer",
-      "period": "March 2024 — Present",
+      "period": "April 2024 — Present",
+      "year": "2024",
       "current": true,
       "icon": "briefcase",
       "points": [
@@ -19,7 +20,8 @@
       "id": "assimilate-intern",
       "company": "Intern — Assimilate Technology",
       "role": "Software Developer Intern",
-      "period": "Dec 2023 — Feb 2024",
+      "period": "Dec 2023 — March 2024",
+      "year": "2023",
       "current": false,
       "icon": "academic",
       "points": [

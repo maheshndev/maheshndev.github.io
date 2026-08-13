@@ -1,24 +1,19 @@
-:root {
-            --sketch-color: #334155;
-            --paper-bg: #f8fafc;
-        }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light);
+  background-image:
+    linear-gradient(#e5e7eb 1px, transparent 1px),
+    linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+  background-size: 20px 20px;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--paper-bg);
-            background-image:
-                linear-gradient(#e5e7eb 1px, transparent 1px),
-                linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        .dark body {
-            background-color: #0f172a;
-            background-image:
-                linear-gradient(#1e293b 1px, transparent 1px),
-                linear-gradient(90deg, #1e293b 1px, transparent 1px);
-            color: #cbd5e1;
-        }
+.dark body {
+  background-color: var(--text);
+  background-image:
+    linear-gradient(#1e293b 1px, transparent 1px),
+    linear-gradient(90deg, #1e293b 1px, transparent 1px);
+  color: var(--light);
+}
 
         .glass {
             background: rgba(255, 255, 255, 0.8);
@@ -39,25 +34,25 @@
             font-family: 'Gochi Hand', cursive;
         }
 
-        .sketch-border {
-            border: 3px solid var(--sketch-color);
-            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-            transition: border-color 0.3s ease;
-        }
+.sketch-border {
+  border: 3px solid var(--muted);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  transition: border-color 0.3s ease;
+}
 
-        .dark .sketch-border {
-            border-color: #64748b;
-        }
+.dark .sketch-border {
+  border-color: var(--muted);
+}
 
-        .sketch-border-sm {
-            border: 2px solid var(--sketch-color);
-            border-radius: 10px 5px 12px 4px/4px 12px 5px 10px;
-            transition: border-color 0.3s ease;
-        }
+.sketch-border-sm {
+  border: 2px solid var(--muted);
+  border-radius: 10px 5px 12px 4px/4px 12px 5px 10px;
+  transition: border-color 0.3s ease;
+}
 
-        .dark .sketch-border-sm {
-            border-color: #64748b;
-        }
+.dark .sketch-border-sm {
+  border-color: var(--muted);
+}
 
         .roadmap-path {
             fill: none;
@@ -69,9 +64,9 @@
             opacity: 0.4;
         }
 
-        .dark .roadmap-path {
-            stroke: #334155;
-        }
+.dark .roadmap-path {
+  stroke: var(--muted);
+}
 
         @keyframes animate-dash {
             to {
@@ -79,31 +74,55 @@
             }
         }
 
-        .node-title {
-            background: #f1f5f9;
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            transform: rotate(-1deg);
-            border: 2px solid var(--sketch-color);
-        }
+.node-title {
+  background: var(--light);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  transform: rotate(-1deg);
+  border: 2px solid var(--muted);
+}
 
-        .sticky-note {
-            background: #fef08a;
-            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
-            transform: rotate(2deg);
-        }
+.sticky-note {
+  background: #fef08a;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+  transform: rotate(2deg);
+}
 
-        .card-hover:hover {
-            transform: translateY(-5px) rotate(1deg);
-            transition: all 0.3s ease;
-        }
+.card-hover:hover {
+  transform: perspective(1100px) rotateX(4deg) rotateY(-5deg) translateZ(24px) translateY(-5px) rotate(1deg);
+  transition: all 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
 
-        .icon-container {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--sketch-color);
-            border-radius: 50%;
-        }
+.sketch-border,
+.sketch-border-sm {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.icon-container {
+  width: 40px;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--muted);
+  border-radius: 50%;
+}
+
+.marker-dot {
+  fill: var(--accent);
+  stroke: var(--light);
+  stroke-width: 2;
+}
+
+.dark .marker-dot {
+  fill: var(--muted);
+  stroke: var(--light);
+}
+
+.path-marker {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 4, 4;
+}

@@ -3,10 +3,12 @@
 .sitemap-card {
   text-decoration: none;
   color: inherit;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
 }
 
 .sitemap-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 20px 40px -12px rgba(139, 92, 246, 0.2);
+  transform: perspective(1100px) rotateX(4deg) rotateY(-5deg) translateZ(26px) translateY(-6px) scale(1.01);
+  box-shadow: 0 30px 60px -18px rgba(139, 92, 246, 0.35), 0 12px 24px -12px rgba(0, 0, 0, 0.15);
 }

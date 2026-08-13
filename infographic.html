@@ -5,23 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahesh Narsale | Interactive Infographic Roadmap</title>
+    <link rel="icon" type="image/png" href="assets/portfolio-icon.png" />
+    <!-- Apply saved/system theme before first paint (prevents light/dark flash) -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind-config.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gochi+Hand&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/infographic.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/3d.css">
 </head>
 
-<body class="antialiased text-slate-800 dark:text-slate-100">
+<body class="min-h-screen flex flex-col antialiased text-slate-800 dark:text-slate-100 overflow-x-hidden">
 
     <!-- NAVBAR (injected) -->
     <div id="site-header"></div>
 
-    <main class="max-w-7xl mx-auto relative pt-10 px-4 md:px-10">
+    <main class="flex-grow max-w-7xl mx-auto relative pt-10 px-4 md:px-10">
+
+        <!-- Page header: name + role (two lines) -->
+        <div class="text-center mb-10 [transform-style:preserve-3d] [transform:translateZ(20px)]">
+            <h1 class="marker-font text-3xl md:text-4xl font-bold text-slate-900 dark:text-white text-3d">Mahesh
+                Narsale</h1>
+            <p class="hand-font text-xl text-slate-600 dark:text-slate-400">Full Stack Developer</p>
+        </div>
 
         <!-- Infographic component (data-driven from multiple JSON) -->
         <div data-infographic-group data-src="data/infographic.json"></div>
+
+        <!-- Charts component (hand-drawn SVG stats) -->
+        <div data-charts-group data-src="data/charts.json"></div>
 
     </main>
 
@@ -33,8 +56,10 @@
     <script src="js/components/footer.js"></script>
     <script src="js/includes.js"></script>
     <script src="js/components/infographic.js"></script>
+    <script src="js/components/charts.js"></script>
     <script type="text/template" data-deps="defer-after-includes" src="js/infographic.js"></script>
     <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+    <script src="js/3d.js" defer></script>
 </body>
 
 </html>

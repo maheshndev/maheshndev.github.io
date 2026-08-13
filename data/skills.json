@@ -3,37 +3,37 @@
     {
       "name": "Angular",
       "category": ["Frontend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+      "icon": "https://img.icons8.com/color/96/angularjs.png"
     },
     {
       "name": "React / Native",
       "category": ["Frontend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      "icon": "https://img.icons8.com/color/96/react-native.png"
     },
     {
       "name": "HTML5",
       "category": ["Frontend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+      "icon": "https://img.icons8.com/color/96/html-5.png"
     },
     {
       "name": "CSS3",
       "category": ["Frontend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      "icon": "https://img.icons8.com/color/96/css3.png"
     },
     {
       "name": "Tailwind CSS",
       "category": ["Frontend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
     },
     {
       "name": "JavaScript",
       "category": ["Frontend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      "icon": "https://img.icons8.com/color/96/javascript.png"
     },
     {
       "name": "TypeScript",
       "category": ["Frontend", "Backend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+      "icon": "https://img.icons8.com/color/96/typescript.png"
     },
     {
       "name": "Frappe / ERPNext",
@@ -43,27 +43,27 @@
     {
       "name": "Python",
       "category": ["Backend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+      "icon": "https://img.icons8.com/color/96/python.png"
     },
     {
       "name": "Flask",
       "category": ["Backend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+      "icon": "https://img.icons8.com/color/96/flask.png"
     },
     {
       "name": "Node.js / Express",
       "category": ["Backend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      "icon": "https://img.icons8.com/color/96/nodejs.png"
     },
     {
       "name": "Java",
       "category": ["Backend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      "icon": "https://img.icons8.com/color/96/coffee.png"
     },
     {
       "name": "FastAPI / REST",
       "category": ["Backend"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+      "icon": "https://img.icons8.com/color/96/api.png"
     },
     {
       "name": "PostgreSQL",
@@ -73,47 +73,47 @@
     {
       "name": "MySQL / MariaDB",
       "category": ["Database & ORM"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+      "icon": "https://img.icons8.com/color/96/mysql-logo.png"
     },
     {
       "name": "MongoDB",
       "category": ["Database & ORM"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      "icon": "https://img.icons8.com/color/96/mongodb.png"
     },
     {
       "name": "Redis",
       "category": ["Database & ORM"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+      "icon": "https://img.icons8.com/color/96/redis.png"
     },
     {
       "name": "Docker",
       "category": ["Cloud & DevOps"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+      "icon": "https://img.icons8.com/color/96/docker.png"
     },
     {
       "name": "AWS",
       "category": ["Cloud & DevOps"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+      "icon": "https://img.icons8.com/color/96/amazon.png"
     },
     {
       "name": "GitHub Workflows",
       "category": ["Cloud & DevOps"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+      "icon": "https://img.icons8.com/color/96/github.png"
     },
     {
       "name": "Ubuntu / Linux",
       "category": ["OS"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+      "icon": "https://img.icons8.com/color/96/ubuntu.png"
     },
     {
       "name": "Package Automation",
       "category": ["Cloud & DevOps"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+      "icon": "https://img.icons8.com/color/96/npm.png"
     },
     {
       "name": "Git / Version Control",
       "category": ["Cloud & DevOps"],
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      "icon": "https://img.icons8.com/color/96/git.png"
     }
   ]
 }

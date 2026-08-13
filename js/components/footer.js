@@ -24,7 +24,7 @@
   <div class="site-footer-inner">
     <div class="site-footer-grid">
       <div class="site-footer-info">
-        <div class="site-footer-brand text-gradient">Mahesh Narsale</div>
+        <div class="site-footer-brand">Mahesh Narsale</div>
         <p class="site-footer-tagline">Building the next generation of web experience.</p>
         <div class="site-footer-socials">
           <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank" rel="noopener" aria-label="LinkedIn">${ICONS.linkedin}</a>

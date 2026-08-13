@@ -1,0 +1,36 @@
+{
+  "education": [
+    {
+      "year": "2022",
+      "title": "MCA",
+      "subtitle": "SPPU, Pune",
+      "period": "2020 – 2022",
+      "icon": "master",
+      "color": "red"
+    },
+    {
+      "year": "2020",
+      "title": "BCA",
+      "subtitle": "Pune University",
+      "period": "2017 – 2020",
+      "icon": "bracket",
+      "color": "blue"
+    },
+    {
+      "year": "2017",
+      "title": "12th Standard",
+      "subtitle": "Aurangabad State Board",
+      "period": "2016 – 2017",
+      "icon": "graduation-cap",
+      "color": "green"
+    },
+    {
+      "year": "2015",
+      "title": "10th Standard",
+      "subtitle": "Aurangabad State Board",
+      "period": "2014 – 2015",
+      "icon": "school",
+      "color": "amber"
+    }
+  ]
+}

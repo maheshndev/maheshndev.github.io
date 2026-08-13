@@ -6,7 +6,15 @@
     "sticky": "\u201cFull Stack Developer\u201d",
     "tagline": "From Logic Mazes to Manufacturing Ecosystems \u2014 A Visual Journey of a Full-Stack ERP Specialist.",
     "startBadge": "YOU ARE HERE: START OF THE JOURNEY",
-    "path": "M 500,50 Q 700,200 300,400 T 500,800 T 300,1200 T 500,1600 T 300,2000"
+    "path": "M 500,50 Q 700,200 300,400 T 500,800 T 300,1200 T 500,1600 T 300,2000",
+  "pathMarkers": [
+    { "cx": 500, "cy": 50 },
+    { "cx": 700, "cy": 200 },
+    { "cx": 300, "cy": 400 },
+    { "cx": 500, "cy": 800 },
+    { "cx": 300, "cy": 1200 },
+    { "cx": 500, "cy": 1600 }
+  ]
   },
   "columns": [
     {
@@ -71,7 +79,6 @@
     "label": "EMAIL ME @ MAHESH"
   },
   "footer": {
-    "left": "\u201cCrafting Logic, One Line at a Time.\u201d",
     "right": "PUNE, INDIA \u00b7 EST. 2023"
   }
 }

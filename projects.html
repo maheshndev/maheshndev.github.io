@@ -5,7 +5,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects — Mahesh Narsale</title>
+  <link rel="icon" type="image/png" href="assets/portfolio-icon.png" />
   <meta name="description" content="Projects and Portfolio of Mahesh Narsale — Full Stack Software Engineer." />
+
+  <!-- Apply saved/system theme before first paint (prevents light/dark flash) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (dark) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind-config.js"></script>
@@ -14,6 +26,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/3d.css">
 </head>
 
 <body class="antialiased bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
@@ -21,10 +34,10 @@
   <div id="site-header"></div>
 
   <main class="flex-grow pt-16 pb-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 [perspective:1200px]">
       <!-- Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Explore My <span class="text-gradient">Portfolio</span>
+      <div class="text-center max-w-3xl mx-auto mb-16 [transform-style:preserve-3d] [transform:translateZ(20px)]">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Explore My <span class="text-gradient [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Portfolio</span>
         </h1>
         <p class="text-lg text-slate-600 dark:text-slate-400">
           A collection of full-stack applications, ERP solutions, and open-source contributions.
@@ -35,16 +48,16 @@
       <!-- Filters -->
       <div id="project-filters" class="flex flex-wrap justify-center gap-3 mb-12">
         <button
-          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn active"
+          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn btn-3d active"
           data-filter="all">All Projects</button>
         <button
-          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn"
+          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn btn-3d"
           data-filter="erpnext">ERPNext / Frappe</button>
         <button
-          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn"
+          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn btn-3d"
           data-filter="fullstack">Full Stack</button>
         <button
-          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn"
+          class="px-5 py-2.5 rounded-full text-sm font-bold glass-card hover:border-accent-400 transition-all filter-btn btn-3d"
           data-filter="mobile">Mobile Apps</button>
       </div>
 
@@ -56,23 +69,21 @@
         data-desc-limit="120"></div>
 
       <!-- More Projects Banner -->
-      <div class="mt-20 p-8 rounded-3xl glass border shadow-xl relative overflow-hidden text-center">
-        <div class="relative z-10">
+      <div class="mt-20 p-8 rounded-3xl glass border shadow-xl relative overflow-hidden text-center [transform-style:preserve-3d] [perspective:1000px] gloss-edge">
+        <div class="relative z-10 [transform:translateZ(20px)]">
           <h2 class="text-2xl font-bold mb-4">Want to see all my work?</h2>
           <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
             I have dozens of repositories showcasing various experiments, utilities, and components.
             Check out my GitHub for the full history of my technical journey.
           </p>
-          <a href="https://github.com/maheshndev" target="_blank" class="btn-premium">
+          <a href="https://github.com/maheshndev" target="_blank" class="btn-premium btn-3d">
             Experience on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
+            <img class="i8 w-5 h-5 ml-2" src="https://img.icons8.com/3d-fluency/96/forward.png" alt="" loading="lazy">
           </a>
         </div>
         <!-- Decorative bg -->
-        <div class="absolute -top-24 -right-24 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl animate-float-3d-blob"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-float-3d-blob"></div>
       </div>
     </div>
   </main>
@@ -88,6 +99,7 @@
   <script defer src="js/components/projects.js"></script>
   <script type="text/template" data-deps="defer-after-includes" src="js/projects.js"></script>
   <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+  <script src="js/3d.js" defer></script>
   <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
 </body>
 

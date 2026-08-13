@@ -1,53 +1,53 @@
-{
+﻿{
   "live": "LIVE",
   "title": "MY TOOLKIT",
   "groups": [
     {
-      "title": "LANGUAGES",
-      "layout": "chips",
-      "items": [
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", "class": "w-4 h-4" }, "text": "Python" },
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "class": "w-4 h-4" }, "text": "TypeScript" },
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "class": "w-4 h-4" }, "text": "JavaScript" },
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", "class": "w-4 h-4" }, "text": "Java" }
-      ]
-    },
-    {
-      "title": "FRAMEWORKS",
+      "title": "FRONTEND",
       "layout": "grid",
       "items": [
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", "class": "w-4 h-4" }, "text": "Angular" },
-        { "icon": { "type": "img", "src": "https://raw.githubusercontent.com/frappe/frappe/develop/frappe/public/images/frappe-framework-logo.png", "class": "w-4 h-4" }, "text": "Frappe" },
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", "class": "w-4 h-4" }, "text": "Node.js" },
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "class": "w-4 h-4" }, "text": "React" }
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/angularjs.png", "class": "w-4 h-4" }, "text": "Angular" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/react-native.png", "class": "w-4 h-4" }, "text": "React / Native" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/html-5.png", "class": "w-4 h-4" }, "text": "HTML5" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/css3.png", "class": "w-4 h-4" }, "text": "CSS3" },
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", "class": "w-4 h-4" }, "text": "Tailwind CSS" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/javascript.png", "class": "w-4 h-4" }, "text": "JavaScript" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/typescript.png", "class": "w-4 h-4" }, "text": "TypeScript" }
       ]
     },
     {
-      "title": "CLOUD \u0026 DEVOPS",
-      "layout": "rows",
+      "title": "BACKEND & FRAMEWORKS",
+      "layout": "grid",
       "items": [
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg" }, "text": "AWS Architecture" },
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg" }, "text": "Docker Containerization" },
-        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg" }, "text": "Linux Infrastructure" }
-      ]
-    }
-  ],
-  "caption": {
-    "svg": {
-      "class": "w-16 h-16 mx-auto text-yellow-400 opacity-80",
-      "viewBox": "0 0 24 24",
-      "fill": "none",
-      "stroke": "currentColor",
-      "stroke-width": "1.5",
-      "paths": [
-        {
-          "d": "M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z",
-          "attrs": {}
-        },
-        { "d": "M21 12a9 9 0 11-18 0 9 9 0 0118 0z", "attrs": {} }
+        { "icon": { "type": "img", "src": "https://raw.githubusercontent.com/frappe/frappe/develop/frappe/public/images/frappe-framework-logo.png", "class": "w-4 h-4" }, "text": "Frappe / ERPNext" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/python.png", "class": "w-4 h-4" }, "text": "Python" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/flask.png", "class": "w-4 h-4" }, "text": "Flask" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/nodejs.png", "class": "w-4 h-4" }, "text": "Node.js / Express" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/coffee.png", "class": "w-4 h-4" }, "text": "Java" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/api.png", "class": "w-4 h-4" }, "text": "FastAPI / REST" }
       ]
     },
-    "text": "Architect of Automation",
-    "note": "Scaling manufacturing workflows with precision code."
-  }
+    {
+      "title": "DATABASES",
+      "layout": "grid",
+      "items": [
+        { "icon": { "type": "img", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", "class": "w-4 h-4" }, "text": "PostgreSQL" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/mysql-logo.png", "class": "w-4 h-4" }, "text": "MySQL / MariaDB" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/mongodb.png", "class": "w-4 h-4" }, "text": "MongoDB" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/redis.png", "class": "w-4 h-4" }, "text": "Redis" }
+      ]
+    },
+    {
+      "title": "CLOUD & DEVOPS",
+      "layout": "rows",
+      "items": [
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/amazon.png", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg flex items-center justify-center" }, "text": "AWS Architecture" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/docker.png", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg flex items-center justify-center" }, "text": "Docker Containerization" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/ubuntu.png", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg flex items-center justify-center" }, "text": "Ubuntu / Linux" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/github.png", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg flex items-center justify-center" }, "text": "GitHub Workflows" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/npm.png", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg flex items-center justify-center" }, "text": "Package Automation" },
+        { "icon": { "type": "img", "src": "https://img.icons8.com/color/96/git.png", "class": "w-6 h-6", "iconBox": "w-8 h-8 bg-white rounded-lg flex items-center justify-center" }, "text": "Git / Version Control" }
+      ]
+    }
+  ]
 }

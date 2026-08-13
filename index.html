@@ -5,8 +5,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mahesh Narsale — Full Stack Developer</title>
+  <link rel="icon" type="image/png" href="assets/portfolio-icon.png" />
   <meta name="description"
     content="Mahesh Narsale — Full Stack Developer. Python, Angular, Frappe, Cloud DevOps. Portfolio & resume 2025." />
+  <!-- Apply saved/system theme before first paint (prevents light/dark flash) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (dark) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
   <!-- Tailwind CDN (Play) - convenient for GitHub Pages single-file prototype -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind-config.js"></script>
@@ -17,6 +28,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/3d.css">
 </head>
 
 <body class="antialiased bg-gray-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100">
@@ -30,11 +42,11 @@
     <!-- HERO -->
     <main class="flex-grow">
       <section id="hero" class="relative py-5 md:py-5">
-        <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div class="space-y-5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-4 lg:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center [perspective:1200px]">
+          <div class="space-y-5 [transform-style:preserve-3d] [transform:translateZ(24px)]">
             <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
               <span
-                class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400">Mahesh
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-green-400 [filter:drop-shadow(0_6px_18px_rgba(139,92,246,0.35))]">Mahesh
                 Narsale</span>
               <span class="block text-lg font-medium text-slate-600 dark:text-slate-300 mt-1">Full Stack Developer —
                 Python · Angular · Frappe · Flask . FastAPI . Node.js . Express.js </span>
@@ -49,29 +61,15 @@
 
             <div class="flex flex-wrap gap-4 mt-6">
               <a href="projects.html" class="btn-premium group">
-                <svg class="w-5 h-5 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-                  </path>
-                </svg>
+                <img class="i8 w-5 h-5 transition-transform group-hover:rotate-12" src="https://img.icons8.com/3d-fluency/96/briefcase.png" alt="" loading="lazy">
                 View Projects
               </a>
               <a href="#contact" class="btn-outline-premium group">
-                <svg class="w-5 h-5 transition-transform group-hover:scale-110" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                  </path>
-                </svg>
+                <img class="i8 w-5 h-5 transition-transform group-hover:scale-110" src="https://img.icons8.com/3d-fluency/96/email.png" alt="" loading="lazy">
                 Hire Me
               </a>
               <a href="assets/resume/Mahesh-Narsale-Resume.pdf" download class="btn-secondary-premium group">
-                <svg class="w-5 h-5 transition-transform group-hover:-translate-y-1" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                </svg>
+                <img class="i8 w-5 h-5 transition-transform group-hover:-translate-y-1" src="https://img.icons8.com/3d-fluency/96/download.png" alt="" loading="lazy">
                 Resume
               </a>
             </div>
@@ -91,15 +89,15 @@
             </div>
           </div>
 
-          <div class="flex justify-center md:justify-end relative">
-            <div class="absolute -top-12 -right-12 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse">
+          <div class="flex justify-center md:justify-end relative [transform-style:preserve-3d]">
+            <div class="absolute -top-12 -right-12 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-float-3d-blob">
             </div>
-            <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"
+            <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-float-3d-blob"
               style="animation-delay: 1s"></div>
 
-            <div class="w-full max-w-lg transform transition-all duration-1000 animate-float-slow z-10 blend-to-bg">
-              <img src="assets/portrait.png" alt="Mahesh Workspace Illustration"
-                class="w-full h-auto object-contain mix-blend-lighten opacity-90 dark:opacity-100 [filter:drop-shadow(0_10px_30px_rgba(139,92,246,0.3))]"
+            <div class="w-full max-w-lg transform transition-all duration-1000 animate-float-3d z-10 blend-to-bg [transform-style:preserve-3d]">
+              <img src="https://avatars.githubusercontent.com/maheshndev" alt="Mahesh Narsale"
+                class="w-56 h-56 sm:w-64 sm:h-64 mx-auto object-cover rounded-full ring-4 ring-accent-500/30 shadow-2xl [filter:drop-shadow(0_10px_30px_rgba(139,92,246,0.3))] [transform:translateZ(30px)]"
                 onerror="this.style.display='none'">
             </div>
           </div>
@@ -136,16 +134,16 @@
               </div>
             </div>
 
-            <aside class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 border">
+            <aside class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4 border tilt-3d gloss-edge">
               <div class="text-sm text-slate-600 dark:text-slate-300">Contact</div>
               <div class="mt-2 font-semibold">Mahesh Narsale</div>
               <div class="mt-3 flex flex-col gap-2">
                 <a href="https://www.linkedin.com/in/mahesh-narsale" target="_blank"
-                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-[#0077b5] hover:text-white">LinkedIn</a>
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-[#0077b5] hover:text-white flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/linkedin.png" alt="" loading="lazy">LinkedIn</a>
                 <a href="https://github.com/maheshndev" target="_blank"
-                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-[#333] hover:text-white">GitHub</a>
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-[#333] hover:text-white flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/github.png" alt="" loading="lazy">GitHub</a>
                 <a href="mailto:__CONTACT_EMAIL__"
-                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-accent-600 hover:text-white">Email</a>
+                  class="text-sm px-3 py-2 rounded-md border text-center transition-colors hover:bg-accent-600 hover:text-white flex items-center justify-center gap-2"><img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/email.png" alt="" loading="lazy">Email</a>
               </div>
             </aside>
           </div>
@@ -153,7 +151,7 @@
       </section>
 
       <!-- EXPERIENCE -->
-      <section id="experience" class="py-20 bg-white dark:bg-slate-900">
+      <section id="experience" class="py-16 bg-white dark:bg-slate-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-experience-group
             data-src="data/experience.json"
@@ -161,44 +159,12 @@
         </div>
       </section>
 
-      <!-- EDUCATION -->
-      <section id="education" class="py-20 bg-gray-50 dark:bg-slate-900/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="mb-12">
-            <h2 class="text-3xl font-extrabold text-gradient inline-block">Academic Foundation</h2>
-          </div>
-
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
-              <div class="text-accent-600 font-bold text-sm mb-2">2020 – 2022</div>
-              <h4 class="font-bold text-slate-900 dark:text-white mb-2">MCA</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">ASMA Institute of Management, Pune</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Pune University</p>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
-              <div class="text-accent-600 font-bold text-sm mb-2">2017 – 2020</div>
-              <h4 class="font-bold text-slate-900 dark:text-white mb-2">BCA</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">New Arts, Science College, Ahmednagar</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Pune University</p>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
-              <div class="text-accent-600 font-bold text-sm mb-2">2016 – 2017</div>
-              <h4 class="font-bold text-slate-900 dark:text-white mb-2">12th Standard</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Shri. Jalandhar High School, Raimoha</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Aurangabad State Board</p>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover">
-              <div class="text-accent-600 font-bold text-sm mb-2">2014 – 2015</div>
-              <h4 class="font-bold text-slate-900 dark:text-white mb-2">10th Standard</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Shri. Jalandhar High School, Raimoha</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Aurangabad State Board</p>
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- EDUCATION -->
+<section id="education" class="py-16 bg-gray-50 dark:bg-slate-900/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div data-education-group data-src="data/education.json"></div>
+  </div>
+</section>
 
       <!-- SKILLS -->
       <section id="skills" class="py-16 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
@@ -210,7 +176,7 @@
             </p>
           </div>
 
-          <div class="rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/95 p-6 shadow-2xl shadow-slate-200/40 dark:shadow-slate-950/40"
+          <div class="rounded-[2rem] border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/95 p-6 shadow-2xl shadow-slate-200/40 dark:shadow-slate-950/40 [transform-style:preserve-3d] [perspective:1400px] gloss-edge"
             data-skill-filter-group
             data-src="data/skills.json"
             data-categories='["Frontend","Backend","Database & ORM","Cloud & DevOps","OS"]'></div>
@@ -218,7 +184,7 @@
       </section>
 
       <!-- PROJECTS (featured) -->
-      <section id="projects" class="py-5 bg-white dark:bg-slate-900">
+      <section id="projects" class="py-16 bg-white dark:bg-slate-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-projects-group
             data-src="data/projects.json"
@@ -229,25 +195,17 @@
       </section>
 
       <!-- CERTIFICATIONS & ACHIEVEMENTS -->
-      <section id="certifications" class="py-20 bg-white dark:bg-slate-900">
+      <section id="certifications" class="py-16 bg-white dark:bg-slate-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mb-12 text-left">
             <h2 class="text-3xl font-extrabold text-gradient inline-block">Professional Recognition</h2>
           </div>
 
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
               <div class="flex items-center gap-4 mb-4">
                 <div class="p-3 rounded-xl bg-orange-500/10 text-orange-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
-                    </path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">
-                    </path>
-                  </svg>
+                  <img class="i8 w-6 h-6" src="https://img.icons8.com/color/96/angularjs.png" alt="" loading="lazy">
                 </div>
                 <div>
                   <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Angular Developer</div>
@@ -256,14 +214,10 @@
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
               <div class="flex items-center gap-4 mb-4">
                 <div class="p-3 rounded-xl bg-blue-500/10 text-blue-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
-                    </path>
-                  </svg>
+                  <img class="i8 w-6 h-6" src="https://img.icons8.com/color/96/coffee.png" alt="" loading="lazy">
                 </div>
                 <div>
                   <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Java / Spring & WCD</div>
@@ -272,13 +226,10 @@
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
               <div class="flex items-center gap-4 mb-4">
                 <div class="p-3 rounded-xl bg-purple-500/10 text-purple-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                  </svg>
+                  <img class="i8 w-6 h-6" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="" loading="lazy">
                 </div>
                 <div>
                   <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Android & C++</div>
@@ -287,13 +238,10 @@
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
               <div class="flex items-center gap-4 mb-4">
                 <div class="p-3 rounded-xl bg-green-500/10 text-green-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                  </svg>
+                  <img class="i8 w-6 h-6" src="https://img.icons8.com/3d-fluency/96/code.png" alt="" loading="lazy">
                 </div>
                 <div>
                   <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Full Stack Development Program
@@ -303,13 +251,10 @@
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
               <div class="flex items-center gap-4 mb-4">
                 <div class="p-3 rounded-xl bg-yellow-500/10 text-yellow-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                  </svg>
+                  <img class="i8 w-6 h-6" src="https://img.icons8.com/3d-fluency/96/lightning-bolt.png" alt="" loading="lazy">
                 </div>
                 <div>
                   <div class="font-bold text-slate-900 dark:text-white line-clamp-1">Fest Dev-Tech Winner</div>
@@ -318,14 +263,10 @@
               </div>
             </div>
 
-            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover">
+            <div class="p-6 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge">
               <div class="flex items-center gap-4 mb-4">
                 <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-600">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                    </path>
-                  </svg>
+                  <img class="i8 w-6 h-6" src="https://img.icons8.com/3d-fluency/96/graduation-cap.png" alt="" loading="lazy">
                 </div>
                 <div>
                   <div class="font-bold text-slate-900 dark:text-white line-clamp-1">IIT Bombay Workshop</div>
@@ -337,8 +278,10 @@
         </div>
       </section>
 
+
+
       <!-- GITHUB PROJECTS (auto-loaded) -->
-      <section id="github-projects-section" class="py-5 bg-white dark:bg-slate-900">
+      <section id="github-projects-section" class="py-16 bg-white dark:bg-slate-900">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between">
             <h2 class="text-3xl font-extrabold text-gradient inline-block">GitHub Projects</h2>
@@ -346,15 +289,15 @@
               repos on GitHub →</a>
           </div>
 
-          <div id="github-projects" class="mt-6 grid gap-6 md:grid-cols-3 lg:grid-cols-3"></div>
+          <div id="github-projects" class="mt-6 grid gap-6 md:grid-cols-3 lg:grid-cols-3 [perspective:1400px]"></div>
         </div>
       </section>
 
       <!-- CONTACT -->
-      <section id="contact" class="py-20 bg-gray-50 dark:bg-slate-900/50">
+      <section id="contact" class="py-16 bg-gray-50 dark:bg-slate-900/50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            class="glass-card p-8 sm:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden"
+            class="glass-card p-8 sm:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden [transform-style:preserve-3d] gloss-edge"
             data-contact-group
             data-src="data/contact.json"></div>
         </div>
@@ -366,11 +309,7 @@
         class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl bg-accent-600 text-white shadow-2xl shadow-accent-600/40 hover:scale-110 hover:-translate-y-1 transition-all duration-300 group flex items-center gap-3 active:scale-95"
         aria-label="Send Email">
       <div class="relative">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-          </path>
-        </svg>
+        <img class="i8 w-6 h-6" src="https://img.icons8.com/3d-fluency/96/email.png" alt="" loading="lazy">
         <span
           class="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-accent-600 animate-ping"></span>
       </div>
@@ -396,11 +335,14 @@
   <!-- Skills component (auto-mounts [data-skill-filter-group]) -->
   <script defer src="js/components/skills.js"></script>
 
-  <!-- Projects component (auto-mounts [data-projects-group]) -->
-  <script defer src="js/components/projects.js"></script>
+<!-- Projects component (auto-mounts [data-projects-group]) -->
+<script defer src="js/components/projects.js"></script>
 
-  <!-- Experience component (auto-mounts [data-experience-group]) -->
-  <script defer src="js/components/experience.js"></script>
+<!-- Education component (auto-mounts [data-education-group]) -->
+<script defer src="js/components/education.js"></script>
+
+<!-- Experience component (auto-mounts [data-experience-group]) -->
+<script defer src="js/components/experience.js"></script>
 
   <!-- Contact component (auto-mounts [data-contact-group]) -->
   <script defer src="js/components/contact.js"></script>
@@ -408,6 +350,9 @@
   <!-- Page scripts (deferred until includes load) -->
   <script type="text/template" data-deps="defer-after-includes" src="js/index.js"></script>
   <script type="text/template" data-deps="defer-after-includes" src="js/contact.js"></script>
+
+   <!-- 3D interactions (mouse-follow tilt) -->
+   <script src="js/3d.js" defer></script>
 
   <!-- Flowbite script (optional) -->
   <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>

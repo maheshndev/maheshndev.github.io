@@ -11,12 +11,12 @@
     { "symbol": "\u25cb", "class": "text-slate-400", "label": "Future Milestone", "muted": true }
   ],
   "sections": [
-    { "src": "data/roadmap/sections-5.json" },
-    { "src": "data/roadmap/sections-4.json" },
-    { "src": "data/roadmap/sections-6.json" },
-    { "src": "data/roadmap/sections-3.json" },
-    { "src": "data/roadmap/sections-2.json" },
-    { "src": "data/roadmap/sections-1.json" }
+    { "src": "data/career-roadmap/sections-5.json" },
+    { "src": "data/career-roadmap/sections-4.json" },
+    { "src": "data/career-roadmap/sections-6.json" },
+    { "src": "data/career-roadmap/sections-3.json" },
+    { "src": "data/career-roadmap/sections-2.json" },
+    { "src": "data/career-roadmap/sections-1.json" }
   ],
   "cta": {
     "title": "Want to Collaborate?",

@@ -8,14 +8,14 @@
       "divider": true
     },
     {
-      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+      "img": "https://img.icons8.com/color/96/angularjs.png",
       "iconBoxClass": "bg-indigo-50 dark:bg-indigo-950/20 border-indigo-100 dark:border-indigo-900/50",
       "title": "Educational Portal",
       "meta": "Full Stack Educational Suite",
       "divider": true
     },
     {
-      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      "img": "https://img.icons8.com/color/96/coffee.png",
       "iconBoxClass": "bg-orange-50 dark:bg-orange-950/20 border-orange-100 dark:border-orange-900/50",
       "title": "Covid-19 Hospital System",
       "meta": "Java + PostgreSQL — MCA Project",

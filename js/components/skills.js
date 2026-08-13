@@ -48,7 +48,7 @@
       this.filters = el('div', 'skill-filter-group mb-8');
       this.host.appendChild(this.filters);
 
-      this.grid = el('div', 'skill-grid');
+      this.grid = el('div', 'skill-grid [perspective:1400px]');
       this.grid.setAttribute('aria-live', 'polite');
       this.host.appendChild(this.grid);
 
@@ -88,14 +88,16 @@
     // ----- render all skill items (respecting current filter) -----
     render() {
       const fragment = document.createDocumentFragment();
-      this.skills.forEach(skill => fragment.appendChild(this.createItem(skill)));
+      this.skills.forEach((skill, i) => fragment.appendChild(this.createItem(skill, i)));
       this.grid.innerHTML = '';
       this.grid.appendChild(fragment);
       console.log('[SkillsSection] rendered', this.skills.length, 'skills');
     }
 
-    buildItem(skill) {
-      const btn = el('button', 'skill-item fade-in');
+    buildItem(skill, index) {
+      const colors = ['skill-blue', 'skill-green', 'skill-red', 'skill-yellow', 'skill-grey', 'skill-purple', 'skill-indigo', 'skill-teal', 'skill-orange', 'skill-pink', 'skill-cyan', 'skill-lime'];
+      const colorClass = colors[index % colors.length];
+      const btn = el('button', 'skill-item fade-in tilt-3d ' + colorClass);
       btn.type = 'button';
       btn.dataset.categories = JSON.stringify(skill.category || []);
       btn.dataset.name = skill.name;
@@ -112,8 +114,8 @@
       return btn;
     }
 
-    createItem(skill) {
-      const item = this.buildItem(skill);
+    createItem(skill, index) {
+      const item = this.buildItem(skill, index);
       const shouldShow =
         this.currentFilter === 'all' ||
         (skill.category && skill.category.includes(this.currentFilter));

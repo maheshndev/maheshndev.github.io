@@ -22,33 +22,22 @@
     return node;
   }
 
-  // SVG paths for the two timeline icons used by this section
-  const ICONS = {
-    briefcase: [
-      {
-        fillRule: 'evenodd',
-        d: 'M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z'
-      },
-      {
-        d: 'M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z'
-      }
-    ],
-    academic: [
-      {
-        d: 'M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2 .712V17a1 1 0 001 1z'
-      }
-    ]
+  // Icons8 (3d-fluency) timeline icons, keyed by data/experience.json icon name
+  const ICONS8 = {
+    briefcase: 'briefcase',
+    academic: 'graduation-cap'
   };
 
   // ============================================================
   // ExperienceSection
   // ============================================================
   class ExperienceSection {
-    constructor(host, options) {
+    constructor(host, options, index) {
       this.host = host;
       this.src = options.src || 'data/experience.json';
       this.title = options.title || 'Work Experience';
       this.items = [];
+      this.index = index;
 
       this.renderShell();
       this.load();
@@ -62,12 +51,25 @@
         this.host.appendChild(titleWrap);
       }
 
+      const wrap = el('div', 'relative');
+      wrap.appendChild(this.buildTimelineLine());
+
       // timeline container (keeps the original alternating layout)
       this.timeline = el(
         'div',
-        'relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent dark:before:via-slate-700'
+        'relative [perspective:1400px]'
       );
-      this.host.appendChild(this.timeline);
+      wrap.appendChild(this.timeline);
+      this.host.appendChild(wrap);
+    }
+
+    buildTimelineLine() {
+      const lineWrap = el('div', 'absolute inset-y-0 left-6 md:left-1/2 -translate-x-1/2 w-0.5 pointer-events-none');
+      const mobile = el('div', 'absolute inset-y-0 -left-px w-0.5 bg-slate-300 dark:bg-slate-600 md:hidden');
+      const desktop = el('div', 'absolute inset-y-0 -left-px w-0.5 bg-gradient-to-b from-transparent via-slate-300 to-transparent dark:via-slate-600 hidden md:block');
+      lineWrap.appendChild(mobile);
+      lineWrap.appendChild(desktop);
+      return lineWrap;
     }
 
     // ----- fetch data from JSON -----
@@ -87,65 +89,68 @@
     // ----- render all timeline items -----
     render() {
       const fragment = document.createDocumentFragment();
-      this.items.forEach(item => fragment.appendChild(this.buildItem(item)));
+      this.items.forEach((item, index) => fragment.appendChild(this.buildItem(item, index)));
       this.timeline.innerHTML = '';
       this.timeline.appendChild(fragment);
       console.log('[ExperienceSection] rendered', this.items.length, 'positions');
     }
 
-    buildItem(item) {
-      // alternating content row (mirrors original markup)
-      const row = el(
-        'div',
-        'relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group' +
-        (item.current ? ' is-active' : '')
-      );
+buildItem(item, index) {
+    const isOdd = index % 2 === 1;
 
-      // timeline icon node
-      const iconBox = el(
-        'div',
-        'flex items-center justify-center w-10 h-10 rounded-full border border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-800 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2'
-      );
-      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.setAttribute('class', 'w-5 h-5 text-accent-600');
-      svg.setAttribute('fill', 'currentColor');
-      svg.setAttribute('viewBox', '0 0 20 20');
-      const paths = ICONS[item.icon] || ICONS.briefcase;
-      paths.forEach(p => {
-        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        if (p.fillRule) {
-          path.setAttribute('fill-rule', p.fillRule);
-          path.setAttribute('clip-rule', p.fillRule);
-        }
-        path.setAttribute('d', p.d);
-        svg.appendChild(path);
-      });
-      iconBox.appendChild(svg);
-      row.appendChild(iconBox);
+    // Desktop: card alternates left/right, icon centered on the line
+    const cardWrapCls = isOdd ? 'md:order-3 md:ml-auto md:pl-12 md:pr-0' : 'md:order-1 md:mr-auto md:pr-12 md:pl-0';
+    const yearWrapCls = isOdd ? 'md:order-1 md:mr-auto md:pr-12 md:pl-0 md:text-right' : 'md:order-3 md:ml-auto md:pl-12 md:pr-0 md:text-left';
 
-      // content card
-      const card = el(
-        'div',
-        'w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover'
-      );
+    const row = el('div', 'relative flex flex-col md:flex-row items-center md:items-center mb-6 md:mb-10');
 
-      const head = el('div', 'flex items-center justify-between space-x-2 mb-1 flex-wrap gap-y-1');
-      head.appendChild(el('div', 'font-bold text-slate-900 dark:text-white', item.company));
-      const time = el('time', 'font-inter text-xs font-medium text-accent-600 uppercase', item.period);
-      head.appendChild(time);
-      card.appendChild(head);
+    // Horizontal connector from card to the center line
+    const connector = el('div', 'hidden md:block absolute top-1/2 -translate-y-1/2 h-0.5 bg-slate-300 dark:bg-slate-600 ' + (isOdd
+      ? 'left-[calc(50%+1.5rem)] w-[calc(8.333%+1.5rem)]'
+      : 'right-[calc(50%+1.5rem)] w-[calc(8.333%+1.5rem)]'));
+    row.appendChild(connector);
 
-      card.appendChild(el('div', 'text-slate-500 dark:text-slate-400 font-semibold text-sm mb-4', item.role));
+    // Timeline icon — on the left line (mobile) / centered on the line (desktop)
+    const iconColors = ['bg-indigo-500', 'bg-emerald-500', 'bg-amber-500', 'bg-rose-500', 'bg-violet-500'];
+    const iconBox = el('div', 'absolute z-10 top-0 left-6 -translate-x-1/2 md:relative md:top-auto md:left-auto md:translate-x-0 md:order-2 flex-shrink-0 w-12 h-12 rounded-full border-4 border-white dark:border-slate-900 shadow-lg flex items-center justify-center ' + iconColors[index % iconColors.length]);
+    const name = ICONS8[item.icon] || ICONS8.briefcase;
+    const img = document.createElement('img');
+    img.className = 'i8 w-8 h-8';
+    img.src = `https://img.icons8.com/3d-fluency/96/${name}.png`;
+    img.alt = '';
+    img.loading = 'lazy';
+    iconBox.appendChild(img);
+    row.appendChild(iconBox);
 
-      const body = el('div', 'text-slate-600 dark:text-slate-400 text-sm');
-      const list = el('ul', 'list-disc ml-4 space-y-2');
-      (item.points || []).forEach(point => list.appendChild(el('li', null, point)));
-      body.appendChild(list);
-      card.appendChild(body);
+    // Card side
+    const cardWrapper = el('div', 'w-full md:w-5/12 pl-16 md:pl-0 ' + cardWrapCls);
+    const card = el('div', 'glass-card p-5 md:p-6 rounded-2xl border border-slate-200 dark:border-slate-800 card-hover tilt-3d gloss-edge text-left w-full');
+    card.appendChild(el('div', 'font-bold text-slate-900 dark:text-white', item.company));
+    card.appendChild(el('time', 'font-inter text-[10px] font-medium text-accent-600 uppercase block mt-1', item.period));
+    card.appendChild(el('div', 'text-slate-500 dark:text-slate-400 font-semibold text-sm mt-2', item.role));
+    const body = el('div', 'text-slate-600 dark:text-slate-400 text-xs mt-2');
+    const list = el('ul', 'list-disc ml-3 space-y-1');
+    (item.points || []).forEach(point => list.appendChild(el('li', null, point)));
+    body.appendChild(list);
+    card.appendChild(body);
+    cardWrapper.appendChild(card);
+    row.appendChild(cardWrapper);
 
-      row.appendChild(card);
-      return row;
+    // Year side (opposite the card)
+    const yearText = item.period || item.year || '';
+    const yearBox = el('div', 'hidden md:block md:w-5/12 ' + yearWrapCls);
+    const yearInner = el('div', '');
+    yearInner.appendChild(el('span', 'text-lg md:text-xl font-extrabold text-accent-600 tracking-tight leading-tight', yearText));
+    if (item.current) {
+      const currentBadge = el('span', 'inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800');
+      currentBadge.textContent = 'CURRENT';
+      yearInner.appendChild(currentBadge);
     }
+    yearBox.appendChild(yearInner);
+    row.appendChild(yearBox);
+
+    return row;
+  }
   }
 
   // ============================================================

@@ -4,7 +4,6 @@
   "location": "Pune, Maharashtra",
   "languages": ["English", "Marathi", "Hindi"],
   "email": "__CONTACT_EMAIL__",
-  "phone": "__CONTACT_PHONE__",
   "social": {
     "github": "https://github.com/maheshndev",
     "linkedin": "https://www.linkedin.com/in/mahesh-narsale"
@@ -20,28 +19,28 @@
     {
       "company": "Assimilate Technology",
       "role": "Full Stack Developer",
-      "period": "March 2024 — Present",
+      "period": "April 2024 — Present",
       "current": true
     },
     {
       "company": "Assimilate Technology",
       "role": "Software Developer Intern",
-      "period": "Dec 2023 — Feb 2024",
+      "period": "Dec 2023 — March 2024",
       "current": false
     }
   ],
-  "education": [
-    {
-      "degree": "MCA",
-      "institution": "SPPU, Pune",
-      "year": "2025 (Expected)"
-    },
-    {
-      "degree": "BCA",
-      "institution": "Pune University",
-      "year": "2022"
-    }
-  ],
+"education": [
+  {
+    "degree": "MCA",
+    "institution": "SPPU, Pune",
+    "year": "2020 – 2022"
+  },
+  {
+    "degree": "BCA",
+    "institution": "Pune University",
+    "year": "2017 – 2020"
+  }
+],
   "certifications": [
     "Angular Developer - SP Institute (2022)",
     "Java / Spring & WCD - SEED InfoTech",

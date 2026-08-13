@@ -1,7 +1,7 @@
 // ============================================================
 // ContactSection component
 // ------------------------------------------------------------
-// Renders the "Get In Touch" contact card (heading, email/phone
+// Renders the "Get In Touch" contact card (heading, email
 // links, contact form) from JSON. Keeps the form ids used by
 // js/contact.js so form submission keeps working.
 //
@@ -40,12 +40,12 @@
 
     renderShell() {
       // decorative background blobs
-      const blob1 = el('div', 'absolute -top-24 -right-24 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl');
-      const blob2 = el('div', 'absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl');
+      const blob1 = el('div', 'absolute -top-24 -right-24 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl animate-float-3d-blob');
+      const blob2 = el('div', 'absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-float-3d-blob');
       this.host.appendChild(blob1);
       this.host.appendChild(blob2);
 
-      this.body = el('div', 'relative z-10');
+      this.body = el('div', 'relative z-10 [transform-style:preserve-3d] [transform:translateZ(8px)]');
       this.host.appendChild(this.body);
     }
 
@@ -62,63 +62,36 @@
     }
 
     render() {
-      const c = this.data;
-      const top = el('div', 'text-center mb-8');
-      top.appendChild(el('h2', 'text-3xl font-extrabold text-gradient inline-block', c.title || 'Get In Touch'));
-      if (c.subtitle) {
-        top.appendChild(el('p', 'mt-4 text-slate-600 dark:text-slate-400 max-w-xl mx-auto', c.subtitle));
-      }
+const c = this.data;
+const top = el('div', 'text-center mb-8');
+top.appendChild(el('h2', 'text-3xl font-extrabold text-gradient inline-block', c.title || 'Get In Touch'));
+if (c.subtitle) {
+  top.appendChild(el('p', 'mt-4 text-slate-600 dark:text-slate-400 max-w-xl mx-auto', c.subtitle));
+}
 
-      const links = el('div', 'mt-4 flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300');
-      if (c.email) {
-        const mail = el('a', 'hover:text-accent-600 flex items-center gap-2', c.email);
-        mail.setAttribute('href', `mailto:${c.email}`);
-        mail.insertBefore(this.mailIcon(), mail.firstChild);
-        links.appendChild(mail);
-      }
-      if (c.phone) {
-        const phone = el('a', 'hover:text-accent-600 flex items-center gap-2', c.phone);
-        phone.setAttribute('href', `tel:${c.phone}`);
-        phone.insertBefore(this.phoneIcon(), phone.firstChild);
-        links.appendChild(phone);
-      }
-      top.appendChild(links);
-      this.body.appendChild(top);
+const links = el('div', 'mt-4 flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300');
+if (c.email) {
+  const mail = el('a', 'hover:text-accent-600 flex items-center gap-2', c.email);
+  mail.setAttribute('href', `mailto:${c.email}`);
+  mail.insertBefore(this.mailIcon(), mail.firstChild);
+  links.appendChild(mail);
+}
+top.appendChild(links);
+this.body.appendChild(top);
 
       this.body.appendChild(this.buildForm(c.form || {}));
     }
 
     mailIcon() {
-      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.setAttribute('class', 'w-4 h-4');
-      svg.setAttribute('fill', 'none');
-      svg.setAttribute('stroke', 'currentColor');
-      svg.setAttribute('viewBox', '0 0 24 24');
-      const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      p.setAttribute('stroke-linecap', 'round');
-      p.setAttribute('stroke-linejoin', 'round');
-      p.setAttribute('stroke-width', '2');
-      p.setAttribute('d', 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z');
-      svg.appendChild(p);
-      return svg;
+      const img = document.createElement('img');
+      img.className = 'i8 w-5 h-5';
+      img.src = 'https://img.icons8.com/3d-fluency/96/email.png';
+      img.alt = '';
+      img.loading = 'lazy';
+      return img;
     }
 
-    phoneIcon() {
-      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.setAttribute('class', 'w-4 h-4');
-      svg.setAttribute('fill', 'none');
-      svg.setAttribute('stroke', 'currentColor');
-      svg.setAttribute('viewBox', '0 0 24 24');
-      const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      p.setAttribute('stroke-linecap', 'round');
-      p.setAttribute('stroke-linejoin', 'round');
-      p.setAttribute('stroke-width', '2');
-      p.setAttribute('d', 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z');
-      svg.appendChild(p);
-      return svg;
-    }
-
-    buildForm(f) {
+buildForm(f) {
       const wrap = el('div', 'flex justify-center pt-4');
       const form = el('form', 'w-full max-w-md space-y-4 text-left');
       form.id = 'contact-form';
@@ -174,18 +147,12 @@
     }
 
     sendIcon() {
-      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.setAttribute('class', 'w-5 h-5');
-      svg.setAttribute('fill', 'none');
-      svg.setAttribute('stroke', 'currentColor');
-      svg.setAttribute('viewBox', '0 0 24 24');
-      const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      p.setAttribute('stroke-linecap', 'round');
-      p.setAttribute('stroke-linejoin', 'round');
-      p.setAttribute('stroke-width', '2');
-      p.setAttribute('d', 'M12 19l9 2-9-18-9 18 9-2zm0 0v-8');
-      svg.appendChild(p);
-      return svg;
+      const img = document.createElement('img');
+      img.className = 'i8 w-5 h-5';
+      img.src = 'https://img.icons8.com/3d-fluency/96/paper-plane.png';
+      img.alt = '';
+      img.loading = 'lazy';
+      return img;
     }
   }
 

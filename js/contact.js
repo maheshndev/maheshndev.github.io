@@ -25,7 +25,7 @@
       if (envVars.SUPABASE_ANON_KEY) SUPABASE_ANON_KEY = envVars.SUPABASE_ANON_KEY;
       if (envVars.CONTACT_EMAIL) CONTACT_EMAIL = envVars.CONTACT_EMAIL;
 
-      if (envVars.CONTACT_EMAIL || envVars.CONTACT_PHONE) {
+if (envVars.CONTACT_EMAIL) {
         envVarsLoaded = envVars;
         replaceContactPlaceholders(envVars);
       }
@@ -34,28 +34,24 @@
     }
   }
 
-  // Replace __CONTACT_EMAIL__ / __CONTACT_PHONE__ in text nodes and links
-  function replaceContactPlaceholders(envVars) {
-    const walk = (node) => {
-      if (node.nodeType === 3) {
-        let text = node.nodeValue;
-        if (envVars.CONTACT_EMAIL && text.includes("__CONTACT_EMAIL__"))
-          text = text.replace(/__CONTACT_EMAIL__/g, envVars.CONTACT_EMAIL);
-        if (envVars.CONTACT_PHONE && text.includes("__CONTACT_PHONE__"))
-          text = text.replace(/__CONTACT_PHONE__/g, envVars.CONTACT_PHONE);
-        if (text !== node.nodeValue) node.nodeValue = text;
-      } else if (node.nodeType === 1 && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
-        if (node.tagName === "A" && node.href) {
-          if (envVars.CONTACT_EMAIL && node.href.includes("__CONTACT_EMAIL__"))
-            node.href = node.href.replace(/__CONTACT_EMAIL__/g, envVars.CONTACT_EMAIL);
-          if (envVars.CONTACT_PHONE && node.href.includes("__CONTACT_PHONE__"))
-            node.href = node.href.replace(/__CONTACT_PHONE__/g, envVars.CONTACT_PHONE);
-        }
-        for (let i = 0; i < node.childNodes.length; i++) walk(node.childNodes[i]);
+// Replace __CONTACT_EMAIL__ in text nodes and links
+function replaceContactPlaceholders(envVars) {
+  const walk = (node) => {
+    if (node.nodeType === 3) {
+      let text = node.nodeValue;
+      if (envVars.CONTACT_EMAIL && text.includes("__CONTACT_EMAIL__"))
+        text = text.replace(/__CONTACT_EMAIL__/g, envVars.CONTACT_EMAIL);
+      if (text !== node.nodeValue) node.nodeValue = text;
+    } else if (node.nodeType === 1 && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
+      if (node.tagName === "A" && node.href) {
+        if (envVars.CONTACT_EMAIL && node.href.includes("__CONTACT_EMAIL__"))
+          node.href = node.href.replace(/__CONTACT_EMAIL__/g, envVars.CONTACT_EMAIL);
       }
-    };
-    walk(document.body);
-  }
+      for (let i = 0; i < node.childNodes.length; i++) walk(node.childNodes[i]);
+    }
+  };
+  walk(document.body);
+}
 
   // Attach the submit handler to the (possibly dynamically-rendered) form
   function initForm() {
@@ -108,7 +104,7 @@
         status.textContent = "Failed to send message. Please try again or email directly.";
         status.className = "text-sm mt-4 text-center text-red-600 dark:text-red-400 block font-medium";
 
-        if (CONTACT_EMAIL && CONTACT_EMAIL !== "__CONTACT_EMAIL__") {
+        if (CONTACT_EMAIL && CONTACT_EMAIL.indexOf("__") === -1) {
           const subject = encodeURIComponent(`Contact Form: Message from ${name}`);
           const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
           window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
@@ -116,7 +112,7 @@
       } finally {
         btn.disabled = false;
         btn.innerHTML =
-          '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg> Send Message';
+          '<img class="i8 w-5 h-5" src="https://img.icons8.com/3d-fluency/96/paper-plane.png" alt="" loading="lazy"> Send Message';
       }
     });
 
@@ -125,11 +121,11 @@
 
   // Fallback: derive email from a mailto link if placeholder wasn't replaced
   function inferEmail() {
-    if (CONTACT_EMAIL && CONTACT_EMAIL !== "__CONTACT_EMAIL__") return;
+    if (CONTACT_EMAIL && CONTACT_EMAIL.indexOf("__") === -1) return;
     const emailLink = document.querySelector('a[href^="mailto:"]');
     if (!emailLink) return;
     const extracted = emailLink.getAttribute("href").replace("mailto:", "").trim();
-    if (extracted && extracted !== "__CONTACT_EMAIL__") {
+    if (extracted && extracted.indexOf("__") === -1) {
       CONTACT_EMAIL = extracted;
     }
   }
