@@ -299,41 +299,38 @@
       return box;
     }
 
-    // 3. EXPERIENCE JOURNEY
+    // 3. EXPERIENCE JOURNEY (reads canonical data/experience.json)
     render_experience(data) {
       const box = el('div', 'space-y-6');
-      (data.items || []).forEach(item => {
-        const card = el('div', `sketch-border p-5 bg-white dark:bg-slate-800/50 ${item.cardClass || ''} relative card-hover tilt-3d`);
+      const ICONS8 = { briefcase: 'briefcase', academic: 'graduation-cap' };
+      const items = Array.isArray(data.experience) ? data.experience : (data.items || []);
+      items.forEach((item, index) => {
+        const card = el('div', 'sketch-border p-5 bg-white dark:bg-slate-800/50 relative card-hover tilt-3d');
 
-        if (item.badge) {
-          const badge = el('div', `absolute -right-3 -top-3 w-10 h-10 ${item.badgeClass || 'bg-blue-600 text-white'} rounded-full flex items-center justify-center font-bold border-2 border-slate-900 shadow-lg`, item.badge);
+        if (item.current) {
+          const badge = el('div', 'absolute -right-3 -top-3 w-10 h-10 bg-green-600 dark:bg-green-500 text-white rounded-full flex items-center justify-center font-bold border-2 border-slate-900 shadow-lg', 'CURRENT');
           card.appendChild(badge);
         }
 
-        if (item.icon) {
-          const iconBox = el('div', 'absolute -left-3 -top-3 w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700');
-          iconBox.appendChild(this.buildIcon(item.icon));
-          card.appendChild(iconBox);
-        }
+        const name = ICONS8[item.icon] || ICONS8.briefcase;
+        const iconBox = el('div', 'absolute -left-3 -top-3 w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700');
+        const img = document.createElement('img');
+        img.className = 'w-5 h-5';
+        img.src = `https://img.icons8.com/color/96/${name}.png`;
+        img.alt = '';
+        iconBox.appendChild(img);
+        card.appendChild(iconBox);
 
-        card.appendChild(el('h3', `font-bold ${item.titleClass || 'dark:text-slate-200'}`, item.title));
-        card.appendChild(el('p', 'text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest', item.period));
+        card.appendChild(el('h3', 'font-bold dark:text-slate-200 text-lg', item.company || item.title || ''));
+        card.appendChild(el('p', 'text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest', item.period || ''));
         if (item.role) {
-          card.appendChild(el('p', `text-sm mt-3 ${item.roleClass || 'text-slate-700 dark:text-slate-200'}`, item.role));
+          card.appendChild(el('p', 'text-sm mt-3 text-slate-700 dark:text-slate-200', item.role));
         }
 
         if ((item.points || []).length) {
           const ul = el('ul', 'text-xs text-slate-600 dark:text-slate-400 mt-2 list-disc ml-4 space-y-1');
           item.points.forEach(p => ul.appendChild(el('li', null, p)));
           card.appendChild(ul);
-        }
-
-        if (item.link) {
-          const linkEl = document.createElement('a');
-          linkEl.href = item.link;
-          linkEl.className = 'inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 dark:text-blue-400 hover:underline mt-3';
-          linkEl.innerHTML = `${item.linkText || 'View More'} <img class="i8 w-3 h-3" src="https://img.icons8.com/ios/16/8b5cf6/forward.png" alt="">`;
-          card.appendChild(linkEl);
         }
 
         box.appendChild(card);

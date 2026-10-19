@@ -20,6 +20,39 @@
       "subtitle": "Fintech UI Concept",
       "image": "assets/img/mobile-app.png",
       "modalDescription": "Financial management mobile app concept with a sleek dark theme and fluid interactive components."
+    },
+    {
+      "id": "gallery-4",
+      "title": "Resume-Powered Interview Prep",
+      "subtitle": "AI Interview Question Generator",
+      "image": "assets/img/personalized-interviewer-1.png",
+      "images": [
+        "assets/img/personalized-interviewer-1.png",
+        "assets/img/personalized-interviewer-2.png",
+        "assets/img/personalized-interviewer-3.png"
+      ],
+      "modalDescription": "Paste your resume → personalized AI interview questions & skills detection. Integrated with NVIDIA, OpenRouter, OpenCode, and Zen AI providers. Data stored in browser only."
+    },
+    {
+      "id": "gallery-5",
+      "title": "Manufacturing ERP",
+      "subtitle": "Yash Plastic & Engineering Works",
+      "image": "assets/project.png",
+      "modalDescription": "Full stack ERPNext modules for sales, purchase, accounts, stock, HR, manufacturing, mold management, and India compliance deployed on AWS."
+    },
+    {
+      "id": "gallery-6",
+      "title": "SoftwareTechIT Website",
+      "subtitle": "Educational Portal",
+      "image": "assets/softwaretechit-website.png",
+      "modalDescription": "Full stack educational portal for technology courses built with Angular, Node.js, Express, and MongoDB."
+    },
+    {
+      "id": "gallery-7",
+      "title": "SoftwareTechIT Android App",
+      "subtitle": "Technology Tutorials App",
+      "image": "assets/softwaretechit-app.png",
+      "modalDescription": "Native Android application providing curated technology tutorials integrated with YouTube Data API v3."
     }
   ]
 }

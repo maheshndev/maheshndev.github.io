@@ -153,6 +153,26 @@
       "demoUrl": "#"
     },
     {
+      "title": "Resume-Powered Interview Prep",
+      "image": "assets/img/personalized-interviewer-1.png",
+      "bg": "bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-indigo-900/40 dark:to-purple-900/40",
+      "textColor": "text-indigo-600 dark:text-indigo-300",
+      "tags": [
+        { "label": "React", "color": "blue" },
+        { "label": "AI", "color": "purple" },
+        { "label": "OpenRouter", "color": "indigo" },
+        { "label": "NVIDIA", "color": "blue" },
+        { "label": "OpenCode", "color": "green" },
+        { "label": "Zen", "color": "rose" }
+      ],
+      "date": "2026",
+      "company": "Personal",
+      "description": "Paste your resume → personalized AI interview questions & skills detection. Built with React, integrated with NVIDIA, OpenRouter, OpenCode, and Zen AI providers. All data stored in browser (localStorage); nothing leaves your machine.",
+      "filter": "fullstack",
+      "viewUrl": "https://maheshndev.github.io/personalized-interviewer-ai-tool/",
+      "demoUrl": "https://maheshndev.github.io/personalized-interviewer-ai-tool/"
+    },
+    {
       "title": "Covid-19 Hospital System",
       "image": "assets/project-color.png",
       "bg": "bg-gradient-to-br from-orange-50 to-red-100 dark:from-orange-900/40 dark:to-red-900/40",

@@ -47,7 +47,7 @@
         {
           "type": "experience",
           "title": "3. EXPERIENCE JOURNEY",
-          "src": "data/infographic/experience.json"
+          "src": "data/experience.json"
         }
       ]
     },
